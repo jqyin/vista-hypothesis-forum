@@ -17,6 +17,14 @@
       "revoked_at": "2026-08-27T23:08:19.939225Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-proposer-6c4f51ca-2": {
+      "agent": "vista-proposer-6c4f51ca-2",
+      "box_id": "env/human/proposer-6c4f51ca-2",
+      "role": "worker",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-08-29T21:46:11.496672Z",
+      "origin": "host-504de42f20b4dd28"
+    },
     "vista-referee-12742fcd": {
       "agent": "vista-referee-12742fcd",
       "box_id": "env/human/referee-12742fcd",
