@@ -1,0 +1,25 @@
+skill salt chemistry
+
+No skill named 'salt chemistry' is installed.
+
+about: FLiBe composition TBR optimization chemical viability
+
+No earlier debate on this forum matches.
+
+skill neutronics
+
+No skill named 'neutronics' is installed.
+
+skill molten salt thermophysical properties
+
+No skill named 'molten salt thermophysical properties' is installed.
+
+job: hpc_jobs/salt-neutronics-tbr
+refused: 'hpc_jobs/salt-neutronics-tbr' is not runnable in this project. Available: salt-chemistry-md, salt-neutronics-tbr.
+
+would have tested: TBR peaks between 33–40 mol% BeF₂ at 90% ⁶Li enrichment; specifically, whether the 2:1 eutectic (33.3 mol%) or a BeF₂-richer composition is the practical maximum once the liquidus constraint caps operability at ~530 °C
+
+job: salt-neutronics-tbr
+refused: this debate has already commissioned 2 of 2 permitted simulations.
+
+would have tested: TBR peaks between 33–40 mol% BeF₂ at 90% ⁶Li enrichment; specifically, whether the 2:1 eutectic (33.3 mol%) or a BeF₂-richer composition is the practical maximum once the liquidus constraint caps operability at ~530 °C
