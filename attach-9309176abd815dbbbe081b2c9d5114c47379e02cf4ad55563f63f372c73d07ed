@@ -1,0 +1,1793 @@
+skill salt chemistry
+
+No skill named 'salt chemistry' is installed.
+
+about: FLiBe TBR alternatives chloride salts
+
+## for FLiBe based molten salt, which composition is most likely to provide high tritium breeding rate while remaining chemical viable to extract from blanket
+## Verdict
+
+**1. FLiBe at the 2:1 LiF:BeF₂ eutectic stoichiometry (33.3 mol% BeF₂, melting point ~459 °C), enriched to ≥90% ⁶Li, is the chemically viable composition that maximises tritium breeding ratio among circulating-blanket-compatible FLiBe melts, with tritium recovered by continuous helium sparging.**
+
+⁶Li(n,α)T is the sole productive breeding reaction; TBR is the product of ⁶Li atom density and effective neutron population. Be moderates fast neutrons into the thermal range where the ⁶Li cross-section peaks (~940 b) and provides ⁹Be(n,2n) multiplication above 2.7 MeV. The neutronics-only optimum sits near 36–40 mol% BeF₂, but BeF₄²⁻ network polymerisation at those compositions raises the liquidus to 530–560 °C and viscosity to ≥100 mPa·s near the liquidus, disqualifying them as circulating coolants. The 2:1 eutectic is the richest-BeF₂ composition that remains single-phase and pumpable (liquidus ~459 °C, viscosity ~6 mPa·s at 600 °C) with an adequate freeze-transient margin. Tritium partitions as T₂/HT into the cover gas at ppb-level melt solubility and is stripped continuously by helium sparging without bulk salt reprocessing.
+
+*Standing.* This is the surviving hypothesis after four rounds, but it survives by constraint elimination rather than positive confirmation. The Proposer originally claimed 2:1 as the neutronics optimum; the Reviewer correctly refuted that, citing published sweeps showing TBR peaking near 38–40 mol% BeF₂. The Proposer conceded the neutronics point entirely and shifted to a chemical-operability argument: the unconstrained neutronics peak is inaccessible because those compositions freeze and gel under operating conditions. The Reviewer's second objection — citing ORNL liquidus data (Cantor 1968, Williams 2006) and the non-linear viscosity jump from BeF₄²⁻ polymerisation — directly attacked the revised 38–40 mol% hypothesis and succeeded; the Proposer accepted the physical chemistry and retreated to 2:1. The final hypothesis thus rests on two accepted facts: (1) the neutronics peak is near 36–40 mol% BeF₂, and (2) those compositions are thermally and rheologically inoperable. Neither fact was contested in the final round. What was never established by argument or simulation is whether the 2:1 composition itself meets TBR >1.05 at ≥90% ⁶Li in the specific blanket geometry under discussion — the numbers are taken from prior literature without a geometry-specific neutronics run. The helium-sparging extraction mechanism was proposed in round 1 and never challenged; it stands as uncontested but also unvalidated.
+*Confidence.* 0.62
+
+*Predictions.*
+- TBR for 2:1 FLiBe at 90% ⁶Li enrichment in a 60 cm blanket zone exceeds 1.05; compositions above 42 mol% BeF₂ at identical enrichment yield lower TBR because the Li-density penalty dominates.
+- A BeF₂ sweep from 33–45 mol% shows a shallow TBR maximum near 36–40 mol%, but those compositions have liquidus ≥530 °C and viscosity ≥50 mPa·s near operating temperature, disqualifying them on operability grounds.
+- Helium sparging at <1 L/min per MW fusion power maintains dissolved tritium below 1 wppm at 500–650 °C, given tritium partial pressure >10⁻⁴ Pa per wppm dissolved T over 2:1 FLiBe.
+- TBR drops below 1.0 at ⁶Li enrichments below 30% for the 2:1 composition in a 60 cm standard blanket geometry.
+
+**2. FLiBe at approximately 38–40 mol% BeF₂ (roughly 1.5:1 LiF:BeF₂) enriched to ≥90% ⁶Li maximises TBR among FLiBe compositions without operability constraints applied.**
+
+In the 33–40 mol% BeF₂ window, ⁹Be(n,2n) neutron multiplication above the 2.7 MeV threshold adds to the total neutron population feeding ⁶Li capture faster than the fractional loss of Li atom density. Above ~40 mol% the Li-density penalty dominates and TBR declines. The peak is interior to the operable composition range only in a neutronics sense.
+
+*Standing.* This hypothesis was proposed by the Reviewer in round 2 as a direct refutation of the original 2:1 optimum claim, and the Proposer accepted it in round 3. However, the Reviewer then refuted it on operability grounds in round 4, citing ORNL thermophysical data the Proposer did not contest. The hypothesis survives as a neutronics statement — that the unconstrained TBR maximum is near 38–40 mol% BeF₂ — but fails as a practical recommendation because the composition cannot be safely circulated. No simulation was commissioned to confirm the neutronics claim, so even the neutronics standing is literature-supported but not independently verified in the debate. It ranks below the eutectic hypothesis solely because the debate applied an operability constraint that the topic explicitly required ('chemically viable to extract from blanket').
+*Confidence.* 0.45
+
+*Predictions.*
+- A BeF₂ composition sweep at 90% ⁶Li shows TBR peaking between 36–42 mol% BeF₂, with the 33.3 mol% eutectic measurably below (≥0.02 TBR units) the peak.
+- TBR at 40 mol% BeF₂ / 90% ⁶Li exceeds 1.10 in a 60 cm blanket zone, versus 1.05–1.10 at 33.3 mol% BeF₂.
+
+**Why this order.** The debate moved through three distinct positions: (1) 2:1 eutectic as neutronics optimum (refuted by the Reviewer on neutron-multiplication grounds); (2) 38–40 mol% BeF₂ as neutronics optimum (accepted by the Proposer, then refuted by the Reviewer on thermophysical-operability grounds); (3) 2:1 eutectic as the best chemically viable composition (accepted by both parties in the final round). The final consensus is narrow: both sides agree the unconstrained neutronics peak is near 38–40 mol% BeF₂, and both agree those compositions are thermally and rheologically inoperable under blanket conditions, leaving the 2:1 eutectic as the best viable option. Confidence is set below the Proposer's 0.74 because the specific TBR values (>1.05, enrichment threshold) were never confirmed by a commissioned simulation and rest on literature interpolation for a generic blanket geometry, not the one under discussion. The helium-sparging extraction method was uncontested throughout but also unvalidated at scale.
+
+**Unresolved.**
+- The TBR of the 2:1 LiF:BeF₂ eutectic at ≥90% ⁶Li in the specific tokamak blanket geometry under consideration was never computed in this debate. A salt-neutronics-tbr sweep from 30–45 mol% BeF₂ at fixed 90% ⁶Li enrichment in that geometry would confirm whether TBR >1.05 is achievable at the eutectic and precisely where the peak sits.
+- The ~0.02-unit TBR advantage of the 38–40 mol% composition over the 2:1 eutectic was asserted from prior published sweeps; it may be within numerical or interpolation error. The same neutronics sweep would resolve whether the peak-to-eutectic TBR difference is real and large enough to motivate engineering workarounds for the operability problem.
+- Whether any thermal-management or composition-control strategy (e.g., operating at higher bulk temperature, adding a small LiF excess, or accepting a narrower freeze margin) could make the 36–38 mol% range circulate-able while preserving most of the TBR gain is unexplored. A salt-chemistry-md simulation at 36–40 mol% BeF₂ near the liquidus would bound the viscosity and phase-stability question more precisely than the 1968 ORNL data allow.
+- Tritium permeation through structural steel at 600 °C relative to helium-sparge stripping rate is unresolved. This determines whether dissolved tritium actually stays below 1 wppm or whether wall permeation is the dominant loss channel, undermining the extraction viability claim. No experimental or simulation pathway was identified to close this gap in the debate.
+- The impact of reduced ⁶Li enrichment (60–70% vs. ≥90%) on TBR at the 2:1 eutectic, and whether a slightly richer-BeF₂ melt at lower enrichment could compensate, was raised as a concern but left entirely unanalysed. This is the commercially critical operating regime and deserves a dedicated neutronics sweep.
+
+query: 37Cl-enriched LiCl-LiF tritium breeding ratio fusion blanket 2025
+knowledge base: molten-salt
+
+[1] Barker_2025_Nucl._Fusion_65_086022.pdf, page 11
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure C.4. Tritium breeding ratio for all combinations of a eight-layer blanket containing liquid lithium (Li) and FLiBe (FL), respectively. The front four layers are on the x-axis and the final four layers are shown on the y-axis. 20% enrichment of the lithium-6 isotope were used in these simulations. References [1] Brereton S.J. and Kazimi M.S. 1988 A comparative study of the safety and economics of fusion fuel cycles Fusion Eng. Des. 6 207–27 [2] Stott P.E. 2005 The feasibility of using D–3He and D–D fusion fuels Plasma Phys. Control. Fusion 47 1305–38 [3] Kulcinski G.L. and Santarius J.F. 2001 New opportunities for fusion in the 21st century - advanced fuels Fusion Technol. 39 480–5 [4] Ivanov B. and Ananev S. 2024 Demand of fusion energy for tritium and the possibility of its production in nuclear reactors At. Energy 135 1–6 [5] Kovari M., Coleman M., Cristescu I. and Smith R. 2017 Tritium resources available for fusion reactors Nucl. Fusion 58 026010 [6] Pearson R.J., Antoniazzi A.B. and Nuttall W.J. 2018 Tritium supply and use: a key issue for the development of nuclear fusion energy Fusion Eng. Des. 136 1140–8 [7] Robinson M.T. 1958 On the chemistry of thermonuclear reactor breeder blankets Technical Report Oak Ridge National Laboratory(ORNL), Oak Ridge, TN (United States) [8] Gruen D. 1958 Fused salts as thermonuclear reactor breeder blankets Papers Presented at the Controlled Thermonuclear Conf. Held at Washington, DC, (3–5 February 1958) (Controlled Thermonuclear Branch, Division of Research, US Atomic Energy ...) vol 1 p 316 [9] Kulsartov T. et al 2022 Studies of two-phase lithium ceramics Li4SiO4-Li2TiO3 under conditions of neutron irradiation Nucl. Mater. Energy 30 101129 [10] Zhou G., Hernández F.A., Pereslavtsev P., Kiss B., Retheesh A., Maqueda L. and Park J.H. 2023 The European DEMO helium cooled pebble bed breeding blanket: design status at the conclusion of the pre-concept design phase Energies 16 5377 [11] Giancarli L. et al 2012 Overview of the ITER TBM program Fusion Eng. Des. 87 395–402 [12] Giancarli L.M. et al 2020 Overview of recent ITER TBM program activities Fusion Eng. Des. 158 111674 [13] Zhou X.w., Tang Y.p., Lu Z.m., Zhang J. and Liu B. 2017 Nuclear graphite for high temperature gas-cooled reactors New Carbon Mater. 32 193–204 [14] Lee D.W., Hong B.G., Kim Y., In W.K. and Yoon K.H. 2007 Preliminary design of a helium cooled molten lithium test blanket module for the ITER test in Korea Fusion Eng. Des. 82 381–8 [15] Ranjithkumar S., Sharma D., Chaudhuri P., Danani C., Kumar E.R., Khan I., Bhattacharya S. and Vyas K. 2016 Engineering design and analysis of indian LLCB TBM set Fusion Eng. Des. 109–111 1581–6 [16] LeBlanc D. 2010 Molten salt reactors: a new beginning for an old idea Nucl. Eng. Des. 240 1644–56 [17] Wong C. et al 2005 Assessment of first wall and blanket options with the use of liquid breeder Fusion Sci. Technol. 47 502–9 [18] Sawan M., Malang S., Wong C. and Youssef M. 2005 Neutronics assessment of molten salt breeding blanket design
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 16
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+chloride salt fusion breeder blankets [8; 9]. These eﬀorts highlight the many advantages and disadvantages of chloride salts relative to the state of the art, suggest a few chloride salt compositions, and present ﬁndings that suggest tritium breeding ratios equal to FLiBe but below PbLi are achievable with chloride-based liquid blankets. 1.2 RESEARCH PURPOSE This purpose of this work was to directly address ORNL research priorities and NAS recommendations by investigating novel liquid blanket materials that could provide self-sustaining operation and draw on experience from research on molten salts used with advanced ﬁssion reactors [2], concentrated solar [3], and 4
+
+————————————————————————————————————————————————————————————
+
+[3] Barker_2025_Nucl._Fusion_65_086022.pdf, page 10
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure B.2. Tritium production per source neutron as a function of layer depth through the blanket over a range of incident neutron energies, that collide with either 6Li or 7Li (in grey). A reduction of TBR across the entire energy range is seen with penetration depth of the neutron through the blanket structure. At the top of the graph the TBR within each order of magnitude of neutron energy is shown. The lower energy neutrons contribute a small amount to the overall TBR while the mid range dominate its overall production. Appendix C. Combinatorics of higher lithium-6 enrichments Figure C.3. Tritium breeding ratio for all combinations of a eight-layer blanket containing liquid lithium (Li) and FLiBe (FL), respectively. The front four layers are on the x-axis and the final four layers are shown on the y-axis. 10% enrichment of the lithium-6 isotope were used in these simulations. 10
+
+————————————————————————————————————————————————————————————
+
+[4] Barker_2025_Nucl._Fusion_65_086022.pdf, page 2
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Keywords: breeder blanket, tritium, neutronics, FLiBe, lithium (Some figures may appear in colour only in the online journal) 1. Introduction Tritium, a heavy isotope of hydrogen (3H or T), is an essential nuclide, along with deuterium (2H or D), in the production of energy from a fusion device. The fusion of the two, commonly referred to as a D-T reaction, is currently the most developed by the fusion community [1]. Its relatively high fusion cross- section at lower temperatures compared to other fuel variet- ies, such as deuterium–deuterium (D-D), makes it an attract- ive fuel source; however, due to tritium’s relatively short half- life of approximately 12.3 years and thus low abundance in nature, it is necessary to breed tritium onsite at rates at or exceeding its consumption within the fusing plasma. An addi- tional challenge when using a D-T reaction includes the need for extra shielding due to the high-energy 14.1 MeV neutron released from the reaction [2]. Alternative fuels, for instance D-D, produce neutrons that are about five times less energetic than those from a D-T reaction, reducing the penetration depth and, thus, the shielding requirements; yet they are hampered by lower fusion cross-sections. In contrast, second and third- generation fuels formed within the plasma as byproducts of the primary reaction, D-3He and 3He-3He, are currently lim- ited by Tokamak technologies when considering confinement conditions and plasma temperatures [3]. Another required feature will be a closed fuel cycle, in which the neutrons generated during the fusion reaction are used to generate additional tritium via neutron capture with lithium; this cycle, in which tritons are extracted, recovered, cleaned and resupplied into the plasma as fuel, is envisaged for many of the most promising energy-to-grid style designs for fusion power plants. The current external supply of tritium from CANDU reactors, a heavy-water based fission reactor, and other low-output facilities can never be sufficient for the next generation of Tokamaks [4]. This issue is compounded by the potential deprecation of the CANDU reactors over the next decades, creating a low global inventory of tritium [5], even for start-up applications within the burgeoning fusion exosys- tem. A realistic reactor start-up may be infeasible by DEMO’s planned initialisation in the mid-2050 s unless large strides are made to improve breeder blanket efficiencies in near-term pro- totype fusion devices [5]. Additional pressure on the tritium supply chain arises from the private investment sector which is continually increasing the number of planned fusion reactors set to come online in the coming decades. This trend further increases the risk that tritium shortages will limit the develop- ment of fusion reactors and, worse, delay or cancel existing ignition timelines. In such a case, the community may need to turn to D-D reactions to pioneer an international fusion energy supply network [6]. 1.1. Current blanket designs Systems that conserve the total amount of tritium throughout the fuel cycle were quickly recognised in the early develop- ments of fusion [7]. Furthermore, blanket concepts of lith- ium breeders have been discussed since the
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 16
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+1. INTRODUCTION 1.1 BRIEF BACKGROUND OF FUSION BREEDER BLANKETS Deuterium-tritium (D-T) fusion reactors cannot operate for a signiﬁcant period of time without a closed tritium fuel cycle, according to a recent National Academies of Sciences (NAS) report on bringing fusion reactors to the US electrical grid [1]. This fact places breeder blankets as one of the foundational systems for self-sustained fusion reactor operation. The typical functional requirements for a breeder blanket system include producing tritium, absorbing kinetic energy, transporting thermal energy, and being environmentally attractive. Conceptual designs of liquid, solid, and combination blankets have been developed in the past. State-of-the-art research on liquid blankets has converged to primarily focus on (LiF)2 and BeF2 (FLiBe) molten salts and a metallic eutectic of lead and lithium (PbLi), but “virtually all of the technologies related to the tritium fuel cycle are at a low technological readiness level” [1]. This work sought to explore optimum blanket conﬁgurations as it aligned with the Oak Ridge National Laboratory (ORNL) FY 2023 Laboratory Directed Research and Development Program’s research priority of developing and expanding the current understanding of fusion blanket science and technology. This work directly addressed ORNL research priorities and NAS recommendations by investigating novel liquid blanket materials that could provide self-sustaining operation and draw on experience from research on molten salts used with advanced ﬁssion reactors, concentrated solar, and thermal energy storage. This work focused on liquid blanket materials that reduced the use of Be (FLiBe), avoided the generation of HF ((LiF)2 and BeF2 (FLiBe)), and minimized magnetohydrodynamic (MHD)-perturbed ﬂow ﬁelds (PbLi). Chloride-based salts avoided these negative characteristics and their development; a fusion breeder blanket could leverage substantial research in chloride salt systems in the ﬁssion, concentrated solar, and thermal energy storage industries. FLiBe salt research beneﬁts both fusion and ﬁssion ﬁelds because of technology overlaps. However, Be has strict handling requirements because of unique health hazards. Liquid metal blankets such as PbLi eutectics are aﬀected by MHD forces, which must be accounted for. Chloride-based salts avoid these negative characteristics while retaining desirable high-temperature properties. Chloride-based salt blanket development could leverage substantial research in chloride salt systems such as ﬁssion, concentrated solar, and thermal energy storage (see Figure 1). For these reasons, chloride-based salts should be investigated as a potential liquid breeder blanket for fusion applications. Despite its potential as a liquid breeder, very little literature published before 2008 could be identiﬁed assessing the feasibility of chloride-based salt fusion blankets [6]. Pre-2008 research ﬁndings consisted of recommendations that chloride salts would require thicker blankets than ﬂuoride salts and found that chloride salts, with an inherently higher neutron energy spectrum, appreciate a 238U multiplying layer before the blanket [7]. However, the recent surge in fusion research has led to at least two publications in the 2020s related to chloride salt fusion breeder blankets [8; 9]. These eﬀorts highlight the many advantages and disadvantages of chloride salts relative to the state of the art, suggest a few chloride salt compositions, and present ﬁndings that suggest tritium breeding ratios equal to FLiBe but below PbLi are achievable with chloride-based liquid
+
+query: FLiBe dominance historical tritium breeding chloride salt alternative
+knowledge base: molten-salt
+
+[1] ORNL-chloride-blanket-Pub201058.pdf, page 14
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Highlights of chloride salt performance relative to FLiBe include the following: 1. Several compositions were found with higher-than-FLiBe tritium production potential. 2. Higher-than-FLiBe tritium production was achieved without optimizing blanket dimensions for chloride salts. 3. The liquidus temperature distribution of chlorides with more tritium production than FLiBe ranges ±100◦C around that of FLiBe. Ternary chloride salts have a 30◦C lower average liquidus temperature than the binary chloride salts. 4. Commercial-scale pricing is diﬃcult to estimate. Recent small-batch FLiBe salt procurements at ORNL have cost between $1,000 to $2,000/kg. Given the $1,000/kg ﬁlter used in this study, all prospective chlorides are less expensive and driven by the 80%–90% LiCl mass fraction at ≈$360/kg. 5. Chloride salts have been identiﬁed with higher-than-FLiBe tritium production without Be or Pb. 6. Some chloride salts can exist in multiple ionization states, which complicates blanket chemistry. 7. Activation results suggest that chloride salts have larger decay heat values than FLiBe. 8. FOMs for ﬂuid ﬂow and heat transfer deﬁne chloride salts as less desirable than FLiBe primarily because of lower speciﬁc heat capacities. 9. An important technology overlap exists with MgCl2 and CaCl2, as they are already used in the halide slagging step of the pyrometallurgical process. Also, the binary salt LiCl-KCl is used in the electroreﬁning step of the pyrometallurgical process, so signiﬁcant operational experience and thermophysical and thermochemical properties exist. Section 3.8 provides a detailed discussion on candidate binary and ternary salt selection. The most promising binary chloride salts were LiCl-PbCl2, LiCl-SrCl2, LiCl-MnCl2, LiCl-BeCl2, LiCl-CoCl2, LiCl-MgCl2, LiCl-NaCl, LiCl-CaCl2, and LiCl-KCl. Based on these binary conﬁgurations, the following mass fraction recommendations can be made: • 0.9LiCl-0.1NaCl at 90% Li is needed to maximize tritium production for Na-containing salts. • 0.3LiCl-0.7PbCl2 maximizes tritium production, but 0.4LiCl-0.6PbCl2 does nearly as well with a 30◦C lower liquidus temperature. • 0.9LiCl-0.1MgCl2 maximizes tritium production, but 0.8LiCl-0.2MgCl2 may be attractive, with a 50◦C lower liquidus temperature. • 0.8LiCl-0.2SrCl2 maximizes tritium production, but 0.7LiCl-0.3PbCl2 does nearly as well with a 32◦C lower liquidus temperature. • 0.5LiCl-0.1MgCl2-0.4PbCl2 produced the most tritium of any ternary salt and had one of the lowest liquidus temperatures at 678 K [405◦C]. • 0.7LiCl-0.2MnCl2-0.1SrCl2 and 0.6LiCl-0.2MnCl2-0.2SrCl2 performed near the top of the ternary salts without the use of PbCl2. • 0.8LiCl-0.1MgCl2-0.1NaCl was the highest tritium-producing salt containing both NaCl and MgCl2. 2
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 42
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 4. The binary salt tritium production normalized to unenriched FLiBe tritium production. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.3LiCl-0.7PbCl2 0.637000 0.725320 1.192990 0.4LiCl-0.6PbCl2 0.677810 0.767230 1.187720 0.2LiCl-0.8PbCl2 0.561350 0.647530 1.187070 0.5LiCl-0.5PbCl2 0.701960 0.790810 1.180160 0.6LiCl-0.4PbCl2 0.716700 0.805900 1.172120 0.7LiCl-0.3PbCl2 0.726210 0.814370 1.164320 0.8LiCl-0.2PbCl2 0.731770 0.819290 1.156400 0.9LiCl-0.1PbCl2 0.735230 0.821190 1.150120 0.8LiCl-0.2SrCl2 0.710040 0.798010 1.145620 0.9LiCl-0.1SrCl2 0.725640 0.812660 1.144580 0.7LiCl-0.3SrCl2 0.689710 0.778240 1.144480 0.7LiCl-0.3MnCl2 0.642550 0.737950 1.143870 0.9LiCl-0.1BeCl2 0.717170 0.808750 1.143550 0.6LiCl-0.4SrCl2 0.662340 0.751050 1.143090 0.9LiCl-0.1CoCl2 0.710730 0.798600 1.142380 0.8LiCl-0.2BeCl2 0.691180 0.790580 1.141990 0.8LiCl-0.2CoCl2 0.682080 0.767970 1.140750 0.6LiCl-0.4MnCl2 0.594190 0.684680 1.139910 0.5LiCl-0.5SrCl2 0.626820 0.714900 1.139610 0.7LiCl-0.3BeCl2 0.658350 0.767190 1.138170 0.7LiCl-0.3CoCl2 0.648210 0.730620 1.137710 0.1LiCl-0.9PbCl2 0.403020 0.479630 1.135330 0.9LiCl-0.1MgCl2 0.711450 0.799000 1.133730 0.6LiCl-0.4CoCl2 0.607730 0.685270 1.132060 0.9LiCl-0.1NaCl 0.716030 0.808120 1.132010 0.4LiCl-0.6SrCl2 0.578960 0.665480 1.131130 0.5LiCl-0.5MnCl2 0.536310 0.619980 1.131120 0.6LiCl-0.4BeCl2 0.616790 0.736590 1.130990 0.9LiCl-0.1CaCl2 0.702610 0.784920 1.127440 0.5LiCl-0.5CoCl2 0.558650 0.629720 1.123210 0.8LiCl-0.2MgCl2 0.679590 0.767640 1.121980 0.5LiCl-0.5BeCl2 0.563890 0.696140 1.119690 0.8LiCl-0.2NaCl 0.688060 0.783950 1.118880 0.9LiCl-0.1KCl 0.689810 0.766290 1.117250 3.4.2 Ternary Salts Figure 28 and Table 5 show the ternary salts’ total tritium production normalized to the total tritium production in FLiBe with 90% 6Li atomic enrichment. Although the ternary salts generally do not perform as well as the binary salts, these results strongly emphasize that many ternary chloride salt mixtures exist that have the potential to equal and surpass enriched FLiBe tritium production while avoiding the use of Be. 30
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 59
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Using Table 10 and Appendix E as guides, the following mass fraction recommendations can be made: • 0.5LiCl-0.1MgCl2-0.4PbCl2 produced the most tritium and had one of the lowest liquidus temperatures at 678 K [405◦C]. • 0.7LiCl-0.2MnCl2-0.1SrCl2 and 0.6LiCl-0.2MnCl2-0.2SrCl2 performed near the top without the use of PbCl2. • 0.8LiCl-0.1MgCl2-0.1NaCl was the highest tritium-producing salt containing NaCl and MgCl2. 4. CONCLUSIONS AND RECOMMENDATIONS The hypothesis proposed at the beginning of the research was that there could be chloride-based blanket designs that can nearly equal or exceed the TBR)s of FLiBe molten salt blankets. The fastest and most cost-eﬀective path to deploying liquid fusion breeder blankets could be from maximizing the synergistic technological overlap between fusion, ﬁssion, concentrated solar, and thermal energy storage industries. The approach to addressing this hypothesis consisted of applying a multilevel serial ﬁltering process to systematically downselect the most promising chloride-based salts to optimize economic, neutronic, TP, and TC parameters. 4.1 CONCLUSIONS As observed in Table 2, a total of 79 unary salts were initially identiﬁed. This search resulted in 3,081 binary, 79,079 ternary, and 1,502,501 quaternary permutations of plausible chloride salts. The ﬁrst step in reducing the domain was applying economic ﬁlters for commercial availability and a price threshold of $1,000/kg. This ﬁlter reduced the number of plausible unary salts from 79 to 30. The low-cost neutronics ﬁlter reinforced engineering judgement for the requirement of Li-bearing salts. A TC ﬁlter of salt liquidus temperature less than 873 K [600◦C] further reduced the domain to 12 unary salts. A 1D medium-cost neutronics ﬁlter determined 10 unary salts in 9 binary and 10 ternary permutations with tritum breeding potentials greater than FLiBe. Finally, a 3D high-cost neutronics ﬁlter investigated four binary salt compositions and conﬁrmed the ﬁndings of the medium-cost neutronics results. Table 10 provides a scoring summary of the top binary salts under consideration. A weight was subjectively assigned to each category. The highest-scoring salt neglecting ﬂuid and heat transfer FOMs was LiCl-NaCl, followed closely by LiCl-PbCl2, LiCl-MgCl2, and LiCl-SrCl2. When considering the additional FOMs, LiCl-NaCl remains at the top, LiCl-PbCl2 did not get evaluated owing to a lack of data, and LiCl-MgCl2 extends its lead on LiCl-SrCl2 with more favorable ﬂow and heat transfer scores. Appendix D presents the performance and data availability of the most-promising binary salts, sorted by tritium production in descending order and evaluated at 873 K [600◦C]. Highlights of chloride salt performance relative to FLiBe include the following: 1. Several compositions were found with higher-than-FLiBe tritium production potential. 2. Higher-than-FLiBe tritium production was achieved without optimizing blanket dimensions for chloride salts. 3. The liquidus temperature distribution of chlorides with more tritium production than FLiBe ranges ±100◦C around that of FLiBe. Ternary chloride salts have a 30◦C lower average liquidus temperature than the binary chloride salts. 47
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-chloride-blanket-Pub201058.pdf, page 17
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Figure 1. Technology overlap that could help the fusion industry derisk the molten salt breeder blanket pathway. thermal energy storage [4]. The hypothesis when proposing this research was that there could be chloride-based blanket designs that can nearly equal or exceed the tritium breeding ratios of FLiBe molten salt blankets. The fastest and most cost-eﬀective path to deploying liquid fusion breeder blankets could be from maximizing the synergistic technological overlap between fusion, ﬁssion, concentrated solar, and thermal energy storage industries. The goal of this research was to systematically identify chloride-based salts with desirable economic, neutronic, thermophysical (TP), and thermochemical (TC) properties for use as a liquid fusion breeder blanket and then compare such plausible salts with state-of-the-art FLiBe molten salt. If proven to yield suﬃcient tritium production, a chloride salt blanket could avoid the primary disadvantages of FLiBe (presence of Be toxicity and generation of HF) and PbLi (MHD forces aﬀecting ﬂuid ﬂow and heat removal). 2. APPROACH The determination of optimal chloride salts begins with a complete or near-complete list of possible salts. In this report, a unary salt refers to the combination of two elements into a single chloride molecule (e.g., LiCl), a binary salt refers to the combination of two chloride molecules (e.g., LiCl-NaCl), and a ternary salt refers to the combination of three chloride molecules (e.g., LiCl-NaCl-KCl). Quaternary salt refers to the combination of four chloride molecules. The unary list was ﬁrst populated with salts from Janz et al. [10] and expanded by searching chemical vendor inventories. The compilation of these resources led to the identiﬁcation of 79 plausible unary chloride salts. Plausible binary, ternary, and quaternary salts were generated using the combinations function within the Python itertools module. At this point, the lengths of the plausible binary, ternary, and quaternary lists were 3,081, 79,079, and 1,502,501 salt combinations long, respectively. Notably, the additional dimensions of varying the weight fractions and isotopic enrichment had not yet been implemented for each salt. The salt lists were further expanded to include a range of weight fractions between 10% and 90% with a 10% step size for each molecule of the binary salts, as well as a range of 10% to 80% for each molecule of the ternary salts. The inclusion of this dimension generated 9 compositions for each binary salt and 36 compositions for each ternary salt. 5
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 40
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 3. The binary salt tritium production normalized to 90% 6Li enriched FLiBe tritium production. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.3LiCl-0.7PbCl2 0.572220 0.651560 1.071670 0.4LiCl-0.6PbCl2 0.608880 0.689210 1.066930 0.2LiCl-0.8PbCl2 0.504260 0.581680 1.066360 0.5LiCl-0.5PbCl2 0.630580 0.710390 1.060140 0.6LiCl-0.4PbCl2 0.643820 0.723940 1.052930 0.7LiCl-0.3PbCl2 0.652360 0.731560 1.045910 0.8LiCl-0.2PbCl2 0.657350 0.735970 1.038800 0.9LiCl-0.1PbCl2 0.660460 0.737680 1.033160 0.8LiCl-0.2SrCl2 0.637840 0.716860 1.029120 0.9LiCl-0.1SrCl2 0.651850 0.730010 1.028180 0.7LiCl-0.3SrCl2 0.619570 0.699100 1.028090 0.7LiCl-0.3MnCl2 0.577200 0.662910 1.027550 0.9LiCl-0.1BeCl2 0.644240 0.726500 1.027260 0.6LiCl-0.4SrCl2 0.594980 0.674670 1.026850 0.9LiCl-0.1CoCl2 0.638460 0.717390 1.026210 0.8LiCl-0.2BeCl2 0.620890 0.710180 1.025860 0.8LiCl-0.2CoCl2 0.612710 0.689870 1.024740 0.6LiCl-0.4MnCl2 0.533760 0.615050 1.023990 0.5LiCl-0.5SrCl2 0.563080 0.642200 1.023720 0.7LiCl-0.3BeCl2 0.591400 0.689170 1.022420 0.7LiCl-0.3CoCl2 0.582290 0.656320 1.022010 0.1LiCl-0.9PbCl2 0.362030 0.430850 1.019880 0.9LiCl-0.1MgCl2 0.639100 0.717740 1.018440 0.6LiCl-0.4CoCl2 0.545930 0.615580 1.016930 0.9LiCl-0.1NaCl 0.643210 0.725940 1.016890 0.4LiCl-0.6SrCl2 0.520090 0.597810 1.016100 0.5LiCl-0.5MnCl2 0.481770 0.556940 1.016090 0.6LiCl-0.4BeCl2 0.554070 0.661680 1.015970 0.9LiCl-0.1CaCl2 0.631160 0.705100 1.012790 0.5LiCl-0.5CoCl2 0.501840 0.565690 1.008980 0.8LiCl-0.2MgCl2 0.610480 0.689580 1.007880 0.5LiCl-0.5BeCl2 0.506550 0.625350 1.005820 0.8LiCl-0.2NaCl 0.618090 0.704230 1.005100 0.9LiCl-0.1KCl 0.619660 0.688370 1.003630 Figure 27 and Table 4 show the top binary salts’ total tritium production normalized to the total tritium production in unenriched FLiBe. By changing the normalization variable from unenriched FLiBe to enriched FLiBe, the relative performance of each chloride salt series decreases by approximately 10%. However, nearly 34 binary chloride salts had higher tritium production than 90% enriched FLiBe, with the best binary chloride salt achieving 7% more tritium production than 90% enriched FLiBe. 28
+
+query: LiCl-LiF salt tritium breeding neutronics 37Cl enrichment parasitic absorption
+knowledge base: molten-salt
+
+[1] ORNL-chloride-blanket-Pub201058.pdf, page 49
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+0.5LiCl-0.1MgCl2-0.4PbCl2 0.5LiCl-0.1NaCl-0.4PbCl2 0.6LiCl-0.1MgCl2-0.3PbCl2 0.7LiCl-0.2MnCl2-0.1SrCl2 0.6LiCl-0.2MnCl2-0.2SrCl2 0.6LiCl-0.3MnCl2-0.1SrCl2 0.8LiCl-0.1MgCl2-0.1PbCl2 0.1KCl-0.4LiCl-0.5PbCl2 0.1KCl-0.5LiCl-0.4PbCl2 0.7LiCl-0.1MgCl2-0.2MnCl2 0.8LiCl-0.1NaCl-0.1SrCl2 0.7LiCl-0.1NaCl-0.2SrCl2 0.7LiCl-0.2MnCl2-0.1NaCl 0.1KCl-0.6LiCl-0.3PbCl2 0.6LiCl-0.1NaCl-0.3SrCl2 0.1CaCl2-0.7LiCl-0.2MnCl2 0.2BeCl2-0.7LiCl-0.1NaCl 0.6LiCl-0.3MnCl2-0.1NaCl 0.1BeCl2-0.1CaCl2-0.8LiCl 0.1CaCl2-0.6LiCl-0.3MnCl2 0.8LiCl-0.1MgCl2-0.1NaCl 0.7LiCl-0.1MnCl2-0.2NaCl 0.7LiCl-0.2NaCl-0.1SrCl2 Ternary Salt 0.5 1.0 1.5 2.0 2.5 3H Production / 36Cl Production Enriched 90% 37Cl 90% 6Li Enriched 90% 37Cl Unenriched Figure 31. The ternary salts’ tritium production to 36Cl production ratio. 37
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 45
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 6. The ternary salt tritium production normalized to unenriched FLiBe tritium production. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.1KCl-0.4LiCl-0.5PbCl2 0.611770 0.687160 1.134090 0.1KCl-0.5LiCl-0.4PbCl2 0.640760 0.717260 1.133080 0.7LiCl-0.1MgCl2-0.2MnCl2 0.644500 0.743810 1.132560 0.8LiCl-0.1NaCl-0.1SrCl2 0.699840 0.793320 1.132330 0.7LiCl-0.1NaCl-0.2SrCl2 0.678660 0.773720 1.131040 0.7LiCl-0.2MnCl2-0.1NaCl 0.644670 0.744480 1.131030 0.1KCl-0.6LiCl-0.3PbCl2 0.660310 0.737670 1.129240 0.6LiCl-0.1NaCl-0.3SrCl2 0.651400 0.746130 1.128430 0.1CaCl2-0.7LiCl-0.2MnCl2 0.639710 0.734170 1.127090 0.2BeCl2-0.7LiCl-0.1NaCl 0.659320 0.768140 1.126900 0.6LiCl-0.3MnCl2-0.1NaCl 0.596760 0.692720 1.126800 0.1BeCl2-0.1CaCl2-0.8LiCl 0.679280 0.768340 1.125820 0.1CaCl2-0.6LiCl-0.3MnCl2 0.593250 0.684450 1.123090 0.8LiCl-0.1MgCl2-0.1NaCl 0.686520 0.781480 1.120730 0.7LiCl-0.1MnCl2-0.2NaCl 0.646990 0.749850 1.117740 0.7LiCl-0.2NaCl-0.1SrCl2 0.666390 0.763820 1.116720 33
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 92
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 21. The production of 36Cl (atoms/b-cm) for ternary salts with a tritium production greater than FLiBe. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.5LiCl-0.1MgCl2-0.4PbCl2 7.8273e-04 3.7855e-04 2.6636e-04 0.5LiCl-0.1NaCl-0.4PbCl2 8.4215e-04 3.8460e-04 2.5941e-04 0.6LiCl-0.1MgCl2-0.3PbCl2 7.0895e-04 3.6826e-04 2.6769e-04 0.7LiCl-0.2MnCl2-0.1SrCl2 5.7757e-04 3.4049e-04 2.6215e-04 0.6LiCl-0.2MnCl2-0.2SrCl2 6.2431e-04 3.4792e-04 2.6302e-04 0.6LiCl-0.3MnCl2-0.1SrCl2 6.1106e-04 3.4172e-04 2.5896e-04 0.8LiCl-0.1MgCl2-0.1PbCl2 6.1308e-04 3.5603e-04 2.7043e-04 0.1KCl-0.4LiCl-0.5PbCl2 7.8301e-04 3.7806e-04 2.6959e-04 0.1KCl-0.5LiCl-0.4PbCl2 7.0190e-04 3.6734e-04 2.7073e-04 0.7LiCl-0.1MgCl2-0.2MnCl2 6.0146e-04 3.4734e-04 2.6500e-04 0.8LiCl-0.1NaCl-0.1SrCl2 6.6191e-04 3.6174e-04 2.6678e-04 0.7LiCl-0.1NaCl-0.2SrCl2 7.2070e-04 3.7267e-04 2.6759e-04 0.7LiCl-0.2MnCl2-0.1NaCl 6.0618e-04 3.4312e-04 2.6001e-04 0.1KCl-0.6LiCl-0.3PbCl2 6.4369e-04 3.6000e-04 2.7199e-04 0.6LiCl-0.1NaCl-0.3SrCl2 7.9543e-04 3.8598e-04 2.6851e-04 0.1CaCl2-0.7LiCl-0.2MnCl2 5.7560e-04 3.4161e-04 2.6432e-04 0.2BeCl2-0.7LiCl-0.1NaCl 9.1403e-04 4.1922e-04 2.7865e-04 0.6LiCl-0.3MnCl2-0.1NaCl 6.3779e-04 3.4435e-04 2.5681e-04 0.1BeCl2-0.1CaCl2-0.8LiCl 6.7600e-04 3.7306e-04 2.7681e-04 0.1CaCl2-0.6LiCl-0.3MnCl2 6.0996e-04 3.4331e-04 2.6131e-04 0.8LiCl-0.1MgCl2-0.1NaCl 6.9073e-04 3.6962e-04 2.6942e-04 0.7LiCl-0.1MnCl2-0.2NaCl 6.5571e-04 3.5366e-04 2.6096e-04 0.7LiCl-0.2NaCl-0.1SrCl2 7.6813e-04 3.7892e-04 2.6508e-04 C-14
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-chloride-blanket-Pub201058.pdf, page 39
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+3.4.1 Binary Salts The binary salts with tritium production greater than FLiBe with 90% 6Li atomic enrichment are shown in Figure 26 and tabulated in Table 3. The tritium production of the unenriched chloride salts was approximately 65% of that for unenriched FLiBe. Tritium production was increased by approximately 10% when enriching the chloride salts to 90% atomic 37Cl. The most signiﬁcant increase in chloride salt tritium production occurred when simultaneously enriching 37Cl and 6Li. In this scenario, chloride salt tritium production ratios were achieved with upward of 19% greater than that of unenriched FLiBe. 0.3LiCl-0.7PbCl2 0.4LiCl-0.6PbCl2 0.2LiCl-0.8PbCl2 0.5LiCl-0.5PbCl2 0.6LiCl-0.4PbCl2 0.7LiCl-0.3PbCl2 0.8LiCl-0.2PbCl2 0.9LiCl-0.1PbCl2 0.8LiCl-0.2SrCl2 0.9LiCl-0.1SrCl2 0.7LiCl-0.3SrCl2 0.7LiCl-0.3MnCl2 0.9LiCl-0.1BeCl2 0.6LiCl-0.4SrCl2 0.9LiCl-0.1CoCl2 0.8LiCl-0.2BeCl2 0.8LiCl-0.2CoCl2 0.6LiCl-0.4MnCl2 0.5LiCl-0.5SrCl2 0.7LiCl-0.3BeCl2 0.7LiCl-0.3CoCl2 0.1LiCl-0.9PbCl2 0.9LiCl-0.1MgCl2 0.6LiCl-0.4CoCl2 0.9LiCl-0.1NaCl 0.4LiCl-0.6SrCl2 0.5LiCl-0.5MnCl2 0.6LiCl-0.4BeCl2 0.9LiCl-0.1CaCl2 0.5LiCl-0.5CoCl2 0.8LiCl-0.2MgCl2 0.5LiCl-0.5BeCl2 0.8LiCl-0.2NaCl 0.9LiCl-0.1KCl Binary Salt 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 Salt 3H / 90% 6Li Enriched FLiBe 3H Enriched 90% 37Cl 90% 6Li Enriched 90% 37Cl Unenriched Figure 26. The binary salts’ tritium production normalized to 90% atomically enriched FLiBe. 27
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 43
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+0.5LiCl-0.1MgCl2-0.4PbCl2 0.5LiCl-0.1NaCl-0.4PbCl2 0.6LiCl-0.1MgCl2-0.3PbCl2 0.7LiCl-0.2MnCl2-0.1SrCl2 0.6LiCl-0.2MnCl2-0.2SrCl2 0.6LiCl-0.3MnCl2-0.1SrCl2 0.8LiCl-0.1MgCl2-0.1PbCl2 0.1KCl-0.4LiCl-0.5PbCl2 0.1KCl-0.5LiCl-0.4PbCl2 0.7LiCl-0.1MgCl2-0.2MnCl2 0.8LiCl-0.1NaCl-0.1SrCl2 0.7LiCl-0.1NaCl-0.2SrCl2 0.7LiCl-0.2MnCl2-0.1NaCl 0.1KCl-0.6LiCl-0.3PbCl2 0.6LiCl-0.1NaCl-0.3SrCl2 0.1CaCl2-0.7LiCl-0.2MnCl2 0.2BeCl2-0.7LiCl-0.1NaCl 0.6LiCl-0.3MnCl2-0.1NaCl 0.1BeCl2-0.1CaCl2-0.8LiCl 0.1CaCl2-0.6LiCl-0.3MnCl2 0.8LiCl-0.1MgCl2-0.1NaCl 0.7LiCl-0.1MnCl2-0.2NaCl 0.7LiCl-0.2NaCl-0.1SrCl2 Ternary Salt 0.6 0.7 0.8 0.9 1.0 Salt 3H / 90% 6Li Enriched FLiBe 3H Enriched 90% 37Cl 90% 6Li Enriched 90% 37Cl Unenriched Figure 28. The ternary salts’ tritium production normalized to 90% atomically enriched FLiBe. 31
+
+query: FLiBe historical selection reasons beryllium toxicity HF corrosion alternative blanket salt
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 10
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+need to keep the salt ~50 or more degrees above its freezing point, a lower salt melting temperature is likely required to enable a concept based on these materials. One advantage of FLiBe over the other liquid candidates is its lower electrical conductivity, decreasing any potential operational complications arising from the interactions with the strong magnetic fields in the reactor [Forsberg 2017] such as the magneto-hydrodynamic (MHD) pressure drop; interference of a conducting fluid with the operation of magnetic sensors necessary to control tokamak plasmas is a primary reason for the selection of FLiBe [Kuang 2018]. However, the Lorentz forces developed in these fields can cause charge separation, which may affect the free energy and kinetics of the reactions between the FLiBe salt and the walls of the blanket [DeVan 1979]. With renewed interest in FLiBe blanket concepts, the purpose of this report is to explore the current state of materials-related understanding associated with using FLiBe, primarily focusing on compatibility issues. Compatibility of structural materials with Li and Pb-Li have been the subject of many studies over the past 50 years [Jun
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 56
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+K [577◦C]. This temperature can be signiﬁcantly decreased by several hundred degrees but with signiﬁcant decreases in tritium production. A 0.1LiCl-0.9BeCl2 composition melts at 451 K [178◦C]. The element Be is not listed in the short- or midterm DOE critical materials report [42]. Unfortunately, Be has unique health hazards and associated challenges working with it. Also, one of the primary goals of investigating alternatives to FLiBe was to determine if molten salts without Be could act as eﬃcient liquid breeder blankets. The element Be is an alkaline earth metal and has a single ionization state, which simpliﬁes the salt system. The LiCl-BeCl2 thermophysical data were available for this salt, and the primary outliers are that this salt has a slightly higher viscosity and lower speciﬁc heat capacity than the other chloride salts. The LiCl-SrCl2 received adequate scores for FOMflow and FOMheat. The LiCl-CoCl2 has good tritium production potential, but it has signiﬁcant drawbacks in the categories of liquidus temperature, price, toxicity, and activation of 60Co, which has a 5.27 year half-life and a high-energy gamma decay. Safety data sheets warn of category 4 acute oral toxicity [43]. The element Co also has multiple ionization states, which complicates the blanket chemistry. Co is listed in both the short- and 44
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-pint-blanket-Pub219653.pdf, page 14
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+5 Figure 3 shows the redox potential for various elements in fluoride salts. Thus, for example, if a stainless steel containing 16%Cr and 2%Mn were exposed to a salt containing NiF2 as an impurity, one would expect more dissolution of Cr and Mn from the steel compared to a salt with no NiF2 impurity. To reduce the salt potential due to T or other impurities, a redox agent can be added to the salt. Be is a good redox agent for FLiBe because it has a strong tendency to form stable BeF2, due to its very low chemical potential, defined as [Olander 2002, Petti 2006, Calderoni 2009, Keiser 2022]: DG = -RTln(𝑝!") The addition of Be can serve as a redox regulating agent [Wong 2005] that serves a dual purpose: a) it captures the free fluorine in the system, which is a byproduct of FLiBe irradiation: xM+ 𝐹" → xM𝐹"/$ b) it also helps reduce TF to T2, the ratio TF/T2 dictates the salt redox potential, which in turn, regulates the extent of corrosion [DeVan 1979, Ihli 2008, Cheng 2003]: 2TF+ Be → Be𝐹" + 𝑇" T2 is then recovered and recycled back to the fusion reactor [Cheng 2003, Fukada 2012]. Figure 3. Calculated redox potentials of various elements as a function of temperature in fluoride salts from HSC Chemistry v.9.0. Solid lines are for metal oxidation at 1ppm concentration. The dotted lines are for oxidation of reductants. HF/H2 rations are for 1 atm total pressure. Eu data in FLiNaK (FLiNaK often is used as a surrogate for FLiBe). [Zhang 2018] It is thus apparent that compatibility of structural materials in FLiBe is a complicated phenomenon. Potential candidate materials are addressed in the following sections where the limited compatibility data (shown in Figure 4) are addressed. Since the testing procedure and salt purity have a strong effect on the
+
+————————————————————————————————————————————————————————————
+
+[4] breeder_blanket_and_tritium_fuel_cycle_feasibility_of_the_infinity_two_fusion_pilot_plant.pdf, page 37
+    Citation: Breeder blanket and tritium fuel cycle feasibility of the Infinity Two fusion pilot plant — D.W.S. Clark et al. — Journal of Plasma Physics vol. 91 (2025) — DOI: 10.1017/S002237782500039X
+
+which can lead to hydrofluoric acid production via radiolysis and requires tight chemistry control in order to avoid unacceptable corrosion (Pint et al. 2024). These are key concerns which may require the development of entirely new materials sys- tems and could potentially hamper the deployment of molten salt blanket concepts in the near term. The final challenge is that of tritium solubility in FLiBe is extremely low and could result in elevated tritium loss via diffusion and trapping in blanket structural materials (Wong et al. 2005). Ultimately, these challenges, in combination with the difficulty of reaching an adequate TBR as outlined in § 3, make FLiBe or other salt-based blankets unattractive for FusionDirect at this point in time. https://doi.org/10.1017/S002237782500039X Published online by Cambridge University Press
+
+————————————————————————————————————————————————————————————
+
+[5] lam-Fusion_Blankets_and_Fluoride-Salt-Cooled_High-Temperature_Reactors_with_Flibe_Salt_Coolant__Common_Challenges__Tritium_Control__and_Opportunities_for_.pdf, page 9
+    Citation: Fusion Blankets and Fluoride-Salt-Cooled High-Temperature Reactors with Flibe Salt Coolant: Common Challenges, Tritium Control, and Opportunities for Synergistic Development Strategies Between Fission, Fusion, and Solar Salt Technologies — Charles Forsberg et al. — Nuclear Technology vol. 206 (2020) — DOI: 10.1080/00295450.2019.1691400
+
+candidate is beryllium metal that is slightly soluble in flibe and rapidly reacts with HF (Ref. 37). Beryllium plus two tritium fluorides yields BeF2 plus 3H2—hydrogen. In flibe salt, hydrogen remains as diatomic hydrogen. Other reducing agents can be used to convert 3HF to 3H2. The reference ARC design has beryllium exposed to flibe. If dissolution rates of beryllium are too high or localized, a more powerful reducing agent may be required to minimize beryllium dissolution into the salt. Fluoride salts are fluxing agents; that is, they dissolve oxide and other coatings. The only way to prevent corro- sion of the metal is to have the chemical redox conditions in the salt more reducing than the metals of construction; that is, the metals must be noble relative to the salt.33 Figure 5 shows the chemical redox potential of various elements. The materials of construction determine the redox conditions required to minimize corrosion. With the requirements for redox control is the associated requirement to develop robust methods to measure and control the redox potential to assure corrosion control. Multiple methods to measure redox control have been developed in a laboratory setting but what is required is development of a redox control strategy and instrumenta- tion with the reliability requirements for power plant operations. In this context, there is a large difference between MSRs and clean flibe systems. In a fluoride salt MSR the historical strategy to control redox is to control the ratio of dissolved +3U/+4U in the salt. With the high concentrations of uranium in the salt, measurement and thus control of redox potential is straightforward. Material choices are first limited by the requirements to be compatible with flibe salt as shown in Fig. 5. Note that the HF/H2 = 0.01 potential is above the Cr/CrF2 potential implying that HF will react with chromium metal to produce chromium fluoride and H2. Chromium is an alloying agent in almost all high-temperature mate- rials. Structural material choices depend on if one wants a code-qualified material. Using code-qualified materials simplifies licensing, and code-qualified materials are commercially available. However, it requires nearly a decade to fully qualify a structure material. There is the option of adding nonstructural materials including tungsten and nickel as coatings for corrosion control. Adding carbon to the system, such as the fuel in the FHR, can increase corrosion rates during irradiation.19,36 All materials in contact with electrically conductive flibe must be considered because of the potential of galvanic corrosion between different materials of construction, In some designs of FHRs this has led to the decision to use a single material of construction, 316 stainless steel, to avoid such interactions. Material decisions are at an earlier stage of development for fusion. This paper does not go further into this complex subject. Coupled to materials and tritium control is purification of the flibe salt to minimize corrosion. Some impurities in all materials of construction will leach into the salt over time. Neutron irradiation will generate other species in the salt, such as oxygen, and by interactions with the materials of construction creating corrosion products
+
+query: 36Cl activation radioactive chloride blanket waste activation products
+knowledge base: molten-salt
+
+[1] Principles_of_Modern_Chemistry_by_David_W._David_W._Oxtoby__Oxtoby__H._Pat_Gillis__Alan_Campion__z-lib.org_.pdf, page 328
+    Citation: Principles of Modern Chemistry — David W. Oxtoby, H. Pat Gillis, Alan Campion
+
+2-chloropropane.
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 47
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+3.4.3 Production of 36Cl Figure 30 and Table 7 show the ratio of tritium production to 36Cl production sorted in descending order of tritium production with the highest-performing salt listed at the top of each table. The general trend of these results highlights the inverse relationship that as tritium production decreases, 36Cl production increases. Notably, various binary salt compositions with MnCl2 appear as outliers with low 36Cl production. 0.3LiCl-0.7PbCl2 0.4LiCl-0.6PbCl2 0.2LiCl-0.8PbCl2 0.5LiCl-0.5PbCl2 0.6LiCl-0.4PbCl2 0.7LiCl-0.3PbCl2 0.8LiCl-0.2PbCl2 0.9LiCl-0.1PbCl2 0.8LiCl-0.2SrCl2 0.9LiCl-0.1SrCl2 0.7LiCl-0.3SrCl2 0.7LiCl-0.3MnCl2 0.9LiCl-0.1BeCl2 0.6LiCl-0.4SrCl2 0.9LiCl-0.1CoCl2 0.8LiCl-0.2BeCl2 0.8LiCl-0.2CoCl2 0.6LiCl-0.4MnCl2 0.5LiCl-0.5SrCl2 0.7LiCl-0.3BeCl2 0.7LiCl-0.3CoCl2 0.1LiCl-0.9PbCl2 0.9LiCl-0.1MgCl2 0.6LiCl-0.4CoCl2 0.9LiCl-0.1NaCl 0.4LiCl-0.6SrCl2 0.5LiCl-0.5MnCl2 0.6LiCl-0.4BeCl2 0.9LiCl-0.1CaCl2 0.5LiCl-0.5CoCl2 0.8LiCl-0.2MgCl2 0.5LiCl-0.5BeCl2 0.8LiCl-0.2NaCl 0.9LiCl-0.1KCl Binary Salt 0.5 1.0 1.5 2.0 2.5 3H Production / 36Cl Production Enriched 90% 37Cl 90% 6Li Enriched 90% 37Cl Unenriched Figure 30. The binary salts’ tritium production to 36Cl production ratio. Table 7. The ratio of 3H production to 36Cl production in each salt. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.3LiCl-0.7PbCl2 0.381159 1.047663 2.673887 0.4LiCl-0.6PbCl2 0.475001 1.169339 2.635615 0.2LiCl-0.8PbCl2 0.268353 0.846603 2.686655 Continued on next page 35
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 49
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+0.5LiCl-0.1MgCl2-0.4PbCl2 0.5LiCl-0.1NaCl-0.4PbCl2 0.6LiCl-0.1MgCl2-0.3PbCl2 0.7LiCl-0.2MnCl2-0.1SrCl2 0.6LiCl-0.2MnCl2-0.2SrCl2 0.6LiCl-0.3MnCl2-0.1SrCl2 0.8LiCl-0.1MgCl2-0.1PbCl2 0.1KCl-0.4LiCl-0.5PbCl2 0.1KCl-0.5LiCl-0.4PbCl2 0.7LiCl-0.1MgCl2-0.2MnCl2 0.8LiCl-0.1NaCl-0.1SrCl2 0.7LiCl-0.1NaCl-0.2SrCl2 0.7LiCl-0.2MnCl2-0.1NaCl 0.1KCl-0.6LiCl-0.3PbCl2 0.6LiCl-0.1NaCl-0.3SrCl2 0.1CaCl2-0.7LiCl-0.2MnCl2 0.2BeCl2-0.7LiCl-0.1NaCl 0.6LiCl-0.3MnCl2-0.1NaCl 0.1BeCl2-0.1CaCl2-0.8LiCl 0.1CaCl2-0.6LiCl-0.3MnCl2 0.8LiCl-0.1MgCl2-0.1NaCl 0.7LiCl-0.1MnCl2-0.2NaCl 0.7LiCl-0.2NaCl-0.1SrCl2 Ternary Salt 0.5 1.0 1.5 2.0 2.5 3H Production / 36Cl Production Enriched 90% 37Cl 90% 6Li Enriched 90% 37Cl Unenriched Figure 31. The ternary salts’ tritium production to 36Cl production ratio. 37
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-chloride-blanket-Pub201058.pdf, page 78
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 16. The binary salt 36Cl production (atoms/b-cm). Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.3LiCl-0.7PbCl2 9.5330e-04 3.9492e-04 2.5450e-04 0.4LiCl-0.6PbCl2 8.1398e-04 3.7427e-04 2.5706e-04 0.2LiCl-0.8PbCl2 1.1932e-03 4.3629e-04 2.5204e-04 0.5LiCl-0.5PbCl2 7.2404e-04 3.6191e-04 2.5938e-04 0.6LiCl-0.4PbCl2 6.6044e-04 3.5437e-04 2.6173e-04 0.7LiCl-0.3PbCl2 6.1270e-04 3.4878e-04 2.6361e-04 0.8LiCl-0.2PbCl2 5.7610e-04 3.4517e-04 2.6529e-04 0.9LiCl-0.1PbCl2 5.4648e-04 3.4224e-04 2.6680e-04 0.8LiCl-0.2SrCl2 5.9695e-04 3.5283e-04 2.6935e-04 0.9LiCl-0.1SrCl2 5.5626e-04 3.4568e-04 2.6855e-04 0.7LiCl-0.3SrCl2 6.4693e-04 3.6144e-04 2.7007e-04 0.7LiCl-0.3MnCl2 5.6685e-04 3.3452e-04 2.5863e-04 0.9LiCl-0.1BeCl2 6.3182e-04 3.6322e-04 2.7379e-04 0.6LiCl-0.4SrCl2 7.0822e-04 3.7246e-04 2.7128e-04 0.9LiCl-0.1CoCl2 5.4753e-04 3.4631e-04 2.6975e-04 0.8LiCl-0.2BeCl2 7.6512e-04 3.9251e-04 2.7995e-04 0.8LiCl-0.2CoCl2 5.7832e-04 3.5264e-04 2.7223e-04 0.6LiCl-0.4MnCl2 5.9981e-04 3.3566e-04 2.5579e-04 0.5LiCl-0.5SrCl2 7.8861e-04 3.8724e-04 2.7282e-04 0.7LiCl-0.3BeCl2 9.2647e-04 4.2821e-04 2.8678e-04 0.7LiCl-0.3CoCl2 6.1519e-04 3.6032e-04 2.7486e-04 0.1LiCl-0.9PbCl2 1.6976e-03 5.4519e-04 2.5333e-04 0.9LiCl-0.1MgCl2 5.7894e-04 3.5186e-04 2.7117e-04 0.6LiCl-0.4CoCl2 6.6130e-04 3.6910e-04 2.7778e-04 0.9LiCl-0.1NaCl 6.1407e-04 3.5352e-04 2.6609e-04 0.4LiCl-0.6SrCl2 8.9834e-04 4.0799e-04 2.7438e-04 0.5LiCl-0.5MnCl2 6.3853e-04 3.3782e-04 2.5244e-04 0.6LiCl-0.4BeCl2 1.1206e-03 4.7340e-04 2.9424e-04 0.9LiCl-0.1CaCl2 5.5082e-04 3.4630e-04 2.7053e-04 0.5LiCl-0.5CoCl2 7.1851e-04 3.7998e-04 2.8099e-04 0.8LiCl-0.2MgCl2 6.4518e-04 3.6532e-04 2.7483e-04 0.5LiCl-0.5BeCl2 1.3538e-03 5.3113e-04 3.0216e-04 0.8LiCl-0.2NaCl 7.0379e-04 3.6718e-04 2.6445e-04 0.9LiCl-0.1KCl 5.3817e-04 3.4767e-04 2.7508e-04 B-10
+
+————————————————————————————————————————————————————————————
+
+[5] Principles_of_Modern_Chemistry_by_David_W._David_W._Oxtoby__Oxtoby__H._Pat_Gillis__Alan_Campion__z-lib.org_.pdf, page 50
+    Citation: Principles of Modern Chemistry — David W. Oxtoby, H. Pat Gillis, Alan Campion
+
+Chemistry
+
+attachment index
+
+Attached to this project:
+- Molten_Salt_Thermophysical_Properties.json
+
+attachment Molten_Salt_Thermophysical_Properties.json
+
+{
+    "MSTDBTP": {
+        "estimates": {
+            "RK": {
+                "Density": {
+                    "BeF2-LiF": {
+                        "A": [
+                            -0.2616,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            7.53e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "CantorS. Density and Viscosity of Several Molten Fluoride Mixtures; Oak RidgeTN (United States)1973. https://doi.org/10.2172/4419855. CantorS.; WardW. T.; MoynihanC. T. Viscosity and Density in Molten BeF 2 -LiF Solutions. J. Chem. Phys. 196950 (7). PowersW. D.; CohenS. I.; GreeneN. D. Physical Properties of Molten Reactor Fuels and Coolants. Nucl. Sci. Eng. 196317.",
+                        "t_max": 1367.5,
+                        "t_min": 787.7
+                    },
+                    "BeF2-NaF": {
+                        "A": [
+                            0.009154,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000106,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "BlankeB. C.; BousquetE. N.; JonesL. V.; MurphyE. L.; ValleeR. E. Density of Fused Mixtures of Sodium FlouorideBeryllium Fluorideand Uranium Fluoride. Mound Laboratory. 1958. PowersW. D.; CohenS. I.; GreeneN. D. Physical Properties of Molten Reactor Fuels and Coolants. Nucl. Sci. Eng. 196317 (2)200-211. https://doi.org/10.13182/NSE63-5.",
+                        "t_max": 1373.0,
+                        "t_min": 633.0
+                    },
+                    "KCl-KF": {
+                        "A": [
+                            0.08214,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -7.36e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1310.0,
+                        "t_min": 962.0
+                    },
+                    "KCl-LiCl": {
+                        "A": [
+                            0.076801732,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -8.5e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Van ArtsdalenE. R.; YaffeI. S. Electrical Conductance and Density of Molten Salt Systems: KCl-LiClKCl-NaCl and KCl-KI. J. Phys. Chem. 195559 (2)118-127. https://doi.org/10.1021/j150524a007.",
+                        "t_max": 1213.2,
+                        "t_min": 668.0
+                    },
+                    "KCl-MgCl2": {
+                        "A": [
+                            0.3931,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000492,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "LillebuenB.Ph.D. ThesisThe Technical University of NorwayTrondheimNorway(1969)",
+                        "t_max": 1213.2,
+                        "t_min": 723.0
+                    },
+                    "KCl-NaCl": {
+                        "A": [
+                            -0.030135058,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -1.21e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Van ArtsdalenE. R.; YaffeI. S. Electrical Conductance and Density of Molten Salt Systems: KCl-LiClKCl-NaCl and KCl-KI. J. Phys. Chem. 195559 (2)118-127. https://doi.org/10.1021/j150524a007.",
+                        "t_max": 1303.2,
+                        "t_min": 945.0
+                    },
+                    "KCl-UCl3": {
+                        "A": [
+                            -2.1219,
+                            1.56934,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.00149087,
+                            -0.0016887,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "DesyatnikV. N.; KatyshevS. F.; RaspopinS. P.; ChervinskiiY. F. DENSITYSURFACE-TENSION AND VISCOSITY OF MELTS OF URANIUM TRICHLORIDE-POTASSIUM-CHLORIDE SYSTEM. Zhurnal Fiz. khimii 197650 (10)2522-2525.",
+                        "t_max": 1500.0,
+                        "t_min": 863.0
+                    },
+                    "KCl-UCl4": {
+                        "A": [
+                            -2.333,
+                            0.5056,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.002062,
+                            2.12e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1213.2,
+                        "t_min": 657.0
+                    },
+                    "KCl-ZrF4": {
+                        "A": [
+                            -1.906,
+                            2.227,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000693,
+                            -0.001029,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1280.0,
+                        "t_min": 864.0
+                    },
+                    "KF-LiF": {
+                        "A": [
+                            -0.05708,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            2.9e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "TaniuchiK.; KanaiT. Density of Binary Molten Salts of Lithium Fluoride-Potassium Fluoride and Lithium Fluoride-Calcium Fluoride Systems. Denki Kagaku oyobi Kogyo Butsuri Kagaku 197745 (6)401-404.",
+                        "t_max": 1367.5,
+                        "t_min": 1006.0
+                    },
+                    "KF-NaF": {
+                        "A": [
+                            -0.6499,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000297,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "PorterB.; MeakerR. E. Density and Molar Volumes of Binary Fluoride Mixtures. U.S. Dept. of the InteriorBureau of Mines. 1966.",
+                        "t_max": 1373.0,
+                        "t_min": 1050.0
+                    },
+                    "KF-ZrF4": {
+                        "A": [
+                            -1.774,
+                            0.9944,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000579,
+                            -0.000261,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1310.0,
+                        "t_min": 933.0
+                    },
+                    "LiCl-NaCl": {
+                        "A": [
+                            -0.2435,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            7.73e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1303.2,
+                        "t_min": 850.0
+                    },
+                    "LiCl-UCl3": {
+                        "A": [
+                            -1.525,
+                            1.321,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.0015069,
+                            -0.001584,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1300.0,
+                        "t_min": 766.0
+                    },
+                    "LiCl-UCl4": {
+                        "A": [
+                            -1.956,
+                            1.404,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.001796,
+                            -0.000984,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1053.0,
+                        "t_min": 819.0
+                    },
+                    "LiF-NaF": {
+                        "A": [
+                            0.005952,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -5.25e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "JanzG. J.; GardnerG. L.; KrebsU. Molten Salts: Volume 4Part 1Fluorides and Mixtures Electrical ConductanceDensityViscosityand Surface Tension Data. J. Phys. Chem. Ref. Data. 19743 (1).",
+                        "t_max": 1373.0,
+                        "t_min": 1123.6
+                    },
+                    "LiF-ThF4": {
+                        "A": [
+                            1.769,
+                            -1.798,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.001047,
+                            0.000873,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "HillD. G.; CantorS.; WardW. T. Molar Volumes in the LiFThF4 System. J. Inorg. Nucl. Chem. 196729 (1)241-243.",
+                        "t_max": 1651.0,
+                        "t_min": 1020.0
+                    },
+                    "LiF-UF4": {
+                        "A": [
+                            2.219429608,
+                            -2.785316627,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.001771493,
+                            0.002645012,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "PorterB.; MeakerR. E. Density and Molar Volumes of Binary Fluoride Mixtures. U.S. Dept. of the InteriorBureau of Mines. 1966.",
+                        "t_max": 1614.0,
+                        "t_min": 980.0
+                    },
+                    "LiF-ZrF4": {
+                        "A": [
+                            -1.272093482,
+                            0.734841564,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000487,
+                            0.000231,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevS. F.; ArtemovV. V; DesyatnikV. N. Density and surface tension of melts of zirconium and hafnium fluorides with lithium fluoride. Sov. At. Energy. 198763929-930.",
+                        "t_max": 1367.5,
+                        "t_min": 943.0
+                    },
+                    "MgCl2-NaCl": {
+                        "A": [
+                            0.38827,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000318,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "LillebuenB.Ph.D. ThesisThe Technical University of NorwayTrondheimNorway(1969)",
+                        "t_max": 1303.2,
+                        "t_min": 990.0
+                    },
+                    "NaCl-NaF": {
+                        "A": [
+                            -0.117,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            1.77e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1373.0,
+                        "t_min": 1073.0
+                    },
+                    "NaCl-ThCl4": {
+                        "A": [
+                            -0.274401353,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.00039,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "OyamadaR.;  YoshidaS.;  KurodaT. Denki Kagaku Oyobi Kogyo Butsuri Kagaku196937417",
+                        "t_max": 1303.2,
+                        "t_min": 670.0
+                    },
+                    "NaCl-UCl3": {
+                        "A": [
+                            -0.1333,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000144,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "ParkerS. S.; LongA.; LhermitteC.; VogelS.; MonrealM.; JacksonJ.M. Thermophysical properties of liquid chlorides from 600 to 1600 K: Melt pointenthalpy of fusionand volumetric expansion. J. Mol. Liq. 2022346118147.",
+                        "t_max": 1500.0,
+                        "t_min": 796.0
+                    },
+                    "NaCl-UCl4": {
+                        "A": [
+                            -2.8509,
+                            3.02579,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.00282427,
+                            -0.0029857,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "ZiolekB.; BogaczA. Roczniki Chem. 197044665.",
+                        "t_max": 1303.2,
+                        "t_min": 780.0
+                    },
+                    "NaCl-ZrF4": {
+                        "A": [
+                            -1.0393,
+                            -0.04282,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000357,
+                            0.000184,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1303.0,
+                        "t_min": 1033.0
+                    },
+                    "NaF-ThF4": {
+                        "A": [
+                            0.4476,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000762,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "DesyatnikV. N.; KlimenkovA. A.; KurbatovN. N.; NechaevA. I.; RaspopinS. P.; ChervinskiiY. F. Density and kinematic viscosity of NaF-ThF4 and KF-ThF4 melts. Sov. At. Energy. 198151807-810.",
+                        "t_max": 1651.0,
+                        "t_min": 1027.0
+                    },
+                    "NaF-UF4": {
+                        "A": [
+                            -0.1274,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000807,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "BlankeB. C.; BousquetE. N.; JonesL. V.; MurphyE. L.; ValleeR. E. Density of Fused Mixtures of Sodium FlouorideBeryllium Fluorideand Uranium Fluoride. Mound Laboratory. 1958. CohenS. I.; JonesT. N. A SUMMARY OF DENSITY MEASUREMENTS ON MOLTEN FLUORIDE MIXTURES AND A CORRELATION FOR PREDICTING DENSITIES OF FLUORIDE MIXTURESORNL-1702; United States1954.",
+                        "t_max": 1614.0,
+                        "t_min": 923.0
+                    },
+                    "NaF-ZrF4": {
+                        "A": [
+                            -1.2952,
+                            -0.4568,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000311,
+                            0.000665,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "ArtemovV. V.; KatyshevS. F.; DesyatnikV. N.Density and Surface Tension of Sodium Halide Melts with Zirconium and Hafnium Tetrafluorides. Zhurnal Fiz. Khimii. 199064 (4)1113-1115.",
+                        "t_max": 1373.0,
+                        "t_min": 953.0
+                    },
+                    "UCl3-UCl4": {
+                        "A": [
+                            0.1833,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000261,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1300.0,
+                        "t_min": 837.0
+                    }
+                },
+                "Viscosity": {
+                    "BeF2-LiF": {
+                        "A": [
+                            -97.41,
+                            -104.354,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.1043,
+                            0.117,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -2.9e-05,
+                            -3.25e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Cantor, S.; Ward, W. T.; Moynihan, C. T. Viscosity and Density in Molten BeF2 -LiF Solutions. J. Chem. Phys. 1969, 50 (7), 2874-2879. https://doi.org/10.1063/1.1671478.",
+                        "t_max": 1303.2,
+                        "t_min": 660.0,
+                        "DOI": "https://doi.org/10.1063/1.1671478"
+                    },
+                    "BeF2-NaF": {
+                        "A": [
+                            -97.66,
+                            -36.368,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.1081,
+                            0.0309,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -3.29e-05,
+                            -9.42e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Blanke, B. C.; Fister, K. W.; Jones, L. V.; Jordan, K. C.; Joyner, R. W.; Murphy, E. L. Viscosity of Fused Mixtures of Sodium Fluoride, Beryllium Fluoride, and Uranium Fluoride. Mound Laboratory. 1958b.",
+                        "t_max": 1373.0,
+                        "t_min": 873.0,
+                        "DOI": "https://www.osti.gov/biblio/4303840-viscosity-fused-mixtures-sodium-fluoride-beryllium-fluoride-uranium-fluoride"
+                    },
+                    "KCl-LiCl": {
+                        "A": [
+                            -0.7936,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000661,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borcan, R.; Zuca, S. Rev Roumaine Chim. 1970, 15, 1681.",
+                        "t_max": 1275.0,
+                        "t_min": 886.0
+                    },
+                    "KCl-MgCl2": {
+                        "A": [
+                            -4.258,
+                            -6.125,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.005012,
+                            0.009048,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -1.66e-06,
+                            -3e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Bondarenko, N. V. J. Appl. Chem. (USSR). 1966. 39, 2522.",
+                        "t_max": 1300.0,
+                        "t_min": 723.0
+                    },
+                    "KCl-NaCl": {
+                        "A": [
+                            1.931,
+                            -1.0121,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.001878,
+                            -4.04e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Birri, Tony, Nick Termini, Kevin Garland, Shay Chapel, Hunter Andrews, Paul Rose Jr, and N. Dianne Ezell. FY23 progress report on viscosity and thermal conductivity measurements of molten salts. No. ORNL/TM-2023/3048. Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States), 2023.",
+                        "t_max": 1303.2,
+                        "t_min": 940.0,
+                        "DOI": "https://doi.org/10.2172/1887678"
+                    },
+                    "KCl-UCl3": {
+                        "A": [
+                            16.96,
+                            -32.46,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.0203,
+                            0.04,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            6.26e-06,
+                            -1.24e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1278.0,
+                        "t_min": 873.0
+                    },
+                    "KCl-UCl4": {
+                        "A": [
+                            -7.557,
+                            20.08,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.0132,
+                            -0.0267,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -4.72e-06,
+                            9.52e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1213.0,
+                        "t_min": 676.0
+                    },
+                    "KF-LiF": {
+                        "A": [
+                            -0.6398,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.00028,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Nguyen, D. K., and V. Danek. \"Viscosity of Melts of the System LiF-KF-K2NbF7.\" Chemical Papers-Slovak Academy of Sciences 54(5) (2000): 277-281.",
+                        "t_max": 1772.0,
+                        "t_min": 830.0
+                    },
+                    "KF-NaF": {
+                        "A": [
+                            0.7318,
+                            0.34734,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000719,
+                            -0.000599,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Kubikova, B., J. Mlynarikova, and M. Boca. \"Intermolecular forces in the NaF+ KF+ K2NbF7 system: Investigation of surface tension and viscosity.\" Journal of Chemical & Engineering Data 53(3) (2008): 812-815.",
+                        "t_max": 1373.0,
+                        "t_min": 1120.0
+                    },
+                    "LiCl-UCl3": {
+                        "A": [
+                            10.57,
+                            -8.417,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.01094,
+                            0.01062,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            3.47e-06,
+                            -3.36e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1278.0,
+                        "t_min": 821.0
+                    },
+                    "LiCl-UCl4": {
+                        "A": [
+                            -9.083,
+                            12.26,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.017,
+                            -0.01762,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -5.65e-06,
+                            5.85e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1275.0,
+                        "t_min": 730.0
+                    },
+                    "LiF-NaF": {
+                        "A": [
+                            0.1938,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000155,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Cohen, S. I.; Jones, T. N. VISCOSITY MEASUREMENTS ON MOLTEN FLUORIDE MIXTURES ORNL-2278; Oak Ridge National Lab., Tenn.: Oak Ridge, TN (United States), 1957. https://doi.org/10.2172/4803933.",
+                        "t_max": 1772.0,
+                        "t_min": 973.0,
+                        "DOI": "https://doi.org/10.2172/4803933"
+                    },
+                    "LiF-UF4": {
+                        "A": [
+                            -101.0,
+                            78.82,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.141,
+                            -0.1039,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -4.71e-05,
+                            3.33e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Blanke, B.C.; Bousquet, E. N.; Curtis, M. L.; Murphy, E. L. Density and Viscosity of Fused Mixtures of Lithium, Beryllium, and Uranium Fluorides. Mound Laboratory. 1959.",
+                        "t_max": 1772.0,
+                        "t_min": 973.0,
+                        "DOI": "https://www.osti.gov/biblio/4274391"
+                    },
+                    "MgCl2-NaCl": {
+                        "A": [
+                            -0.1719,
+                            3.753,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000755,
+                            -0.004986,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            2.3e-07,
+                            1.52e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Bondarenko, N. V.; Strelets, Kh. L. J. Appl. Chem. (USSR). 1965, 38, 1254.",
+                        "t_max": 1203.2,
+                        "t_min": 973.0
+                    },
+                    "NaCl-UCl3": {
+                        "A": [
+                            21.44,
+                            -25.24,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.02594,
+                            0.0301,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            7.95e-06,
+                            -9.24e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1278.0,
+                        "t_min": 888.0
+                    },
+                    "NaCl-UCl4": {
+                        "A": [
+                            -4.008,
+                            10.47,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.005072,
+                            -0.008681,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1203.2,
+                        "t_min": 713.0
+                    },
+                    "NaF-UF4": {
+                        "A": [
+                            -130.6,
+                            124.2,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.1864,
+                            -0.169,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -6.44e-05,
+                            5.72e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Blanke, B. C.; Fister, K. W.; Jones, L. V.; Jordan, K. C.; Joyner, R. W.; Murphy, E. L. Viscosity of Fused Mixtures of Sodium Fluoride, Beryllium Fluoride, and Uranium Fluoride. Mound Laboratory. 1958b.",
+                        "t_max": 1614.0,
+                        "t_min": 973.0,
+                        "DOI": "https://www.osti.gov/biblio/4303840-viscosity-fused-mixtures-sodium-fluoride-beryllium-fluoride-uranium-fluoride"
+                    },
+                    "UCl3-UCl4": {
+                        "A": [
+                            24.63,
+                            17.13,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.02749,
+                            -0.0208,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            8.5e-06,
+                            6.42e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1300.0,
+                        "t_min": 870.0
+                    }
+                }
+            }
+        },
+        "evaluated": {
+            "AlCl3": {
+                "1": {
+                    "boil": {
+                        "reference": "Janz, G. J. Molten Salts Handbook; Elsevier: New York, 1967. https://doi.org/10.1016/B978-0-123-95642-2.X5001-1.",
+                        "uncertainty_notes": "None",
+                        "value": 453.0,
+                        "value_notes": "Sublimates",
+                        "DOI": "https://doi.org/10.1016/B978-0-123-95642-2.X5001-1",
+                        "abs_uncertainty": 0.0
+                    },
+                    "heat_capacity": {
+                        "pct_uncertainty": 0.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            125.52,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011"
+                    },
+                    "melt": {
+                        "reference": "Kelley, K.K. Contributions to the Data on Theoretical Metallurgy: [Part] 3. The Free Energies of Vaporization and Vapor Pressures of Inorganic Substances. U.S. Department of the Interior, Bureau of Mines. 1935.",
+                        "uncertainty_notes": "None",
+                        "value": 465.0,
+                        "value_notes": "Pressurized",
+                        "DOI": "https://digital.library.unt.edu/ark:/67531/metadc12551/",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 133.3405,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            469.0,
+                            559.0
+                        ],
+                        "reference": "Brockner, W.; Torklep, K.; Oye, H.A. Viscosity of Aluminium Chloride and Acidic Sodium Chloroaluminate Melts. Berichte der Bunsengesellschaft for Phys. Chemie 1979b, 83 (1), 1-11.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.00228,
+                            19399.999999999996
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19790830102"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            462.0,
+                            569.0
+                        ],
+                        "reference": "King, L. A.; Seegmiller, D. W. Liquid and vapor densities of aluminum chloride. J. Chem. Eng. Data 1971, 16 (1), 23-26.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.56,
+                            0.00271
+                        ],
+                        "DOI": "https://doi.org/10.1021/je60048a008"
+                    }
+                }
+            },
+            "AlCl3-KCl": {
+                "0.055-0.945": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "value": 1024.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 5.0
+                    },
+                    "molecular_weight": 77.7847,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0529,
+                            26800.0
+                        ]
+                    }
+                },
+                "0.115-0.885": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 1000.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 81.3121,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0407,
+                            27700.0
+                        ]
+                    }
+                },
+                "0.183-0.817": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 972.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 85.3097,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0285,
+                            29800.0
+                        ]
+                    }
+                },
+                "0.257-0.743": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 942.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 89.6601,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0197,
+                            31900.0
+                        ]
+                    }
+                },
+                "0.333-0.667": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 905.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 94.1281,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            960.0,
+                            1040.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.97,
+                            0.00061
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                },
+                "0.5-0.5": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "value": 531.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 5.0
+                    },
+                    "molecular_weight": 103.9459,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            740.0,
+                            1040.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.96,
+                            0.000662
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                },
+                "0.667-0.333": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "value": 414.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 5.0
+                    },
+                    "molecular_weight": 113.7637,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            500.0,
+                            780.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.99,
+                            0.00079
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                },
+                "0.8-0.2": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 452.0,
+                        "value_notes": "LiquidGas",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 121.5827,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            480.0,
+                            540.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.03,
+                            0.001
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                }
+            },
+            "AlCl3-LiCl-NaCl": {
+                "0.5-0.1-0.4": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 414.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 94.2868,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            383.0,
+                            556.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0538,
+                            15000.0
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            432.0,
+                            606.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.04,
+                            0.000791
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.5-0.2-0.3": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 393.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 92.6819,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            372.0,
+                            534.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0441,
+                            15900.0
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            419.0,
+                            545.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.03,
+                            0.000794
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.5-0.3-0.2": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 381.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 91.077,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            384.0,
+                            534.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0448,
+                            16000.000000000002
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            397.0,
+                            534.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.01,
+                            0.000795
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.5-0.4-0.1": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 402.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 89.4721,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            424.0,
+                            574.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0495,
+                            15800.0
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            418.0,
+                            535.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.98,
+                            0.000764
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.6-0.1-0.3": {
+             
+
+… Molten_Salt_Thermophysical_Properties.json truncated at 60000 characters.
+
+query: LiCl-LiF eutectic thermophysical properties liquidus melting point
+knowledge base: molten-salt
+
+[1] bryantsev-d4sc07253g.pdf, page 7
+    Citation: Computing chemical potentials with machine-learning-accelerated simulations to accurately predict thermodynamic properties of molten salts — Luke D. Gibson, Rajni Chahal, Vyacheslav S. Bryantsev — Chemical Science vol. 16 (2025) — DOI: 10.1039/d4sc07253g
+
+solid- and liquid- phase LiCl. By locating the temperature at which the solid- and liquid-phase trends intersect, the ambient pressure melting point of LiCl is predicted to be 880 ± 18 K, which is remarkably close to the experimental value of 883 K. Conclusions The next generation of nuclear technologies heavily relies on the utility of molten salts for a variety of applications, ranging from coolants in nuclear reactors to solvents for recycling spent nuclear fuel. Despite great strides being made in experimental measurements of important molten salt mixtures, atomistic modeling can inform—and even accelerate—experiments by leveraging MD simulations for thermodynamic property predictions. However, poorly described interatomic interactions will lead to inaccurate predictions, and unreliable free energy methods frequently cause large uncertainties. Therefore, the overarching goal of this work is to demonstrate how our MLIP- accelerated, predictive framework can be leveraged to interro- gate challenging thermodynamic properties of molten salts. To this end, we predicted the melting point of lithium chloride because previous studies have shown that previously employed21 empirical methods fail to accurately predict this important thermodynamic property. Given that the chemical potential is the basis for predicting the melting point of LiCl, as well as many other thermochemical properties, we performed several chemical potential calcula- tions of both molten and solid LiCl through TI-based approaches with DFT-trained MLIPs. For select cases, we demonstrated excellent agreement between our MLIP-based Table 3 Solid phase chemical potentials at varying temperatures extrapolated to inﬁnite system size Source T (K) Method Chemical potential, m (kcal mol−1) MLFF 800 Einstein crystal −219.704  0.007 850 Einstein crystal −221.093  0.007 880 Einstein crystal −221.949  0.008 900 Einstein crystal −222.513  0.008 DFT 700 Harmonic + anharmonic −217.00  0.02 750 Harmonic + anharmonic −218.34  0.02 800 Harmonic + anharmonic −219.75  0.01 Fig. 5 Solid and liquid phase chemical potentials from MLFF and DFT predictions compared to experiment.45 Uncertainties of the ﬁtted lines are omitted for clarity, but error bars of MLFF and DFT data points are smaller than the size of the markers. 3084 | Chem. Sci., 2025, 16, 3078–3091 © 2025 The Author(s). Published by the Royal Society of Chemistry Chemical Science Edge Article Open Access Article. Published on 24 January 2025. Downloaded on 12/29/2025 2:23:10 PM. This article is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported Licence. View Article Online
+
+————————————————————————————————————————————————————————————
+
+[2] aimd-eutectic1.pdf, page 6
+    Citation: First-principles molecular dynamics modeling of UCl3 in LiCl-KCl eutectic — Jia Song et al. — Journal of Molecular Liquids vol. 234 (2017) — DOI: 10.1016/j.molliq.2017.03.099
+
+molten LiCl-KCl and LiCl-KCl-UCl3 mixtures. Table 2 Activation energies Ea (kJ mol−1) and pre-exponential factors D0 (cm2 s−1) for ions in LiCl- KCl eutectic and molten LiCl-KCl-UCl3 mixture evaluated from the temperature depen- dences of self-diffusion coefﬁcients. D0 Ea D0 Ea LiCl-KCl LiCl-KCl-UCl3 Li+ 1.65 × 10−3 25.16 9.18 × 10−3 38.64 K+ 1.93 × 10−3 28.12 7.11 × 10−3 39.79 U3+ 4.99 × 10−3 44.07 Cl− 5.92 × 10−4 20.44 9.72 × 10−3 43.10 Fig. 7. Temperature dependences of ionic self-diffusion coefﬁcients in the molten (a) LiCl- KCl and (b) LiCl-KCl-UCl3 mixtures. 285 J. Song et al. / Journal of Molecular Liquids 234 (2017) 279–286
+
+————————————————————————————————————————————————————————————
+
+[3] bryantsev-d4sc07253g.pdf, page 3
+    Citation: Computing chemical potentials with machine-learning-accelerated simulations to accurately predict thermodynamic properties of molten salts — Luke D. Gibson, Rajni Chahal, Vyacheslav S. Bryantsev — Chemical Science vol. 16 (2025) — DOI: 10.1039/d4sc07253g
+
+force elds (MLFFs) for the solid and liquid phases of lithium chloride. Based on the test set errors (shown in the Fig. S1 of the ESI‡), both potentials displayed good performance in repro- ducing DFT energies, forces, and stresses. The liquid structure produced by the molten LiCl MLFF was also conrmed to remain stable (Fig. S3‡). The radial distribution function, g(r), for the Li–Cl pair in Fig. 1 shows nearly perfect agreement between the MLFF and DFT (AIMD with PBE-D3). Additionally, the MLFF exhibits similar liquid structure to experiment32 based on the good agreement with the experimental g(r) in Fig. 1. All free energy calculations were performed in the NVT ensemble at the equilibrium volume determined from NpT simulations at 1 bar. The predicted densities from both solid and liquid potentials exhibit good agreement with experiment: the MLFFs yield a liquid phase density of 1.53 g cm−3 at 943 K (rExp. (l) [943 K] = 1.47 g cm−3, ref. 33) and solid phase density of 1.85 g cm−3 at 850 K (rExp. (s) [850 K] = 1.92 g cm−3, ref. 34). Computing chemical potentials of molten lithium chloride To compute the chemical potential of LiCl in the liquid phase, we used alchemical transformation to convert either one or all LiCl pairs from ideal gas particles into fully interacting Li+ and Cl−ions (selected pairs highlighted in Fig. 2a and b, respec- tively) via thermodynamic integration (TI). Herein, these two thermodynamic pathways are respectively referred to as DN = 1 and DN = N. As shown in the energy diagram in Fig. 2d, for a system with 150 LiCl pairs, both pathways yield the same value at 943 K for the chemical potential of molten LiCl. Since the two thermodynamic pathways are inherently diﬀerent, their inte- grand plots (hdH/dli vs. l, Fig. 2c) have slightly diﬀerent trends. Notably, the excess chemical potential computed with DN = 1 has a larger magnitude than DN = N by approximately 3.5 kcal mol−1 (or 1.9kBT); however, this diﬀerence is fully compensated by the diﬀerence in ideal chemical potentials. Although both pathways yield the same chemical potential value, the DN = N pathway has better statistics with uncertainty that is lower than the DN = 1 pathway by an order of magnitude. This reduced uncertainty stems from the fact that all ions contribute to hdH/dli; whereas, for DN = 1, hdH/dli is only based on the local environment around the single Li+ and Cl− ions. Naturally, this also manifests in the time required to converge calculations using both pathways, where only ∼200 ps Fig. 1 Comparison of the Li–Cl radial distribution function between experiment,32 DFT, and MLFF. Fig. 2 Comparison of chemical potentials computed via TI for DN = 1 and DN = 150 pathways on a system with 150 LiCl pairs at 943 K. Highlighted ions denote that their interactions were modiﬁed via TI in the cases of (a) a single pair and (b) the full system. (c) Comparison of the integrand at each l point for both approaches. Error bars represent 95% conﬁdence intervals, which are
+
+————————————————————————————————————————————————————————————
+
+[4] bryantsev-d4sc07253g.pdf, page 8
+    Citation: Computing chemical potentials with machine-learning-accelerated simulations to accurately predict thermodynamic properties of molten salts — Luke D. Gibson, Rajni Chahal, Vyacheslav S. Bryantsev — Chemical Science vol. 16 (2025) — DOI: 10.1039/d4sc07253g
+
+predictions and DFT free energy benchmarks, with absolute errors of 0.16 and 0.05 kcal mol−1 for liquid- and solid-phase calculations, respectively. Liquid phase chemical potentials are notoriously diﬃcult to compute, and perhaps even more challenging to achieve consistent results across the many free energy methods.16,17,20,30 We explored two commonly used thermodynamic pathways for liquid phase chemical potential calculations where either one or all LiCl ion pairs are transformed from noninteracting particles into fully interacting ions. Signicantly, we achieved consistent results across both pathways for a system of 150 LiCl pairs at 943 K, with an absolute deviation of only 0.11 kcal mol−1, when accounting for the diﬀerence in the ideal terms of eqn (7) and (10). To achieve this consistency, we found that signicantly more sampling (2.0 vs. 0.2 ns per TI window) was required for the single ion pair insertion pathway to avoid oversampling of short interionic distances, which can appreciably alter excess chemical potential calculations (±2 kcal mol−1). This can possibly explain the diﬃculties seen in previous theoretical studies20,35 that used single ion pair insertion. We also found that less sampling was required to converge calculations when the ions were xed at large interionic distances, but we note that other sampling challenges may arise for molten salts that exhibit signicant short- and intermediate-range ordering.3,6,11,14,29 These insights will become particularly important when single ion pair insertion is the most appropriate pathway for studying a thermodynamic process for minor components in molten salts. We also demon- strated how so-core potentials can address the unique chal- lenges that arise for TI calculations with MLIPs when two or more atoms become too close at small coupling parameter, l. Using a stepwise TI approach, we were able to achieve good agreement for excess chemical potentials computed with both MLFF and NNIP architectures (−184.37 and −183.66 kcal mol−1, respec- tively) and AIMD (−184.21 kcal mol−1), which were also consis- tent with the value from direct TI calculations (−184.25 kcal mol−1). This agreement showcases how our predictive framework is both accurate and extensible to a variety of MLIP architectures. Solid-phase free energy calculations were markedly less challenging than in the liquid phase. We used the Einstein crystal method for all solid LiCl free energy calculations. By applying this method for varying system sizes, we reported absolute free energies of solid LiCl extrapolated to innite system sizes at a range of temperatures. Free energies from Einstein crystal calculations were also validated against DFT calculations, which involve computing the harmonic vibra- tional contributions and accounting for anharmonic eﬀects through TI for a hybrid Hamiltonian that couples a harmonic crystal to a real crystal via a series of AIMD simulations. Excel- lent agreement was observed at 800 K between MLFF and DFT, with values of the total chemical potentials of −219.704 and −219.75 kcal mol−1, respectively. Using the array of solid- and liquid-phase LiCl chemical potentials computed at varying temperatures, we predicted the melting point of LiCl to be 880 ± 18 K, which matches excep- tionally well with the experimental value of 883 K. Interestingly, our computed chemical potentials
+
+————————————————————————————————————————————————————————————
+
+[5] aimd-eutectic1.pdf, page 5
+    Citation: First-principles molecular dynamics modeling of UCl3 in LiCl-KCl eutectic — Jia Song et al. — Journal of Molecular Liquids vol. 234 (2017) — DOI: 10.1016/j.molliq.2017.03.099
+
+from 858 K to 1019 K, the self-diffusion coefﬁcients increase from 4.95 to 9.22 × 10−5 cm2 s−1 for Li+, 3.33 to 7.42 × 10−5 cm2 s−1 for K+, and 3.54 to 5.79 × 10−5 cm2 s−1 for Cl−. These results are consistent with experimental values of 0.7–6.6 × 10−5 cm2 s−1 for Li+, 1.1–7.2 × 10−5 cm2 s−1 for K+, and 1.2–6.5 × 10−5 cm2 s−1 for Cl−in temperature range of 640 to 1094 K [10]. In molten LiCl-KCl-UCl3 mixture, the change tendencies of self- diffusion coefﬁcients are similar compared with their correspond- ing values in molten LiCl-KCl mixture (Fig. 7b). While the interaction between trivalent U3+ and Cl−is more powerful than that between a monovalent cation and Cl−, a much lower self-diffusion coefﬁcient for U3+ is expected. As the temperature increases from 860 to 1030 K, the self-diffusion coefﬁcients vary between 3.51–10.10 × 10−5 cm2 s−1, 3.13–7.87 × 10−5 cm2 s−1, 2.21–6.76 × 10−5 cm2 s−1, and 0.89–2.67 × 10−5 cm2 s−1 for Li+, K+, Cl−, and U3+, respectively. The self-diffusion coefﬁcients for U3+ are in accordance with literature values between 1.83 × 10−5 and 4.10 × 10−5 cm2 s−1 in temperature range of 673 and 823 K evaluated from electrochemical measurements [45], and between 1.99 × 10−5 to 5.75 × 10−5 cm2 s−1 in temperature range of 773–1100 K evaluated from classical MD simulations [30]. By ﬁtting the temperature dependence of self-diffusion coefﬁcients to the Arrhenius equation, D ¼ D0 exp −Ea=RT ð Þ ð6Þ the pre-exponential factor D0 and activation energy Ea are obtained as shown in Table 2. The pre-exponential factors of cations in molten LiCl-KCl are similar, while that for the anion Cl−is only one third of the cations. Their activa- tion energies vary from 20.44 to 28.12 kJ mol−1, consistent with our previous classical MD simulations [13]. However, the addition UCl3 in molten LiCl-KCl eutectic greatly retards the self-diffusion of ions in the molten salt mixture because of the strong interaction between monova- lent anions and trivalent cations U3+. Therefore, the corresponding activation energies in molten LiCl-KCl-UCl3 mixture are much higher than those in molten LiCl-KCl mixture. The average activation energies for Li+, K+, and Cl−increase from 24.6 kJ mol−1 in molten LiCl-KCl to 41.40 kJ mol−1 in LiCl-KCl-UCl3. The activation energy for U3+ is about 44.07 kJ mol−1 evaluated from temperature range of 860 to 1030 K; however, literature values scatter at 32.55 kJ mol−1 [46], 25.8 kJ mol−1 [13], 35.6 kJ mol−1 [47], 38.9 kJ mol−1 [48], and 66.41 kJ mol−1 [49]. Meanwhile, the corresponding Fig. 6. Mean square displacements of the ions as a function of elapsed time in molten (a) LiCl-KCl and (b) LiCl-KCl-UCl3 mixtures at 960 K. 284 J. Song et al. / Journal of Molecular Liquids 234 (2017) 279–286
+
+query: FLiBe dominance MHD low electrical conductivity magnetic confinement tokamak advantage selection
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 10
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+need to keep the salt ~50 or more degrees above its freezing point, a lower salt melting temperature is likely required to enable a concept based on these materials. One advantage of FLiBe over the other liquid candidates is its lower electrical conductivity, decreasing any potential operational complications arising from the interactions with the strong magnetic fields in the reactor [Forsberg 2017] such as the magneto-hydrodynamic (MHD) pressure drop; interference of a conducting fluid with the operation of magnetic sensors necessary to control tokamak plasmas is a primary reason for the selection of FLiBe [Kuang 2018]. However, the Lorentz forces developed in these fields can cause charge separation, which may affect the free energy and kinetics of the reactions between the FLiBe salt and the walls of the blanket [DeVan 1979]. With renewed interest in FLiBe blanket concepts, the purpose of this report is to explore the current state of materials-related understanding associated with using FLiBe, primarily focusing on compatibility issues. Compatibility of structural materials with Li and Pb-Li have been the subject of many studies over the past 50 years [Jun
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 10
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+1 1. INTRODUCTION This evaluation was prepared at the request of DOE-FES and expands on an earlier evaluation prepared by Wilson, Wiffen and Keiser in 2015 (attached as Appendices A and B). Additional useful information for materials in fission molten salt reactor systems that use FLiBe can be found in a prior NRC report [Busby 2019]. The purpose of this report is to review the considerations that will determine the fusion blanket structural materials that will be suitable for use in a FLiBe breeder-coolant fusion power plant (FPP). Identifying a fusion-relevant structural material that is sufficiently compatible with FLiBe is a key issue to be addressed. The constraints and trade-offs made in structural materials selection include the usual power generation requirements such as mechanical properties, fabricability and durability, which assumes reasonable compatibility with the working fluid. For an FPP, additional constraints include neutron economy (breeding ratio), resistance to irradiation damage and low activation (i.e. waste disposal) characteristics. 2. FUSION BLANKET SELECTION There has been increased recent attention on commercializing fusion energy as a potential source of greener and more sustainable power production [Beaufait 2023]. While the US fusion materials program has been focused on the dual coolant lead lithium (DCLL) [Malang 2011] blanket and magnetic confinement fusion (MCF) for the past 20 years, there is commercial interest in exploring other concepts including inertial confinement fusion. In MCF, the plasma is magnetically confined inside a tokamak or stellarator. One of the main purposes of the blanket is to extract heat from the reactor to both cool the first wall and produce power. The other main purpose is to breed tritium, which is not available in nature, but is needed for a sustained D-T fusion reaction. Tritium can be produced when neutrons from the plasma interact with Li, with 6Li being the most favorable reaction: 6Li + n -> 4He + T Thus, the blanket breeding material must include 6Li either as a liquid or solid. Candidate solid breeder materials include mainly lithium metal oxides, such as L2TiO3 [Shmayda 2022]. Many recent reactor designs feature higher power densities and neutron fluxes, which could potentially lead to failure modes in solid breeder materials and have led to a preference for liquid breeders [Forsberg 2017]. The liquid candidates typically combine the breeder (Li) with a neutron multiplier (Be or Pb); these candidates include Li, eutectic Pb-16at.%Li, and 2LiF-BeF2 molten halide salt, commonly referred to as FLiBe. Another less investigated salt option is FLiNaBe (LiF-NaF-BeF2) which has a lower melting point compared to FLiBe (305°C vs. 459°C) [Yamashita 2018, Shmayda 2022]. Also, the LiF-BeF2 phase diagram suggests that the lowest melting temperature is near 0.48LiF-0.52BeF2, ~365-375°C [Romberger 1972, Benes 2009, Romero-Serrano 2009]. Given the temperature limitation of reduced activation ferritic martensitic steels (RAFM) to 550°-600°C and the need to keep the salt ~50 or more degrees above its freezing point, a lower salt melting temperature is likely required to enable a concept based on these materials. One advantage of FLiBe over the other liquid candidates is its lower electrical conductivity, decreasing any potential operational complications arising from
+
+————————————————————————————————————————————————————————————
+
+[3] breeder_blanket_and_tritium_fuel_cycle_feasibility_of_the_infinity_two_fusion_pilot_plant.pdf, page 36
+    Citation: Breeder blanket and tritium fuel cycle feasibility of the Infinity Two fusion pilot plant — D.W.S. Clark et al. — Journal of Plasma Physics vol. 91 (2025) — DOI: 10.1017/S002237782500039X
+
+et al. 2024). As can be seen from the parametric analysis in § 3, this is where lithium blanket concepts excel. The FLiBe- based designs are being driven by the desire to enable extremely compact devices, and so the associated blanket designs must maximize the shielding value of the breed- ing zone. As can be seen from the parametric analysis in § 3, this is where FLiBe concepts excel, although it does require design modifications elsewhere to ensure that the TBR requirements are met simultaneously. An example of this design trade- off space is the Commonwealth Fusion Systems’ ARC design (Sorbom et al. 2015), where structure and penetration in the breeding zone are kept to essentially zero in https://doi.org/10.1017/S002237782500039X Published online by Cambridge University Press
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-pint-blanket-Pub219653.pdf, page 33
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+APPENDIX A. FLIBE FOR FUSION REACTORS – CONCEPTUAL DESIGN CONSIDERATIONS BASED LARGELY ON ORNL EXPERIENCE
+
+————————————————————————————————————————————————————————————
+
+[5] tritium-breeding-1305833.pdf, page 24
+    Citation: Tritium Breeding Blanket for a Commercial Fusion Power Plant - A System Engineering Assessment — Wayne R. Meier — (2014)
+
+22 7.2 Comparison of Processes The original DCLL TBB design and the selected DCLL-FCI design operate in virtually the same manner with a two key differences: 1) The DCLL-FCI can achieve a higher PbLi outlet temperature which leads to a more efficient thermal conversion systems and better overall plant economics. This is due to the thermal insulating effects of the FCI. 2) The PbLi flow velocity and total rate can be higher with the DCLL-FCI design. This allows a higher flow rate to the T extraction system resulting in lower T concentration in the PbLi and reduced safety risk. The allowed higher flow velocity is due to the electrical insulating properties of the FCI, which reduce MHD pressure drop. Beyond these two factors, the concepts are comparable.
+
+query: 37Cl enrichment cost isotope separation chloride blanket feasibility economics
+knowledge base: molten-salt
+
+[1] ORNL-chloride-blanket-Pub201058.pdf, page 28
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Figure 9. Periodic table with elements under consideration highlighted in white based on existing published literature. Table 2 presents the number of unique elemental compositions of salts that remained after applying each ﬁlter. Because of the near-zero existence of measured TP values for quaternary salts, these salts were removed from consideration after applying the economic ﬁlter. Keep in mind that the low- and medium-cost neutronic ﬁlters added additional dimensions of varying the weight percent and enrichment. With a 10% step size in weight percent, a total of 9 permutations were considered for each binary salt and 36 permutations for each ternary salt. A total of three enrichment conﬁgurations were considered for each chloride salt: natural abundance, 90% enriched 37Cl, and 90% enriched 37Cl and 6Li. 3.1 ECONOMIC CONSIDERATIONS The economic ﬁlters of availability and a price threshold of $1,000/kg were applied to the unﬁltered unary list of 79 chloride salts. Of those salts, 49 were removed from consideration, which signiﬁcantly narrowed Table 2. The number of unique elemental compositions of salts that remained after applying ﬁlters. Values do not account for the permutations of mass fraction and isotopic enrichment for a given unique elemental composition. Filter Unary Binary Ternary Quaternary Raw 79 3,081 79,079 1,502,501 Economic [price, availability] 30 435 4,060 27,405 TP [data availability] 30 435 4,060 N/A Low-cost neutronic [Li-bearing] 30 29 378 N/A TC [liquidus] 12 11 34 N/A Medium-cost neutronic 10 9 10 N/A 16
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 18
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+With the goal to quantify the breeder blanket tritium production across a very large set of salts with as little bias as possible, a multilevel serial ﬁltering process was applied. This set of ﬁlters was loosely designed to minimize computational cost. This systematic downselection of the most promising chloride-based salts focuses on economic, neutronic, TP, and TC parameters to optimize. After the data-driven ﬁltering process had been completed, the most promising chloride salts were investigated using transport and depletion sequences within the SCALE [11] suite of products. Finally, from this data set, the best-performing chloride salts were identiﬁed and compared with FLiBe, the benchmark molten salt breeder blanket material. Figure 2. Multilevel serial ﬁltering process used to determine optimal chloride salts for use as a fusion breeder blanket. Neutronic ﬁlters are abbreviated for low-cost (LC), medium-cost (MC), and high-cost (HC). 2.1 ECONOMIC FILTERS Economic ﬁlters were employed ﬁrst because of their low relative computational cost. The ﬁrst economic ﬁlter of the process was a Boolean check on the commercial availability of a given unary chloride salt by conﬁrming inventory at major chemical suppliers such as Sigma-Aldrich, Avantor/VWR, Alfa, and others. If commercially available, the unit price ($/kg) was appended to the price array found in Appendix A. This price array was then used as a low-pass ﬁlter based on a threshold of less than $1,000/kg. Quotes for some salts were requested at both the lab scale (1 to 10 kg) and commercial scale (100,000 kg) to better estimate and extrapolate the pricing. The $1,000/kg price threshold was selected to qualitatively eliminate low-abundance elements. It also 6
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 50
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 8. The ratio of 3H production to 36Cl production in each salt. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.5LiCl-0.1MgCl2-0.4PbCl2 0.485823 1.141073 2.473478 0.5LiCl-0.1NaCl-0.4PbCl2 0.454620 1.139370 2.534379 0.6LiCl-0.1MgCl2-0.3PbCl2 0.550870 1.200424 2.451147 0.7LiCl-0.2MnCl2-0.1SrCl2 0.650140 1.266036 2.490297 0.6LiCl-0.2MnCl2-0.2SrCl2 0.573030 1.185987 2.477379 0.6LiCl-0.3MnCl2-0.1SrCl2 0.569816 1.175902 2.513146 0.8LiCl-0.1MgCl2-0.1PbCl2 0.656641 1.272470 2.402058 0.1KCl-0.4LiCl-0.5PbCl2 0.445673 1.036800 2.399569 0.1KCl-0.5LiCl-0.4PbCl2 0.520736 1.113811 2.387374 0.7LiCl-0.1MgCl2-0.2MnCl2 0.611238 1.221547 2.437838 0.8LiCl-0.1NaCl-0.1SrCl2 0.603108 1.250991 2.421130 0.7LiCl-0.1NaCl-0.2SrCl2 0.537148 1.184290 2.411039 0.7LiCl-0.2MnCl2-0.1NaCl 0.606649 1.237668 2.481336 0.1KCl-0.6LiCl-0.3PbCl2 0.585146 1.168873 2.368288 0.6LiCl-0.1NaCl-0.3SrCl2 0.467141 1.102678 2.397287 0.1CaCl2-0.7LiCl-0.2MnCl2 0.633961 1.225936 2.432326 0.2BeCl2-0.7LiCl-0.1NaCl 0.411465 1.045194 2.306919 0.6LiCl-0.3MnCl2-0.1NaCl 0.533727 1.147504 2.502823 0.1BeCl2-0.1CaCl2-0.8LiCl 0.573191 1.174813 2.319967 0.1CaCl2-0.6LiCl-0.3MnCl2 0.554794 1.137256 2.451604 0.8LiCl-0.1MgCl2-0.1NaCl 0.566953 1.206032 2.372878 0.7LiCl-0.1MnCl2-0.2NaCl 0.562845 1.209443 2.443261 0.7LiCl-0.2NaCl-0.1SrCl2 0.494873 1.149845 2.403111 3.5 HIGH-COST NEUTRONICS SIMULATIONS The approach to deﬁning the high-cost neutronics ﬁlter can be found in Section 2.4.3. Figure 32 shows the tritium breeding ratio for a subset of salts, including the ARC composition of FLiBe. The ARC FLiBe TBR (1.127) is very similar to the baseline FLiBe composition, with 6Li enriched to 90% TBR (1.128) used as a benchmark in the low- and medium-cost neutron ﬁlters. The ﬁrst row presents the TBR within the inner salt channel. The second row shows the TBR within the blanket. The tritium breeding ratio within the channel is higher for FLiBe than in the chloride salts. This channel is approximately 3 cm thick. However, the TBR within the blanket is higher for all ﬁve chloride salts enriched to 90% in both 37Cl and 6Li. Future work should explore the optimization of thicker blanket tanks designed for the increased neutron mean free path that exists when using chloride salts. Summing these two regions yielded the identiﬁcation that all the selected chloride salts enriched to 90% in both 37Cl and 6Li produced more tritium than FLiBe. 38
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-chloride-blanket-Pub201058.pdf, page 30
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Figure 11. Periodic table with elements under consideration after applying the economic and liquidus temperature ﬁlters. abundance, mixtures using 90% enriched 37Cl, and mixtures using 90% enriched 37Cl and 90% enriched 6Li . One of the biggest ﬁltering criteria that the low-cost neutronics ﬁlter enforced was that all Cl-based salt mixtures must contain Li. This criterion, of course, was an expectation and was validated by the analysis. 3.3.1 Binary Salts The top 30 binary salts sorted by the FOM for each enrichment conﬁguration are plotted in Figures 12, 13, and 14. The top 30 salts change between assumptions of 37Cl enrichment, but the top-performing salt, 90%-LiCl + 10%PbCl2 (by mass fraction), remains the top performer in all three cases. Figure 12. Top 30 binary salts sorted by the FOM assuming a natural abundance of all elements. 18
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 26
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Figure 7. The process to generate salt compositions after 1 year of operation with Shift and ORIGEN. Notably, all simulations assumed no salt puriﬁcation over the course of the 12 months of operation. Consideration of stable isotopic enrichment was also investigated. The key isotopes to enrich to maximum the tritium production using a chloride salt blanket included 6Li and 37Cl. The lithium enrichment activity is synergistic with thermal spectrum ﬂuoride-based molten salt ﬁssion reactors. These ﬁssion reactors want to avoid tritium production and therefore strongly desire 7Li in their FLiBe salt. Therefore, one separation activity could produce the desired isotopic concentrations for both ﬁssion and fusion industries. Enrichment of 37Cl is advantageous because of the relatively large (n,Xn) cross section and lower epithermal capture cross section compared with the other stable isotope, 35Cl. The chlorine enrichment activity is synergistic with fast-spectrum, chloride-based molten salt ﬁssion reactors. Both systems would beneﬁt from enriching 37Cl to avoid parasitic loss of neutrons from the relatively large neutron capture cross section of 35Cl. Having two industries demand this isotope could lead to larger cost savings. In total, 3 sets of simulations were performed for all salts considered: 1. Unenriched: all salts composed of natural abundances of elements 2. 90% 37Cl enriched: chlorine in the salt has a 90% abundance of 37Cl and 10% abundance of 35Cl 3. 90% 37Cl 90% 6Li enriched: chlorine in the salt has a 90% abundance of 37Cl and 10% abundance of 35Cl; lithium in the salt has a 90% abundance of 6Li and 10% of 7Li 2.4.3 High-Cost Neutronics Filter The Fusion Energy Reactor Models Integrator (FERMI) is a multiphysics modeling and simulation framework for fusion reactors [27; 28; 29]. The framework includes basic plasma physics, neutronics, computational ﬂuid dynamics, structural mechanics, and streamlines the process of transferring results from 14
+
+query: chloride salt corrosion structural material compatibility fusion blanket temperature
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 26
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+17 also provide necessary chemistry control mechanism, but the compatibility of these materials, including any potential multi-material interactions in the presence of both salt and steel (or other structural materials), needs to be assessed. 7. Salt purity: Defining the needed FLiBe composition to achieve good compatibility is fundamental for all materials. Recent work [Pillai 2021, 2022] has identified a methodology for predicting salt compatibility using Fe and Cr dissolution rates using unalloyed Cr and Fe specimens in static salt, Figure 8b. The baseline data in Figure 8b requires verification. Examination of Figures 8a and 8b indicates a strong temperature effect for Fe dissolution from the static steel specimen test that was not observed for Fe-based alloy specimens exposed to the same batch of FLiBe. Additional similar experiments are needed with Be additions and intentional impurity additions: e.g., Li2O, Li3N or NiF2, to understand how redox and impurity additions affect the dissolution of Cr and Fe. These experiments are relatively inexpensive and important understanding could be achieved for developing salt purity standards and predictive models for an initial investment of ~$100,000. 8. Salt-hydrogen interactions: A final fundamental experiment will address a concern in the literature about H/T generation affecting FLiBe compatibility. A proposed initial experiment is to load H into, for example, a RAFM steel specimen and then expose the H-containing specimen to static FLiBe to see if H would diffuse from the alloy into the salt and affect the reaction rate with FLiBe. An initial set of experiments could be conducted for approximately $50,000. 9. REFERENCES Adamson, Jr., G. M., Crouse, R. S., Manly, W. D. (1961) “Interim Report on corrosion by Zirconium- Based Fluorides,” Oak Ridge National Laboratory Technical Report ORNL-2338, Oak Ridge, TN. Beaufait, R., Fischer, L. (2023). "Blanket Cooling of a Fusion Reactor." Energies 16(4), 1890. Beneš, O., Konings, R. J. M. (2009) “Thermodynamic properties and phase diagrams of fluoride salts for nuclear applications,” Journal of Fluorine Chemistry 130, 22-29. Britsch, K., Anderson, M., Brooks, P., Sridharan, K. (2019) “Natural circulation FLiBe loop overview,” International Journal of Heat and Mass Transfer 134, 970–983. Busby, J., Garrison, L., Lin, L., Raiman, S., et al. (2019) “Technical Gap Assessment for Materials and Component Integrity Issues for Molten Salt Reactors,” NRC Report ADAMS Accession No. ML19077A137, Nuclear Regulatory Commission, Rockville, MD. Calderoni, P., et al. (2009). "Control of molten salt corrosion of fusion structural materials by metallic beryllium." Journal of Nuclear Materials 386, 1102-1106. Cantor, S., Grimes, W. R. (1974) “Fused-Salt Corrosion and Its Control in Fusion Reactors,” Nuclear Technology, 22, 120–126. Cheng, E., et al. (2003). "Nuclear aspects of molten salt blankets." Fusion Engineering and Design 69, 205-213. Crowley, J.L., McDonald, W. B., Clark, D. L., (1963) "Design and operation of forced-circulation corrosion testing loops with molten salt," Oak Ridge National Laboratory Report TM-528, Oak Ridge, TN. Desmon, L. G., Mosher, D. R., (1951) “Preliminary Study of Circulation in an Apparatus Suitable for Determining Corrosive Effects of Hot Flowing Liquids,” NACA Report No. NACA-RM-E51D12, Cleveland, OH. DeVan, J. H. (1969) “Effect of Alloying Additions on Corrosion Behavior of Nickel-Molybdenum Alloys in
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 24
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+15 at 550°C and higher. For RAFM steels, lower melting point salts need to be evaluated to allow for a wider operating window. A number of authors have pointed out that tritium generation from lithium, a main function of FLiBe in the blanket, will alter FLiBe compatibility. Continuous oxygen and nitrogen production via fluorine transmutation is also likely to affect compatibility. Thus, an improved understanding about mitigating any effect of tritium using redox control or other means is needed. Application of coatings as barriers against corrosion in the fusion blanket environment could enhance the compatibility between structural material and coolant [Zinkle 2017]. This is a relatively unexplored solution but difficult to implement in practice based on the historic experience with coating durability for long-term service in power generation applications. For a V/FLiBe concept, a tritium permeation barrier concept also would have to be developed. Once FLiBe-compatible materials are identified (along with relevant salt compositions), flowing experiments will be needed to better understand compatibility in a temperature gradient where mass transfer can occur. Also, dissimilar material interactions must be assessed similar to the tests of SiC and FeCrAl in flowing Pb-Li, where a strong reaction was observed at a peak temperature of 700°C [Pint 2021, Romedenne 2023]. After the baseline material performance has been established in flowing FLiBe, the effect of magnetic fields on structural material compatibility must be investigated in a forced convection loop. For the FLiBe blanket concept to advance, compatible materials identified based on FLiBe performance in the absence of neutron irradiation will eventually need to be assessed/demonstrated in a radiation environment. In the MSRE, alloy N was unexpectedly embrittled by the fission product Te, a new concern that was not fully resolved before the end of the program [McCoy 1978]. Finally, the questions that will arise for the multi-material heat transfer circuits likely to be required in a FPP have not been addressed. An engineered power generating system will include pumps, valves, piping transitions, heat exchangers, etc., unlikely to consist of a single material composition. The compatibility issues that arise are beyond the detail provided in current conceptual designs. A multi-material system will introduce new compatibility concerns that will need to be evaluated. 8. RECOMMENDATIONS This review has revealed that the database of fusion-relevant materials exposed to FLiBe in an FPP blanket is very small (see Figure 4). This lack of relevant data must be addressed first through static tests and then via flowing tests, i.e. thermal convection loops, in order to identify appropriate structural materials and combinations of structural and functional materials for FLiBe-based fusion blankets. Other issues that require attention involve developing a better fundamental understanding of salt purity effects that would support the development of predictive compatibility models. Currently, the lack of data prevents effective modeling of material corrosion compatibility except for thermodynamic calculations (e.g. Figure 3) that provide useful information but do not predict reaction rates. 1. Industry communication: A starting point for this research topic should be industry engagement to gage interest, understand design concepts and unanswered concerns, establish data needs and identify research
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-pint-blanket-Pub219653.pdf, page 23
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+14 Figure 10. FLiNaK forced convection loop (FCL) at ORNL [Yoder 2010, 2014]. 6. CONCLUSIONS One of the key materials issues for a FLiBe-based fusion blanket concept is the compatibility of the structural and functional materials with FLiBe. However, little compatibility data exists for fusion- relevant materials in FLiBe. The limited data available are mainly static data conducted under a variety of conditions making it difficult to draw conclusions. In general, the evaluation of fusion-relevant data for materials in FLiBe has not progressed to flowing testing or studying the effect of magnetic fields or irradiation on corrosion. Historically, a low-Cr Ni-based alloy (alloy N) was used for the Molten Salt Reactor Experiment (MSRE), which used fuel salts based on FLiBe at ~700°C. Current molten salt fission reactors are focused on austenitic stainless steels as structural materials with a few completed static and flowing experiments that have shown good compatibility of Type 316H stainless steel with purified FLiBe at 550°-650°C and selective dissolution of Cr and Fe. A few static experiments with RAFM steels in FLiBe have shown small mass losses. However, a primary concern is that RAFM steels may be limited to 550°-600°C due to their creep properties. For traditional 2LiF-BeF2 salt, the 459°C melting temperature leaves a very narrow operating window. Thus, the compatibility and physical properties of lower melting point salts (e.g. LiF-BeF2 at ~400°C) need to be explored for use with RAFM steels, and their neutronic and thermal hydraulic performance needs to be more thoroughly assessed. At 750°C, SiC-SiC composites specimens have shown small mass changes in static FLiBe and appear to have good compatibility but flowing testing is needed to confirm this assessment. Vanadium-based alloys may have acceptable compatibility but are not likely a good match for FLiBe because of tritium inventory issues that would require an effective tritium permeation barrier. 7. FUTURE RESEARCH DIRECTIONS AND KNOWLEDGE GAPS A broad-based screening of fusion relevant structural materials in FLiBe (and perhaps FLiNaBe) with and without redox control (Be) is needed to understand their relative behavior in a purified FLiBe salt at blanket-relevant temperatures. Since the 2LiF-BeF2 salt melts at 459°C, these studies must be conducted
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-pint-blanket-Pub219653.pdf, page 15
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+6 results [Raiman 2018], it is difficult to compare the various datasets available. The test variables include exposure time, salt purity, salt volume-specimen surface area ratio and capsule/crucible material [Pint 2023] that are not shown in Figure 4, which only captures the effect of temperature. 4.1 RAFM STEELS Candidate RAFM steels have attractive mechanical properties and irradiation resistance in fusion environments, including low irradiation-produced swelling [Wong 2004b]. The primary alloying element is Cr, which can range between 8 and 12% [Zinkle 2000]. The alloys are nominally Fe-Cr-W with specific alloy compositions shown in Table 1. RAFM steels are a leading structural material candidate for a variety of blanket types, including solid breeders, Pb-Li, Li and FLiBe. However, they are limited in temperature to ~550°C due to creep strength and with the relatively high melting point of FLiBe (459°C), that leaves a relatively small operating window. As mentioned previously, a higher BeF2 content in the salt with a lower melting point (<400°C) might be attractive for RAFM steels. Steels are generally considered compatible with FLiBe [Sagara 2006, Kondo 2009c] with several examples in Figure 4 (i.e. JLF-1 and F82H). There are several classes of advanced RAFM steel. For example, to achieve temperatures above 600°C, oxide dispersion strengthening might be considered [Klueh 2002, Maziasz 2002, Wong 2004a, 2004b, Ohnuma 2009, Was 2019] with a nano-scale dispersion of oxides rich in Y and Ti. In this case, the Cr content could be higher than the 8-11% found in RAFM steels. Fully ferritic steels with 12-18%Cr could potentially operate up to 800°C [Zinkle 2017] but a´ embrittlement is a concern at 475°C [Grobner 1973] and at even lower temperatures with irradiation [Field 2015]. Additional alloying elements such as Zr and Ta might further improve mechanical properties [Rahmanifard 2016]. Blanket studies assumed that ODS steels could operate in FLiBe up to 700°C [Wong 2004b], perhaps by using a protective coating such as ~10µm W or Ta [Wong 2004a]. However, very little work has been done to confirm that these materials are actually compatible with FLiBe at these temperatures. It should be noted that both Zr and Ta produce significant decay heat after irradiation, that Zr will transmute to long-lived isotopes that may challenge low-level waste disposal criteria, and the tritium gettering properties of Ta likely make it unsuitable as a coating in contact with breeder materials. The FLiBe corrosion mechanism has been characterized as a competition between fluoridation and oxidation [Muroga 2008, Terai 1998, 2001, Tanaka 2001]. However, this may be less relevant in highly purified FLiBe [Kelleher 2015] where the O content is low and oxidation should not occur. Unfortunately, halide salt impurity levels are rarely documented in detail [Sulejmanovic 2021] so it is not possible to specify what level of O is low enough to minimize corrosion. As will be discussed later, the focus in much of the molten salt literature is on Cr dissolution. However, both Fe and Cr (as well as Mn) in steels readily dissolve in FLiBe which is different from Ni-based alloys. Based on Figure 3, the Ni matrix is more
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 16
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+chloride salt fusion breeder blankets [8; 9]. These eﬀorts highlight the many advantages and disadvantages of chloride salts relative to the state of the art, suggest a few chloride salt compositions, and present ﬁndings that suggest tritium breeding ratios equal to FLiBe but below PbLi are achievable with chloride-based liquid blankets. 1.2 RESEARCH PURPOSE This purpose of this work was to directly address ORNL research priorities and NAS recommendations by investigating novel liquid blanket materials that could provide self-sustaining operation and draw on experience from research on molten salts used with advanced ﬁssion reactors [2], concentrated solar [3], and 4
+
+query: chloride salt neutron spectrum harder fast neutrons blanket multiplier 35Cl parasitic capture cross section
+knowledge base: molten-salt
+
+[1] ORNL-chloride-blanket-Pub201058.pdf, page 7
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+25 The (n, 2n) cross sections of the top four best-performing LiCl diluents. These cross sections peak near the maximum ﬂux at ∼14 MeV. . . . . . . . . . . . . . . . . . . . . . . . 26 26 The binary salts’ tritium production normalized to 90% atomically enriched FLiBe. . . . . . 27 27 The binary salts’ tritium production normalized to unenriched FLiBe. . . . . . . . . . . . . 29 28 The ternary salts’ tritium production normalized to 90% atomically enriched FLiBe. . . . . . 31 29 The ternary salts’ tritium production normalized to unenriched FLiBe. . . . . . . . . . . . . 34 30 The binary salts’ tritium production to 36Cl production ratio. . . . . . . . . . . . . . . . . . 35 31 The ternary salts’ tritium production to 36Cl production ratio. . . . . . . . . . . . . . . . . . 37 32 The FERMI TBR output for a subset of binary chloride salt compositions. . . . . . . . . . . 39 33 Tritium production predictions and correlated behavior between the low- and medium-cost neutronics ﬁlters. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40 vi
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 36
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+underperforming compared with the binary mixture 60% LiCl + 40% PbCl2. This underperformance is driven by density diﬀerences and low absorption of Pb isotopes. The same diluent molecules were shown to rise to the top (based on FOM) for the binary and ternary mixtures—MgCl2, PbCl2, NaCl, and SrCl2 among the most important. Some of this can be attributed to low neutron loss owing to neutron capture in Mg, Pb, Sr, and Na. The capture cross sections for major isotopes of these three elements are shown in Figure 23. Only 23Na, 86,87Sr, and 207Pb capture cross sections are larger than 37Cl in the epithermal neutron energy range (<1 keV in Figure 23), and none of them have capture cross sections greater than 35Cl in that energy region. Figure 23. The capture cross section of the top four best-performing LiCl diluents. The capture cross sections of all four are lower than 35Cl, and only 23Na, 86,87Sr, and 207Pb capture cross sections are larger than 37Cl when neutrons become thermalized. Other poison reactions considered for the low-cost neutronic analysis were (n, p), (n, d), and (n, α) which are plotted below in Figure 24. These cross sections, while small, play an important role because they peak close to the maximum ﬂux for the assumed ﬂux energy spectrum. For reference, the ﬂux used in the calculation of the FOM is shown in Figure 24, as well. Again, 35Cl has the greatest probability for absorbing neutrons among the top-performing salts. 24
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 6
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+salts sorted by the FOM assuming a 90% enrichment of 37Cl. . . . . . . . . . 19 14 Top 30 binary salts sorted by the FOM assuming a 90% enrichment of 37Cl and 6Li. . . . . . 19 15 Density as a function of the FOM for binary salts for all three cases: natural abundance, 90% enriched 37Cl, and 90% enriched 37Cl and 6Li—black, blue, and red, respectively. The dashed line indicates the density of LiCl. . . . . . . . . . . . . . . . . . . . . . . . . . 20 16 Liquidus temperature as a function of FOM for binary salts for all three cases: natural abundance, 90% enriched 37Cl, and 90% enriched 37Cl and 6Li—black, blue, and red, respectively. The dashed line indicates the liquidus temperature of LiCl. . . . . . . . . . . . 20 17 Top 30 ternary salts sorted by the FOM assuming a natural abundance of all elements. . . . . 21 18 Top 30 ternary salts sorted by the FOM assuming a 90% enrichment of 37Cl. . . . . . . . . . 21 19 Top 30 ternary salts sorted by the FOM assuming a 90% enrichment of 37Cl and 6Li. . . . . 22 20 Density as a function of FOM for ternary salts for all three cases: natural abundance, 90% enriched 37Cl, and 90% enriched 37Cl and 6Li—black, blue, and red, respectively. The dashed line indicates the density of LiCl. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22 21 Liquidus temperature as a function of FOM for ternary salts for all three cases: natural abundance, 90% enriched 37Cl, and 90% enriched 37Cl and 6Li—black, blue, and red, respectively. The dashed line indicates the liquidus temperature of LiCl. . . . . . . . . . . . 23 22 All binary and ternary salts, considering all enrichment conﬁgurations, were sorted by the FOM. The top 30 are presented here, with binary mixtures for all of the top 10. Only salts with 90% enriched 37Cl and 6Li made the top 30. . . . . . . . . . . . . . . . . . . . . . . . 23 23 The capture cross section of the top four best-performing LiCl diluents. The capture cross sections of all four are lower than 35Cl, and only 23Na, 86,87Sr, and 207Pb capture cross sections are larger than 37Cl when neutrons become thermalized. . . . . . . . . . . . . . . . 24 24 The (n, p), (n, d), and (n, α) cross sections (where available) of the top three best-performing LiCl diluents. These cross sections peak near the maximum ﬂux at ∼14 MeV. 25 v
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-chloride-blanket-Pub201058.pdf, page 50
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 8. The ratio of 3H production to 36Cl production in each salt. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.5LiCl-0.1MgCl2-0.4PbCl2 0.485823 1.141073 2.473478 0.5LiCl-0.1NaCl-0.4PbCl2 0.454620 1.139370 2.534379 0.6LiCl-0.1MgCl2-0.3PbCl2 0.550870 1.200424 2.451147 0.7LiCl-0.2MnCl2-0.1SrCl2 0.650140 1.266036 2.490297 0.6LiCl-0.2MnCl2-0.2SrCl2 0.573030 1.185987 2.477379 0.6LiCl-0.3MnCl2-0.1SrCl2 0.569816 1.175902 2.513146 0.8LiCl-0.1MgCl2-0.1PbCl2 0.656641 1.272470 2.402058 0.1KCl-0.4LiCl-0.5PbCl2 0.445673 1.036800 2.399569 0.1KCl-0.5LiCl-0.4PbCl2 0.520736 1.113811 2.387374 0.7LiCl-0.1MgCl2-0.2MnCl2 0.611238 1.221547 2.437838 0.8LiCl-0.1NaCl-0.1SrCl2 0.603108 1.250991 2.421130 0.7LiCl-0.1NaCl-0.2SrCl2 0.537148 1.184290 2.411039 0.7LiCl-0.2MnCl2-0.1NaCl 0.606649 1.237668 2.481336 0.1KCl-0.6LiCl-0.3PbCl2 0.585146 1.168873 2.368288 0.6LiCl-0.1NaCl-0.3SrCl2 0.467141 1.102678 2.397287 0.1CaCl2-0.7LiCl-0.2MnCl2 0.633961 1.225936 2.432326 0.2BeCl2-0.7LiCl-0.1NaCl 0.411465 1.045194 2.306919 0.6LiCl-0.3MnCl2-0.1NaCl 0.533727 1.147504 2.502823 0.1BeCl2-0.1CaCl2-0.8LiCl 0.573191 1.174813 2.319967 0.1CaCl2-0.6LiCl-0.3MnCl2 0.554794 1.137256 2.451604 0.8LiCl-0.1MgCl2-0.1NaCl 0.566953 1.206032 2.372878 0.7LiCl-0.1MnCl2-0.2NaCl 0.562845 1.209443 2.443261 0.7LiCl-0.2NaCl-0.1SrCl2 0.494873 1.149845 2.403111 3.5 HIGH-COST NEUTRONICS SIMULATIONS The approach to deﬁning the high-cost neutronics ﬁlter can be found in Section 2.4.3. Figure 32 shows the tritium breeding ratio for a subset of salts, including the ARC composition of FLiBe. The ARC FLiBe TBR (1.127) is very similar to the baseline FLiBe composition, with 6Li enriched to 90% TBR (1.128) used as a benchmark in the low- and medium-cost neutron ﬁlters. The ﬁrst row presents the TBR within the inner salt channel. The second row shows the TBR within the blanket. The tritium breeding ratio within the channel is higher for FLiBe than in the chloride salts. This channel is approximately 3 cm thick. However, the TBR within the blanket is higher for all ﬁve chloride salts enriched to 90% in both 37Cl and 6Li. Future work should explore the optimization of thicker blanket tanks designed for the increased neutron mean free path that exists when using chloride salts. Summing these two regions yielded the identiﬁcation that all the selected chloride salts enriched to 90% in both 37Cl and 6Li produced more tritium than FLiBe. 38
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 92
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 21. The production of 36Cl (atoms/b-cm) for ternary salts with a tritium production greater than FLiBe. Salt Unenriched 90% Enriched 37Cl 90% Enriched 6Li-37Cl 0.5LiCl-0.1MgCl2-0.4PbCl2 7.8273e-04 3.7855e-04 2.6636e-04 0.5LiCl-0.1NaCl-0.4PbCl2 8.4215e-04 3.8460e-04 2.5941e-04 0.6LiCl-0.1MgCl2-0.3PbCl2 7.0895e-04 3.6826e-04 2.6769e-04 0.7LiCl-0.2MnCl2-0.1SrCl2 5.7757e-04 3.4049e-04 2.6215e-04 0.6LiCl-0.2MnCl2-0.2SrCl2 6.2431e-04 3.4792e-04 2.6302e-04 0.6LiCl-0.3MnCl2-0.1SrCl2 6.1106e-04 3.4172e-04 2.5896e-04 0.8LiCl-0.1MgCl2-0.1PbCl2 6.1308e-04 3.5603e-04 2.7043e-04 0.1KCl-0.4LiCl-0.5PbCl2 7.8301e-04 3.7806e-04 2.6959e-04 0.1KCl-0.5LiCl-0.4PbCl2 7.0190e-04 3.6734e-04 2.7073e-04 0.7LiCl-0.1MgCl2-0.2MnCl2 6.0146e-04 3.4734e-04 2.6500e-04 0.8LiCl-0.1NaCl-0.1SrCl2 6.6191e-04 3.6174e-04 2.6678e-04 0.7LiCl-0.1NaCl-0.2SrCl2 7.2070e-04 3.7267e-04 2.6759e-04 0.7LiCl-0.2MnCl2-0.1NaCl 6.0618e-04 3.4312e-04 2.6001e-04 0.1KCl-0.6LiCl-0.3PbCl2 6.4369e-04 3.6000e-04 2.7199e-04 0.6LiCl-0.1NaCl-0.3SrCl2 7.9543e-04 3.8598e-04 2.6851e-04 0.1CaCl2-0.7LiCl-0.2MnCl2 5.7560e-04 3.4161e-04 2.6432e-04 0.2BeCl2-0.7LiCl-0.1NaCl 9.1403e-04 4.1922e-04 2.7865e-04 0.6LiCl-0.3MnCl2-0.1NaCl 6.3779e-04 3.4435e-04 2.5681e-04 0.1BeCl2-0.1CaCl2-0.8LiCl 6.7600e-04 3.7306e-04 2.7681e-04 0.1CaCl2-0.6LiCl-0.3MnCl2 6.0996e-04 3.4331e-04 2.6131e-04 0.8LiCl-0.1MgCl2-0.1NaCl 6.9073e-04 3.6962e-04 2.6942e-04 0.7LiCl-0.1MnCl2-0.2NaCl 6.5571e-04 3.5366e-04 2.6096e-04 0.7LiCl-0.2NaCl-0.1SrCl2 7.6813e-04 3.7892e-04 2.6508e-04 C-14
+
+query: tritium extraction chloride salt molten salt breeding blanket tritium recovery
+knowledge base: molten-salt
+
+[1] ORNL-chloride-blanket-Pub201058.pdf, page 79
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+APPENDIX C. TERNARY SALT TRITIUM PRODUCTION
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-chloride-blanket-Pub201058.pdf, page 16
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+chloride salt fusion breeder blankets [8; 9]. These eﬀorts highlight the many advantages and disadvantages of chloride salts relative to the state of the art, suggest a few chloride salt compositions, and present ﬁndings that suggest tritium breeding ratios equal to FLiBe but below PbLi are achievable with chloride-based liquid blankets. 1.2 RESEARCH PURPOSE This purpose of this work was to directly address ORNL research priorities and NAS recommendations by investigating novel liquid blanket materials that could provide self-sustaining operation and draw on experience from research on molten salts used with advanced ﬁssion reactors [2], concentrated solar [3], and 4
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 59
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Using Table 10 and Appendix E as guides, the following mass fraction recommendations can be made: • 0.5LiCl-0.1MgCl2-0.4PbCl2 produced the most tritium and had one of the lowest liquidus temperatures at 678 K [405◦C]. • 0.7LiCl-0.2MnCl2-0.1SrCl2 and 0.6LiCl-0.2MnCl2-0.2SrCl2 performed near the top without the use of PbCl2. • 0.8LiCl-0.1MgCl2-0.1NaCl was the highest tritium-producing salt containing NaCl and MgCl2. 4. CONCLUSIONS AND RECOMMENDATIONS The hypothesis proposed at the beginning of the research was that there could be chloride-based blanket designs that can nearly equal or exceed the TBR)s of FLiBe molten salt blankets. The fastest and most cost-eﬀective path to deploying liquid fusion breeder blankets could be from maximizing the synergistic technological overlap between fusion, ﬁssion, concentrated solar, and thermal energy storage industries. The approach to addressing this hypothesis consisted of applying a multilevel serial ﬁltering process to systematically downselect the most promising chloride-based salts to optimize economic, neutronic, TP, and TC parameters. 4.1 CONCLUSIONS As observed in Table 2, a total of 79 unary salts were initially identiﬁed. This search resulted in 3,081 binary, 79,079 ternary, and 1,502,501 quaternary permutations of plausible chloride salts. The ﬁrst step in reducing the domain was applying economic ﬁlters for commercial availability and a price threshold of $1,000/kg. This ﬁlter reduced the number of plausible unary salts from 79 to 30. The low-cost neutronics ﬁlter reinforced engineering judgement for the requirement of Li-bearing salts. A TC ﬁlter of salt liquidus temperature less than 873 K [600◦C] further reduced the domain to 12 unary salts. A 1D medium-cost neutronics ﬁlter determined 10 unary salts in 9 binary and 10 ternary permutations with tritum breeding potentials greater than FLiBe. Finally, a 3D high-cost neutronics ﬁlter investigated four binary salt compositions and conﬁrmed the ﬁndings of the medium-cost neutronics results. Table 10 provides a scoring summary of the top binary salts under consideration. A weight was subjectively assigned to each category. The highest-scoring salt neglecting ﬂuid and heat transfer FOMs was LiCl-NaCl, followed closely by LiCl-PbCl2, LiCl-MgCl2, and LiCl-SrCl2. When considering the additional FOMs, LiCl-NaCl remains at the top, LiCl-PbCl2 did not get evaluated owing to a lack of data, and LiCl-MgCl2 extends its lead on LiCl-SrCl2 with more favorable ﬂow and heat transfer scores. Appendix D presents the performance and data availability of the most-promising binary salts, sorted by tritium production in descending order and evaluated at 873 K [600◦C]. Highlights of chloride salt performance relative to FLiBe include the following: 1. Several compositions were found with higher-than-FLiBe tritium production potential. 2. Higher-than-FLiBe tritium production was achieved without optimizing blanket dimensions for chloride salts. 3. The liquidus temperature distribution of chlorides with more tritium production than FLiBe ranges ±100◦C around that of FLiBe. Ternary chloride salts have a 30◦C lower average liquidus temperature than the binary chloride salts. 47
+
+————————————————————————————————————————————————————————————
+
+[4] ___Molten_Salts_and_Ionic_Liquids__Never_the_Twain_z-lib.org_.pdf, page 0
+    Citation: Molten Salts and Ionic Liquids: Never the Twain? — Marcelle Gaune-Escard, Kenneth R. Seddon — (2010)
+
+MOLTEN SALTS AND IONIC LIQUIDS
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 14
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Highlights of chloride salt performance relative to FLiBe include the following: 1. Several compositions were found with higher-than-FLiBe tritium production potential. 2. Higher-than-FLiBe tritium production was achieved without optimizing blanket dimensions for chloride salts. 3. The liquidus temperature distribution of chlorides with more tritium production than FLiBe ranges ±100◦C around that of FLiBe. Ternary chloride salts have a 30◦C lower average liquidus temperature than the binary chloride salts. 4. Commercial-scale pricing is diﬃcult to estimate. Recent small-batch FLiBe salt procurements at ORNL have cost between $1,000 to $2,000/kg. Given the $1,000/kg ﬁlter used in this study, all prospective chlorides are less expensive and driven by the 80%–90% LiCl mass fraction at ≈$360/kg. 5. Chloride salts have been identiﬁed with higher-than-FLiBe tritium production without Be or Pb. 6. Some chloride salts can exist in multiple ionization states, which complicates blanket chemistry. 7. Activation results suggest that chloride salts have larger decay heat values than FLiBe. 8. FOMs for ﬂuid ﬂow and heat transfer deﬁne chloride salts as less desirable than FLiBe primarily because of lower speciﬁc heat capacities. 9. An important technology overlap exists with MgCl2 and CaCl2, as they are already used in the halide slagging step of the pyrometallurgical process. Also, the binary salt LiCl-KCl is used in the electroreﬁning step of the pyrometallurgical process, so signiﬁcant operational experience and thermophysical and thermochemical properties exist. Section 3.8 provides a detailed discussion on candidate binary and ternary salt selection. The most promising binary chloride salts were LiCl-PbCl2, LiCl-SrCl2, LiCl-MnCl2, LiCl-BeCl2, LiCl-CoCl2, LiCl-MgCl2, LiCl-NaCl, LiCl-CaCl2, and LiCl-KCl. Based on these binary conﬁgurations, the following mass fraction recommendations can be made: • 0.9LiCl-0.1NaCl at 90% Li is needed to maximize tritium production for Na-containing salts. • 0.3LiCl-0.7PbCl2 maximizes tritium production, but 0.4LiCl-0.6PbCl2 does nearly as well with a 30◦C lower liquidus temperature. • 0.9LiCl-0.1MgCl2 maximizes tritium production, but 0.8LiCl-0.2MgCl2 may be attractive, with a 50◦C lower liquidus temperature. • 0.8LiCl-0.2SrCl2 maximizes tritium production, but 0.7LiCl-0.3PbCl2 does nearly as well with a 32◦C lower liquidus temperature. • 0.5LiCl-0.1MgCl2-0.4PbCl2 produced the most tritium of any ternary salt and had one of the lowest liquidus temperatures at 678 K [405◦C]. • 0.7LiCl-0.2MnCl2-0.1SrCl2 and 0.6LiCl-0.2MnCl2-0.2SrCl2 performed near the top of the ternary salts without the use of PbCl2. • 0.8LiCl-0.1MgCl2-0.1NaCl was the highest tritium-producing salt containing both NaCl and MgCl2. 2
