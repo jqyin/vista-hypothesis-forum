@@ -1,0 +1,45 @@
+job: salt-neutronics-tbr
+refused: Error calling tool 'submit_hpc_job': Job 'salt-neutronics-tbr' has no "frontier" section in cluster_defaults.json
+
+would have tested: overall TBR for 5 cm solid Be layer with 2LiF·BeF2 eutectic (25 mol% 6Li)
+
+job: salt-neutronics-tbr
+refused: Error calling tool 'submit_hpc_job': Job 'salt-neutronics-tbr' has no "frontier" section in cluster_defaults.json
+
+would have tested: overall TBR for 5 cm solid Be layer with 2LiF·BeF2 eutectic (25 mol% 6Li)
+
+query: Lee 2023 MCNP-X 5 cm Be reflector FLiBe TBR 1.48
+knowledge base: molten-salt
+
+[1] Barker_2025_Nucl._Fusion_65_086022.pdf, page 8
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al cross-section, though generally also considered as a multiplier [46], and tungsten carbide (WC) which is found to be an excellent reflector in small reactors [47]. The inclusion of any reflector in only the final layer is always seen to improve the TBR of the blanket (this configuration is shown as [‘Li’, ‘Li’, ‘R’]), when compared to a pure lithium alternative, but only FLiBe gave a continual increase in TBR performance as the volume of the reflector increased (shown in figure 5 by popu- lating more layers of reflector ‘R’). Initially (with R only at the rear), a FLiBe reflector produced system wide TBR levels sim- ilar to those of a beryllium reflector, which was to be expec- ted as it is assumed the reflective nature of FLiBe comes from the presence of beryllium in the molten salt. However, as the volume of reflectors is increased, the loss of lithium towards the rear in all but FLiBe has a negative effect on the TBR. Because FLiBe contains lithium, the drop in lithium density is much less abrupt, and when combined with the reflecting prop- erties of beryllium, this material exceeds all of the alternatives considered, including pure Li. A potential issue was identified in the nuclear data for FLiBe. During analysis of the neutron spectra produced within FLiBe, an increase in near-thermal neutron populations was observed to improve the TBR of the system. However, the cross-section libraries found in ENDF/B-VII.1 and other rel- evant nuclear data libraries do not include the thermal scat- tering data S(α,β) associated with liquid FLiBe. As a res- ult, this scattering data was not incorporated throughout the study, and the thermal neutron dynamics may not have been accurately characterized. Nevertheless, as shown in figure 4, neutrons largely remain above the thermal threshold of ⩾0.025 eV, so their exclusion from this study should have a minimal effect on the final results. Although such data has been generated [48], they do not appear to be publicly available. 4. Conclusion A repeatable digital optimisation workflow to create and test fusion reactor blankets concepts has been shown along with verification steps to provide evidence of the validity of the model. The TBR error through segmentation of the EU- DEMO-like geometry was found to be within the order of 0.01. The model was applied to a hybrid liquid metal and mol- ten salt design, and it was found that FLiBe acted as an effi- cient reflector. This novel use of FLiBe alongside layers of pure Li differentiates it from other considered reflectors, typ- ically graphite and tungsten carbide, due to its ability to breed tritium as well as reflect. The general metric to find effect- ive reflectors relies on materials that have a high moderat- ing ratio (the ratio of neutron scattering and absorption cross- sections). FLiBe would not rate high on this metric due to its large lithium content. However, through a merger of two of FLiBe’s properties, namely high neutron scattering and multi- plication in beryllium and the breeding potential of lithium,
+
+————————————————————————————————————————————————————————————
+
+[2] Barker_2025_Nucl._Fusion_65_086022.pdf, page 0
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+PAPER • OPEN ACCESS Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector To cite this article: Adam J. Barker et al 2025 Nucl. Fusion 65 086022 View the article online for updates and enhancements. You may also like Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants Samuele Meschini, Sara E. Ferry, Rémi Delaporte-Mathurin et al. - Electrochemical Study of Eu(III)/Eu(II) in LiF-BeF2 Molten Salt Yong Zuo, Hao Peng, Nan Ji et al. - Characterization of a Thermodynamic Reference Electrode for Molten LiF-BeF2 (FLiBe) Francesco Carotti, Huali Wu and Raluca O. Scarlat - This content was downloaded from IP address 192.31.96.218 on 26/12/2025 at 21:06
+
+————————————————————————————————————————————————————————————
+
+[3] Barker_2025_Nucl._Fusion_65_086022.pdf, page 7
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure 4. (a) The neutron flux per unit lethargy (neutron cm−2 per unit lethargy) as a function of neutron energy and layer number for a pure liquid lithium blanket. (b) The neutron flux per unit lethargy (neutron cm−2 per unit lethargy) as a function of neutron energy and layer number for a hybrid blanket containing liquid lithium (blue) and FLiBe (grey). (c) A comparison of the TBR produced per layer for each design: pure liquid lithium (blue) and the hybrid blanket (grey). (d) Shows the (n,2n) reaction rate in reactions per source neutron. Every second layer is shown of the fifty layer model. Figure 5. Comparison of FLiBe against common reflectors and pure Lithium—the x-axis labels show the distribution of reflectors and Li in the final 3 layers of the model. The placement of the reflector in the system uses the generic term ‘R’. A pure lithium rear is also included to easily validate if the reflector is causing an increase or decrease in performance. 3.2. A comparison to common reflectors A comparison of FLiBe to common neutron reflectors can be seen in figure 5. Utilising the original eight layer segmentation model, and by only placing the different reflectors in the final three layers, the corresponding permutations were found and simulated using the same methodology described in section 2. The final three layers of the eight layer model was chosen because this is the configuration that produced the maximum TBR when combining liquid lithium and FLiBe. The selec- tion of reflectors represents typical materials considered for fission and fusion applications, which include: graphite [44] as a moderator and reflector, beryllium as a multiplier and reflector [45], Pb for moderation due to its low absorption 7
+
+————————————————————————————————————————————————————————————
+
+[4] madden-book-thorium.pdf, page 333
+    Citation: Thorium Energy for the World — Jean-Pierre Revol et al. — (2016) — DOI: 10.1007/978-3-319-26542-1
+
+minor actinides; 3 fuel assemblies of the water-cooled blanket; 4 module of the control systems; 5 decoupler (if required); 6 thermal neutron trap (moderator), which can be placed anywhere; 7 reﬂector Proposal of the ADS Research Stand Based on the Linac of the Institute for Nuclear Research … 317
+
+————————————————————————————————————————————————————————————
+
+[5] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe serves as breeder, neu- tron shield, and coolant for the vacuum vessel [11]. The beryllium in FLiBe acts as a neutron multiplier, which significantly enhances Tritium Breeding Ratio (TBR). Al- though there are many challenges associated with working with beryllium because of its toxicity, FLiBe remains the most promising breeder choice for the ARC-class FPP due to its cooling capabilities [12], and its ability to achieve high TBR [13]. Recent models have shown that the FLiBe LIB should enable the ARC-class FPP to achieve tritium self-sufficiency [6]. Preprint submitted to Nuclear Fusion December 5, 2024 arXiv:2412.02721v1 [physics.plasm-ph] 2 Dec 2024
