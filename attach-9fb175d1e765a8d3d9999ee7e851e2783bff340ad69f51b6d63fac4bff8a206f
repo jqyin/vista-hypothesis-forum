@@ -1,0 +1,10 @@
+{
+  "prediction": "TBR at 43.3 mol% BeF2 and Li-6=0.90 will fall between 1.35 and 1.43 and provenance.is_extrapolated will be false, with beryllium_multiplier reported as approximately 1.299",
+  "job_id": "57776203",
+  "job_name": "salt-neutronics-tbr",
+  "cluster": "perlmutter",
+  "state": "COMPLETED",
+  "output_dir": null,
+  "log_path": null,
+  "outputs": "JOB_ID=57776203\nCLUSTER=perlmutter\nSTATE=COMPLETED\nEXIT_CODE=0\n\n--- LOGS ---\n\n(unable to fetch logs: [nersc-iri][filesystem] head task ended with status 'failed' (task_id=b9b7038a-7720-4d5a-9477-0885c2f9870a))\n\n--- OUTPUT FILES ---\n\n(no output files yet)"
+}
