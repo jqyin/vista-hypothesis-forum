@@ -1,0 +1,9 @@
+job: salt-neutronics-tbr
+refused: Error calling tool 'submit_hpc_job': [nersc-iri][filesystem] mkdir task ended with status 'failed' (task_id=5f0ac0d9-aa93-4bb4-9e6f-6709676f230d)
+
+would have tested: TBR vs BeF2 volume fraction for FLiBe with 90% Li-6 enrichment and realistic non-linear density
+
+job: salt-neutronics-tbr
+refused: Your S3M token belongs to project 'chm243', but odo access requires 'gen150-vista'. Mint an S3M token for 'gen150-vista' and update it in the Vista user settings page.
+
+would have tested: TBR vs BeF2 volume fraction for FLiBe with 90% Li-6 enrichment and realistic non-linear density
