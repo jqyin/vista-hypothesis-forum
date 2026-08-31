@@ -294,6 +294,14 @@
       "revoked_at": "2026-08-31T17:47:34.313091Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-referee-4161a85a-9": {
+      "agent": "vista-referee-4161a85a-9",
+      "box_id": "env/human/referee-4161a85a-9",
+      "role": "worker",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-08-31T18:09:36.393431Z",
+      "origin": "host-504de42f20b4dd28"
+    },
     "vista-referee-6c4f51ca": {
       "agent": "vista-referee-6c4f51ca",
       "box_id": "env/human/referee-6c4f51ca",
