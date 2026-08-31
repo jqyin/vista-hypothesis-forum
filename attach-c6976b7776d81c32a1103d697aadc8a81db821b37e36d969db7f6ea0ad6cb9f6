@@ -1,0 +1,260 @@
+job: salt-neutronics-tbr
+refused: Your S3M token belongs to project 'chm243', but odo access requires 'gen150-vista'. Mint an S3M token for 'gen150-vista' and update it in the Vista user settings page.
+
+would have tested: TBR peaks at 70-75 mol% BeF2 in homogeneous FLiBe blanket with 90% Li-6 enrichment
+
+query: FLiBe BeF2 composition tritium breeding ratio 2024
+knowledge base: molten-salt
+
+[1] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe serves as breeder, neu- tron shield, and coolant for the vacuum vessel [11]. The beryllium in FLiBe acts as a neutron multiplier, which significantly enhances Tritium Breeding Ratio (TBR). Al- though there are many challenges associated with working with beryllium because of its toxicity, FLiBe remains the most promising breeder choice for the ARC-class FPP due to its cooling capabilities [12], and its ability to achieve high TBR [13]. Recent models have shown that the FLiBe LIB should enable the ARC-class FPP to achieve tritium self-sufficiency [6]. Preprint submitted to Nuclear Fusion December 5, 2024 arXiv:2412.02721v1 [physics.plasm-ph] 2 Dec 2024
+
+————————————————————————————————————————————————————————————
+
+[2] Tritium-BABYexperiment2024.pdf, page 9
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+offer valuable insights into the intricate dynamics of tri- tium breeding within molten salts. A TBR of 3.57 × 10−4 was measured: 21 Bq of tritium produced and a neutron fluence of 3.35×1013 n over 24 h of irradiation. Future en- deavors will be dedicated to reconciling disparities between observed and modeled tritium breeding ratios, refining neutron source characterization, and better understand- ing of the tritium speciation observations. Moreover, an effort will be made to develop and validate higher-fidelity tritium transport models. This project will progress to- wards larger-scale investigations, such as the planned 1 L volume experiment with FLiBe salt, and will continue to explore alternative beryllium-free molten salt breeders. Acknowledgements The authors would like to acknowledge funding from the Advanced Research Projects Agency-Energy (ARPA- E), U.S. Department of Energy. The views and opinions of authors expressed herein do not necessarily state or re- flect those of the United States Government or any agency thereof. References [1] Fusion Industry Association, The global fusion in- dustry in 2023, 2023, available at: hhttps://www. fusionindustryassociation.org/wp-content/uploads/2023/ 07/FIA%E2%80%932023-FINAL.pdf. Accessed: 2024-21-03. [2] M. Kovari, M. Coleman, I. Cristescu, and R. Smith, “Tritium resources available for fusion reactors,” Nuclear Fusion, vol. 58, no. 2, p. 026010, Dec. 2017, publisher: IOP Publishing. [Online]. Available: https://dx.doi.org/10.1088/1741-4326/aa9d25 [3] R. J. Pearson, A. B. Antoniazzi, and W. J. Nuttall, “Tritium supply and use: a key issue for the development of nuclear fusion energy,” Fusion Engineering and Design, vol. 136, pp. 1140–1148, Nov. 2018. [Online]. Available: https://www. sciencedirect.com/science/article/pii/S092037961830379X [4] M. Coleman, Y. H¨orstensmeyer, and F. Cismondi, “DEMO tritium fuel cycle: performance, parameter explorations, and design space constraints,” Fusion Engineering and Design, vol. 141, pp. 79–90, Apr. 2019. [Online]. Available: https://www. sciencedirect.com/science/article/pii/S092037961930167X [5] H. Chen, L. Pan, Z. Lv, W. Li, and Q. Zeng, “Tritium fuel cycle modeling and tritium breeding analysis for CFETR,” Fusion Engineering and Design, vol. 106, pp. 17–20, May 2016. [Online]. Available: https://www.sciencedirect.com/science/ article/pii/S0920379616301922 [6] S. Meschini, S. E. Ferry, R. Delaporte-Mathurin, and D. G. Whyte, “Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants,” Nuclear Fusion, vol. 63, no. 12, p. 126005, Sep. 2023, publisher: IOP Publishing. [Online]. Available: https://dx.doi.org/10.1088/1741-4326/acf3fc [7] M. Abdou, M. Riva, A. Ying, C. Day, A. Loarte, L. Baylor, P. Humrickhouse, T. F. Fuerst, and S. Cho, “Physics and technology considerations for the deuterium–tritium fuel cycle and conditions for tritium fuel self sufficiency,” Nuclear Fusion, vol. 61, no. 1, p. 013001, Jan. 2021. [Online]. Available: https://iopscience.iop.org/article/10.1088/1741-4326/abbf35 [8] S. E. Ferry, K. B. Woller, E. E. Peterson, C. Sorensen, and D. G. Whyte, “The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum,” Fusion Science and Technology, vol. 0, no. 0, pp. 1–23, Jun. 2022, publisher: Taylor & Fran- cis eprint: https://doi.org/10.1080/15361055.2022.2078136. [Online]. Available: https://doi.org/10.1080/15361055.2022. 2078136 [9] B. N. Sorbom, J. Ball, T. R. Palmer, F. J. Mangiarotti, J. M. Sierchio, P. Bonoli, C. Kasten, D. A. Sutherland, H. S. Barnard, C. B. Haakonsen, J. Goh, C. Sung, and D. G. Whyte, “ARC: A compact, high-field, fusion nuclear science facility and demonstration
+
+————————————————————————————————————————————————————————————
+
+[3] Barker_2025_Nucl._Fusion_65_086022.pdf, page 0
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+PAPER • OPEN ACCESS Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector To cite this article: Adam J. Barker et al 2025 Nucl. Fusion 65 086022 View the article online for updates and enhancements. You may also like Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants Samuele Meschini, Sara E. Ferry, Rémi Delaporte-Mathurin et al. - Electrochemical Study of Eu(III)/Eu(II) in LiF-BeF2 Molten Salt Yong Zuo, Hao Peng, Nan Ji et al. - Characterization of a Thermodynamic Reference Electrode for Molten LiF-BeF2 (FLiBe) Francesco Carotti, Huali Wu and Raluca O. Scarlat - This content was downloaded from IP address 192.31.96.218 on 26/12/2025 at 21:06
+
+————————————————————————————————————————————————————————————
+
+[4] Barker_2025_Nucl._Fusion_65_086022.pdf, page 6
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure 3. Tritium production in 6Li at different layers throughout the blanket. The first instance of FLiBe for the best TBR performing configurations is shown with circular markers. In each instance, an increase in TBR is observed in the preceding Li layers. Also shown is a pure liquid Li blanket design for comparison (dashed line). though the best performing blanket designs all contain FLiBe, shown in figure 2. It is proposed that by including a propor- tion of molten salt in the rear of the blanket, FLiBe is act- ing as a reflector of neutrons and elevating tritium produc- tion in the preceding pure lithium layers, whilst also contrib- uting directly to the tritium production. The implication is that FLiBe increases tritium production in lithium through reflec- tion, rather than enhancing the overall (TBR) solely due to FLiBe being a more efficient breeder than pure liquid lithium. This is supported by figure 3, which shows the best performing iterations of the blanket, and displays tritium produced (from exclusively 6Li) in each layer. Referenced on the image is the first instance of FLiBe in each variation. Any lithium layers directly preceding (i.e. lower-layer number) the first appear- ance of FLiBe clearly show an increase in tritium production, while the highest performing blankets (shown in dark blue) all have their initial FLiBe layer in layer 4.5. The observed variations in tritium production between the hybrid scenarios are caused by a change in the ordering of Li and FLiBe layers from layer 5 onwards—see figure 2. The dashed line in figure 3 represents the TBR from a pure liquid lithium blanket and a constant decrease in tritium production is seen throughout the layers in contrast to the varied nature of the tritium production when FLiBe is included into the system. Here it is observed that FLiBe is outperformed at the rear of the blanket when compared to liquid lithium, though in the mixed segmentation scenarios, this under performance of FLiBe is counteracted by the increase in TBR in the initial layers of the blanket. This results in a larger overall TBR in the higher neutron flux areas of the blanket, rather than in the low TBR production areas at the rear of the blanket. For greater spatial resolution a fifty-layer blanket was cre- ated using the same methodology, as described above. The neutron flux per unit lethargy (neutron cm−2 per unit lethargy) as a function of neutron energy (group structure CCFE-709) and layer number, are shown in figures 4(a) and (b). These figures illustrate how the neutron flux spectrum is affected by penetration depth within the blanket, indicated by the layer number, with 50 representing the final layer, or the layer fur- thest from the plasma source. A comparison is made between a solely liquid lithium blanket, figure 4(a), and a hybrid dual breeder design, figure 4(b), where lithium is contained within the first 31 layers and layer 32–50 contain FLiBe. This was chosen because it most closely represents the best performing configuration in figure 2.
+
+————————————————————————————————————————————————————————————
+
+[5] Barker_2025_Nucl._Fusion_65_086022.pdf, page 1
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+International Atomic Energy Agency Nuclear Fusion Nucl. Fusion 65 (2025) 086022 (12pp) https://doi.org/10.1088/1741-4326/adecb2 Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector Adam J. Barker1,∗, Mark R. Gilbert2and Philip D. Edmondson1 1 University of Manchester, Oxford Road, Manchester M13 9PL, United Kingdom of Great Britain and Northern Ireland 2 United Kingdom Atomic Energy Authority, Culham Campus, Abingdon OX14 3DB, United Kingdom of Great Britain and Northern Ireland E-mail: adam.barker-3@manchester.ac.uk Received 2 April 2025, revised 5 June 2025 Accepted for publication 7 July 2025 Published 17 July 2025 Abstract Tritium production in a fusion reactor is essential for a deuterium-tritium burning plasma source, and designing a lithium-containing breeder blanket is crucial for a closed fuel cycle in an electricity-to-grid power plant. Tritium is a rare resource, currently produced only in a limited number of fission reactors and other low-output facilities. Due to the lack of experimental data in this area, neutronics calculations will guide the design of the first-generation fusion blankets tasked with tritium fuel production as without maximised breeding potential, reactor startup times may need to be postponed due to a low global inventory. This paper describes an optimisation workflow that segments a DEMO-style blanket to allow flexibility in material allocation, along with the necessary validation steps for repeatable results. The developed blanket is tested within the neutronics code OpenMC to evaluate the performance of a hybrid liquid metal–molten salt breeder. FLiBe is found to be an efficient neutron reflector, showing performance increases of 7%, resulting in an overall tritium breeding ratio (TBR) of 1.11, even with a natural abundance of 7.5 % lithium-6. Analysis of the neutron spectral profile indicates a shift towards thermal neutrons when reflected from FLiBe placed at the rear of the design. The use of molten salt as a reflector is novel as a result of its ability to breed tritium and provide a secondary increase in TBR through the reflection of neutrons. A dual system would require more complex engineering, but may offer a solution for compact reactors and/or systems with low lithium enrichment. ∗Author to whom any correspondence should be addressed. Original Content from this work may be used under the terms of the Creative Commons Attribution 4.0 licence. Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI. 1741-4326/25/086022+12$33.00 Printed in the UK 1 © 2025 Crown copyright, UK Atomic Energy Authority & The Author(s). Published by IOP Publishing Ltd on behalf of the IAEA.
+
+query: Pint 2024 FLiBe BeF2 composition TBR
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 2
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 Materials Science and Technology Division MATERIALS ASSESSMENT FOR FLiBe FUSION BLANKETS Bruce A. Pint, Evangelia Kiosidou, Dino Sulejmanovic and Paul Humrickhouse September 2024 Prepared by OAK RIDGE NATIONAL LABORATORY Oak Ridge, TN 37831 managed by UT-BATTELLE LLC for the US DEPARTMENT OF ENERGY under contract DE-AC05-00OR22725
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 39
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+APPENDIX B – ORNL EXPERIENCE WITH FLIBE IN FISSION AND COMMENTS ON USE IN FUSION
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-pint-blanket-Pub219653.pdf, page 0
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY Materials Assessment for FLiBe Fusion Blankets Bruce A. Pint Evangelia Kiosidou Dino Sulejmanovic Paul Humrickhouse September 2024
+
+————————————————————————————————————————————————————————————
+
+[4] Barker_2025_Nucl._Fusion_65_086022.pdf, page 2
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+2
+
+————————————————————————————————————————————————————————————
+
+[5] tritium-LIBRA_Experiment_FLiBe.pdf, page 16
+    Citation: The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum — Sara E. Ferry et al. — Fusion Science and Technology vol. 79 (2023) — DOI: 10.1080/15361055.2022.2078136
+
+achieves a much faster doubling time and lower startup inventory. VI. CONCLUSION LIBRA is the key to showing that high TBR and rapid T recovery times can be achieved in an experimentally simulated LIB environment. The FLiBe-based LIB has a higher TBR and shorter doubling time than any conven­ tional blanket design while still minimizing total plant inventory. However, FLiBe T breeding research has stag­ nated, and there are many open research questions that must be addressed, quickly, in order to make the LIB relevant to the nascent fusion power industry by 2030. LIBRA is a time- and cost-efficient way to launch this process. In the near term, detailed engineering plans of the LIBRA facility will be completed. Before LIBRA is completed, small-scale FLiBe experiments will be carried out in parallel with the preparation work to establish safe handling procedures and validate equipment. We plan to share these results as well as progress on the LIBRA facility construction as we move toward the first LIBRA Phase I experimental campaigns. In the longer term, the LIBRA facility will be mod­ ified to pursue more ambitious scientific goals. The tanks will be expanded to accommodate larger FLiBe volumes, and a higher-fluence neutron source (up to 5 × 1013 n/s, currently under development) will be installed. LIBRA Phase II (Fig. 5) will aim to achieve higher T breeding rates and a TBR of > 1.3. Methods to verify continuous, volumetric T breeding and recovery will be validated and refined. Eventually, LIBRA will provide the foundation for the design of a LIB test blanket module for installa­ tion on a burning D-T plasma device. Disclosure Statement No potential conflict of interest was reported by the author(s). Funding The information, data, or work presented herein was funded in part by the Advanced Research Projects Agency- Energy (ARPA-E), U.S. Department of Energy, under Award Number DE-AR0001542. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof. ORCID Sara E. Ferry http://orcid.org/0000-0002-7505-9571 References 1. NATIONAL ACADEMIES OF SCIENCES, ENGINEERING, AND MEDICINE, Accelerating Decarbonization of the U.S. Energy System, The National Academies Press, Washington, D.C (2021); https://doi.org/10.17226/25932. 2. NATIONAL ACADEMY OF ENGINEERING AND NATIONAL ACADEMIES OF SCIENCES, ENGINEERING, AND MEDICINE, Bringing Fusion to the U.S. Grid, The National Academies Press, Washington, D.C. (2021); https://doi.org/10.17226/ 25991. 3. V. MASSON-DELMOTTE et al., “Climate Change 2021: The Physical Science Basis,” Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change (2021). 4. M. ABDOU et al., “Physics and Technology Considerations for the Deuterium–Tritium Fuel Cycle and Conditions for Tritium Fuel Self Sufficiency,” Nucl. Fusion, 61, 1, 013001 (2020); https://doi.org/10. 1088/1741-4326/abbf35. 5. B. SORBOM et al., “ARC: A Compact, High-Field, Fusion Nuclear Science Facility and Demonstration Power Plant with Demountable Magnets,” Fusion Eng. Des., 100, 378 (2015); https://doi.org/10.1016/J. FUSENGDES.2015.07.008. 6. T. CARTER, “Powering the Future Fusion & Plasmas: A Long-Range Plan to Deliver Fusion Energy and to Advance Plasma Science,” Federal Economic Statistics Advisory Committee (2020). 7. D. BAKER et al., “BEATRIX-II: In-Situ
+
+query: ORNL/TM-2024/3508 TBR BeF2
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 0
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY Materials Assessment for FLiBe Fusion Blankets Bruce A. Pint Evangelia Kiosidou Dino Sulejmanovic Paul Humrickhouse September 2024
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 2
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 Materials Science and Technology Division MATERIALS ASSESSMENT FOR FLiBe FUSION BLANKETS Bruce A. Pint, Evangelia Kiosidou, Dino Sulejmanovic and Paul Humrickhouse September 2024 Prepared by OAK RIDGE NATIONAL LABORATORY Oak Ridge, TN 37831 managed by UT-BATTELLE LLC for the US DEPARTMENT OF ENERGY under contract DE-AC05-00OR22725
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 0
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+ORNL/TM-2023/3052 Optimal Chloride Salt Mixture for a Fusion Blanket Nolan E. Goth Jesse M. Brown Tarek Ghaddar Logan Scott Jin Whan Bae Phillip Britt September 2023 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY
+
+————————————————————————————————————————————————————————————
+
+[4] molten-salt-fusion-1972-4578255.pdf, page 22
+    Citation: Molten Salts as Blanket Fluids in Controlled Fusion Reactors — W. R. Grimes, Stanley Cantor — ORNL-TM-4047 (1972)
+
+20 ORNL-DWG 71-5270R2 fmole faction) Fig. 1. Phase Diagram of the System LiF-BeF2.
+
+————————————————————————————————————————————————————————————
+
+[5] epri-fusion-blankets-report-2024.pdf, page 0
+    Citation: Fusion Blankets Research Objectives: Results from the 2023 Fusion Blankets Workshop — Sara Ferry et al. — (2024)
+
+2024 TECHNICAL UPDATE Fusion Blankets Research Objectives Results from the 2023 Fusion Blankets Workshop 14936798
+
+attachment ORNL-pint-blanket-Pub219653.pdf
+
+Could not read ORNL-pint-blanket-Pub219653.pdf: 404: Not found
+
+query: Pint FLiBe
+knowledge base: molten-salt
+
+[1] Principles_of_Modern_Chemistry_by_David_W._David_W._Oxtoby__Oxtoby__H._Pat_Gillis__Alan_Campion__z-lib.org_.pdf, page 562
+    Citation: Principles of Modern Chemistry — David W. Oxtoby, H. Pat Gillis, Alan Campion
+
+S
+
+————————————————————————————————————————————————————————————
+
+[2] breeder_blanket_and_tritium_fuel_cycle_feasibility_of_the_infinity_two_fusion_pilot_plant.pdf, page 38
+    Citation: Breeder blanket and tritium fuel cycle feasibility of the Infinity Two fusion pilot plant — D.W.S. Clark et al. — Journal of Plasma Physics vol. 91 (2025) — DOI: 10.1017/S002237782500039X
+
+Press
+
+————————————————————————————————————————————————————————————
+
+[3] _M._P._Tosi__auth.___Marcelle_Gaune-Escard__eds.___z-lib.org_.pdf, page 81
+    Citation: Molten Salts: From Fundamentals to Applications — M. P. Tosi, Marcelle Gaune-Escard — NATO Science Series II: Mathematics, Physics and Chemistry vol. 52 (2002) — DOI: 10.1007/978-94-010-0458-9
+
+an apex.
+
+————————————————————————————————————————————————————————————
+
+[4] Principles_of_Modern_Chemistry_by_David_W._David_W._Oxtoby__Oxtoby__H._Pat_Gillis__Alan_Campion__z-lib.org_.pdf, page 180
+    Citation: Principles of Modern Chemistry — David W. Oxtoby, H. Pat Gillis, Alan Campion
+
+Energy
+
+————————————————————————————————————————————————————————————
+
+[5] _M._P._Tosi__auth.___Marcelle_Gaune-Escard__eds.___z-lib.org_.pdf, page 286
+    Citation: Molten Salts: From Fundamentals to Applications — M. P. Tosi, Marcelle Gaune-Escard — NATO Science Series II: Mathematics, Physics and Chemistry vol. 52 (2002) — DOI: 10.1007/978-94-010-0458-9
+
+in industry.
+
+query: "ORNL/TM-2024/3508" FLiBe
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 0
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY Materials Assessment for FLiBe Fusion Blankets Bruce A. Pint Evangelia Kiosidou Dino Sulejmanovic Paul Humrickhouse September 2024
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 2
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 Materials Science and Technology Division MATERIALS ASSESSMENT FOR FLiBe FUSION BLANKETS Bruce A. Pint, Evangelia Kiosidou, Dino Sulejmanovic and Paul Humrickhouse September 2024 Prepared by OAK RIDGE NATIONAL LABORATORY Oak Ridge, TN 37831 managed by UT-BATTELLE LLC for the US DEPARTMENT OF ENERGY under contract DE-AC05-00OR22725
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 0
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+ORNL/TM-2023/3052 Optimal Chloride Salt Mixture for a Fusion Blanket Nolan E. Goth Jesse M. Brown Tarek Ghaddar Logan Scott Jin Whan Bae Phillip Britt September 2023 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-pint-blanket-Pub219653.pdf, page 39
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+APPENDIX B – ORNL EXPERIENCE WITH FLIBE IN FISSION AND COMMENTS ON USE IN FUSION
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-pint-blanket-Pub219653.pdf, page 33
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+APPENDIX A. FLIBE FOR FUSION REACTORS – CONCEPTUAL DESIGN CONSIDERATIONS BASED LARGELY ON ORNL EXPERIENCE
+
+query: optimal FLiBe composition TBR eutectic
+knowledge base: molten-salt
+
+[1] Barker_2025_Nucl._Fusion_65_086022.pdf, page 5
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure 2. Tritium breeding ratio for all combinations of a eight-layer blanket containing liquid lithium (Li) and FLiBe (FL), respectively. The front four layers are on the x-axis and the final four layers are shown on the y-axis. Natural abundance of Li isotopes were used in these simulations. • When FLiBe is placed near the front of the blanket the per- formance significantly reduces regardless of whether lith- ium or FLiBe is placed behind, shown in figure 2 as the shift from blue to red on the heatmap. • When FLiBe is placed near the rear of the blanket the TBR values exceeds the pure lithium case, even with an overall reduction of lithium atomic density throughout the blanket. Also, at the location near the rear of the blanket neutron multiplication is likely to have a small effect on the tri- tium production in FLiBe because the 9Be(n,2n)8Be is a threshold reaction requiring neutron energies of approxim- ately > 4 MeV: verified shown later in, figure 4(d). To further expand on the final point, when comparing all of the results to the pure liquid lithium variant (top left quadrant of figure 2), which can be considered a reference, a TBR perform- ance improvement occurs when FLiBe was placed towards the rear of the blanket. The observed increase, due to the placement of FLiBe, elevated an additional 50 combinations to an eligible candidate solution (TBR >1.05), even at nat- ural 6Li abundance. While the best performing blankets saw TBR levels of 1.1. Nearly all of these eligible designs con- sisted of a blanket with a liquid lithium front and a FLiBe rear with varying volumes of each material, but always in the same configuration. The effect of 6Li enrichment was also evaluated by increas- ing the enrichment in both FLiBe and liquid lithium to 10% and 20%. This produced, as expected, a clear increase through- out all permutations when compared to their lower enrichment counterparts. The best performing blankets, across all enrich- ment values, were again a hybrid design consisting of a lithium dominated front paired with a FLiBe rear. Initially, at natural enrichment the placement of FLiBe at the rear was observed to have a TBR increase of approximately 7% when compared to a pure liquid lithium configuration. When the enrichment was increased to 20% the additional increase was found to be 3.5%, therefore diminishing returns are observed at higher levels of 6Li enrichment when comparing configuration with the same enrichment level. The best performing blanket in this study produced a theoretical TBR of 1.25, well above the required TBR threshold, and was found in a hybrid blanket consisting of 3 final layers of FLiBe and 5 front layers of lithium when both were enriched to 20%. Details on higher 6Li enrichments can be found in appendix C This investigation into blanket configuration shows that the spatial placement of the materials can have considerable impact in the overall TBR, and adds leverage to the segment- ation approach showing that further optimisation of blankets
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 39
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+APPENDIX B – ORNL EXPERIENCE WITH FLIBE IN FISSION AND COMMENTS ON USE IN FUSION
+
+————————————————————————————————————————————————————————————
+
+[3] ORNL-chloride-blanket-Pub201058.pdf, page 94
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+APPENDIX D. BINARY SALT THERMOPHYSICAL DATA Data availability of the most promising binary salts, sorted by tritium production in descending order and evaluated at 873 K [600◦C] Salt 3H Tliquidus ρ µ k cp ρid wt.%>wt.% Production [K] [g/cm3] [mPa · s] [W/m · K] [J/mol · K] [Bool] 66LiF-33BeF2 [mol%] 1.000 773 1.984 8.535 1.1 79.9 F H2OPWR N/A N/A 0.720 0.09 0.54 103.2 F 0.3LiCl-0.7PbCl2 1.072 697 2.873 N/A N/A N/A T 0.4LiCl-0.6PbCl2 1.067 667 2.542 N/A N/A N/A T 0.2LiCl-0.8PbCl2 1.066 725 3.304 N/A N/A N/A T 0.5LiCl-0.5PbCl2 1.060 699 2.279 N/A N/A N/A T 0.6LiCl-0.4PbCl2 1.053 740 2.065 N/A N/A N/A T 0.7LiCl-0.3PbCl2 1.046 778 1.888 N/A N/A N/A T 0.8LiCl-0.2PbCl2 1.039 815 1.739 N/A N/A N/A T 0.9LiCl-0.1PbCl2 1.033 849 1.612 N/A N/A N/A T 0.8LiCl-0.2SrCl2 1.029 816 1.661 2.413 0.615 61.052 F 0.9LiCl-0.1SrCl2 1.028 849 1.577 1.969 0.623 63.244 F 0.7LiCl-0.3SrCl2 1.028 784 1.753 2.941 0.607 58.448 F 0.7LiCl-0.3MnCl2 1.028 852 1.684 N/A N/A N/A T 0.9LiCl-0.1BeCl2 1.027 849 1.482 1.557 0.595 61.56 F 0.6LiCl-0.4SrCl2 1.027 787 1.857 3.58 0.596 55.303 F 0.9LiCl-0.1CoCl2 1.026 876 1.565 N/A N/A N/A T 0.8LiCl-0.2BeCl2 1.026 815 1.462 1.521 0.557 57.629 F 0.8LiCl-0.2CoCl2 1.025 849 1.633 N/A N/A N/A T 0.6LiCl-0.4MnCl2 1.024 849 1.755 N/A N/A N/A T 0.5LiCl-0.5SrCl2 1.024 841 1.974 4.366 0.583 51.429 F 0.7LiCl-0.3BeCl2 1.022 778 1.443 1.482 0.514 53.257 F 0.7LiCl-0.3CoCl2 1.022 818 1.708 N/A N/A N/A T 0.1LiCl-0.9PbCl2 1.020 750 3.887 N/A N/A N/A T 0.9LiCl-0.1MgCl2 1.018 847 1.524 1.656 0.609 66.364 F 0.6LiCl-0.4CoCl2 1.017 792 1.790 N/A N/A N/A T 0.9LiCl-0.1NaCl 1.017 848 1.517 1.608 0.623 65.562 F 0.4LiCl-0.6SrCl2 1.016 898 2.107 5.358 0.567 46.538 F 0.5LiCl-0.5MnCl2 1.016 829 1.833 N/A N/A N/A T 0.6LiCl-0.4BeCl2 1.016 740 1.424 1.438 0.467 48.364 F 0.9LiCl-0.1CaCl2 1.013 848 1.549 1.814 0.622 66.62 F 0.5LiCl-0.5CoCl2 1.009 836 1.880 N/A N/A N/A T 0.8LiCl-0.2MgCl2 1.008 800 1.546 1.732 0.587 67.773 F 0.5LiCl-0.5BeCl2 1.006 699 1.406 1.388 0.414 42.852 F 0.8LiCl-0.2NaCl 1.005 808 1.532 1.629 0.618 66.038 F 0.9LiCl-0.1KCl 1.004 797 1.514 1.608 0.616 65.615 F 0.8LiCl-0.2CaCl2 0.996 811 1.599 2.07 0.615 68.34 F 0.7LiCl-0.3MgCl2 0.996 736 1.569 1.817 0.562 69.373 F 0.4LiCl-0.6CoCl2 0.995 882 1.980 N/A N/A N/A T D-2
+
+————————————————————————————————————————————————————————————
+
+[4] Barker_2025_Nucl._Fusion_65_086022.pdf, page 5
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+were enriched to 20%. Details on higher 6Li enrichments can be found in appendix C This investigation into blanket configuration shows that the spatial placement of the materials can have considerable impact in the overall TBR, and adds leverage to the segment- ation approach showing that further optimisation of blankets can be found via appropriate placement of the material within the blanket region. A blanket made solely from FLiBe would not perform well, at the enrichment levels tested, while a pure liquid lithium blanket would also fall short of the TBR tar- get ⩾1.05 at natural abundances. However, when FLiBe and Li are combined in differing combinations with natural 6Li abundance the minimum required TBR level can be exceeded. Furthermore, when the 6Li enrichment was increased, to 10% or 20%, multiple combinations, including pure liquid lithium, exceeded the minimum theoretical TBR threshold; though the greatest performance was seen when FLiBe was placed near the rear and this configuration was always the best performer at each enrichment level tested. 3.1. FLiBe as a reflector It is evident that a pure FLiBe blanket produces less tritium in a like-for-like comparison to its pure lithium counterpart, 5
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 54
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+Table 9. Performance of binary chloride salts quantiﬁed by turbulent forced convection ﬂow and heat transfer FOMs normalized by values for FLiBe. Water at 300◦C and 15.5 MPa [2,250 psi] is also provided for a comparison with pressurized water reactor coolant. Turbulent forced convection Heat exchanger area Coolant FOMﬂow,i FOMﬂow,FLiBe Coolant FOMheat,i FOMheat,FLiBe 0.7LiCl-0.3CaCl2 5.67 0.8LiCl-0.2CaCl2 1.41 0.4LiCl-0.6NaCl 5.80 0.7LiCl-0.3KCl 1.42 0.7LiCl-0.3MgCl2 5.81 0.4LiCl-0.6NaCl 1.42 0.7LiCl-0.3KCl 5.87 0.3LiCl-0.7NaCl 1.45 0.9LiCl-0.1BeCl2 6.08 0.6LiCl-0.4KCl 1.47 0.3LiCl-0.7NaCl 6.09 0.7LiCl-0.3CaCl2 1.47 0.6LiCl-0.4CaCl2 6.20 0.2LiCl-0.8NaCl 1.48 0.6LiCl-0.4MgCl2 6.41 0.7LiCl-0.3MgCl2 1.48 0.2LiCl-0.8NaCl 6.41 0.1LiCl-0.9NaCl 1.51 0.6LiCl-0.4KCl 6.49 0.8LiCl-0.2SrCl2 1.52 0.1LiCl-0.9NaCl 6.76 0.5LiCl-0.5KCl 1.52 0.5LiCl-0.5CaCl2 6.81 0.8LiCl-0.2BeCl2 1.53 0.5LiCl-0.5MgCl2 7.11 0.6LiCl-0.4CaCl2 1.54 0.5LiCl-0.5KCl 7.21 0.9LiCl-0.1AlCl3 1.56 0.8LiCl-0.2SrCl2 7.37 0.6LiCl-0.4MgCl2 1.56 0.4LiCl-0.6CaCl2 7.51 0.4LiCl-0.6KCl 1.59 0.4LiCl-0.6MgCl2 7.95 0.5LiCl-0.5CaCl2 1.62 0.4LiCl-0.6KCl 8.06 0.7LiCl-0.3SrCl2 1.66 0.8LiCl-0.2BeCl2 8.60 0.5LiCl-0.5MgCl2 1.67 0.3LiCl-0.7KCl 9.07 0.3LiCl-0.7KCl 1.67 0.7LiCl-0.3SrCl2 9.99 0.7LiCl-0.3BeCl2 1.69 0.2LiCl-0.8KCl 10.28 0.4LiCl-0.6CaCl2 1.71 0.7LiCl-0.3BeCl2 12.69 0.2LiCl-0.8KCl 1.76 0.9LiCl-0.1AlCl3 13.64 0.8LiCl-0.2AlCl3 1.79 0.6LiCl-0.4SrCl2 14.24 0.4LiCl-0.6MgCl2 1.80 0.6LiCl-0.4BeCl2 19.83 0.6LiCl-0.4SrCl2 1.82 0.5LiCl-0.5SrCl2 21.82 0.6LiCl-0.4BeCl2 1.90 0.8LiCl-0.2AlCl3 29.71 0.7LiCl-0.3AlCl3 2.00 0.5LiCl-0.5BeCl2 33.45 0.5LiCl-0.5SrCl2 2.03 0.4LiCl-0.6SrCl2 37.21 0.5LiCl-0.5BeCl2 2.18 0.7LiCl-0.3AlCl3 54.92 0.6LiCl-0.4AlCl3 2.22 0.4LiCl-0.6BeCl2 63.21 0.4LiCl-0.6SrCl2 2.30 0.6LiCl-0.4AlCl3 91.73 0.5LiCl-0.5AlCl3 2.46 0.3LiCl-0.7BeCl2 142.89 0.4LiCl-0.6BeCl2 2.61 0.5LiCl-0.5AlCl3 144.45 0.4LiCl-0.6AlCl3 2.74 0.4LiCl-0.6AlCl3 215.73 0.3LiCl-0.7AlCl3 3.11 0.3LiCl-0.7AlCl3 312.11 0.3LiCl-0.7BeCl2 3.32 0.2LiCl-0.8AlCl3 433.09 0.2LiCl-0.8AlCl3 3.65 0.2LiCl-0.8BeCl2 447.73 0.2LiCl-0.8BeCl2 4.72 42
+
+query: BeF2 molten density
+knowledge base: molten-salt
+
+[1] ___Molten_Salts_and_Ionic_Liquids__Never_the_Twain_z-lib.org_.pdf, page 168
+    Citation: Molten Salts and Ionic Liquids: Never the Twain? — Marcelle Gaune-Escard, Kenneth R. Seddon — (2010)
+
+in the melt.
+
+————————————————————————————————————————————————————————————
+
+[2] molten-salt-breed-neutronics-fdm1234.pdf, page 6
+    Citation: Neutronics Assessment of Molten Salt Breeding Blanket Design Options — M.E. Sawan et al. — 16th ANS Topical Meeting on Fusion Energy (2004)
+
+40 48 56 64 Flibe FS Be Power Density (W/cm3) Depth in Blanket (cm) Radial Distribution of Power Density in Blanket Components at OB Midplane Peak Neutron Wall Loading 5.45 MW/m 2 Dual Coolant Blanket Flibe/He/Be/FS Fig. 6. Power density distribution in DC-Be blanket. 4
+
+————————————————————————————————————————————————————————————
+
+[3] molten-salt-fusion-1972-4578255.pdf, page 22
+    Citation: Molten Salts as Blanket Fluids in Controlled Fusion Reactors — W. R. Grimes, Stanley Cantor — ORNL-TM-4047 (1972)
+
+20 ORNL-DWG 71-5270R2 fmole faction) Fig. 1. Phase Diagram of the System LiF-BeF2.
+
+————————————————————————————————————————————————————————————
+
+[4] aimd-eutectic1.pdf, page 2
+    Citation: First-principles molecular dynamics modeling of UCl3 in LiCl-KCl eutectic — Jia Song et al. — Journal of Molecular Liquids vol. 234 (2017) — DOI: 10.1016/j.molliq.2017.03.099
+
+where a and b are parameters evaluated from experimental density at 2.029 g cm−3 and 5.274 × 10−4 g cm−3 K−1, and from our FPMD den- sity at 2.217 g cm−3 and 6.892 × 10−4 g cm−3 K−1, respectively [39]. For the molten LiCl-KCl-UCl3 mixture, the FPMD density decreases from 1.801 to 1.702 g cm−3 as the temperature increases from 858 to 1019 K, agrees satisfactorily with density approximated by isometric mixing of molten LiCl-KCl and UCl3 as shown in Fig. 2 [40]. By ﬁtting the density to Eq. (1), parameters a and b are obtained at 2.382 g cm−3 and 6.764 × 10−4 g cm−3 K−1 from our FPMD optimiza- tion, and 2.273 g cm−3 and 5.428 × 10−4 g cm−3 K−1 from isometric mixing. 3.1.2. Partial molar volume of UCl3 in molten LiCl-KCl-UCl3 mixture From the volume of molten LiCl-KCl and LiCl-KCl-UCl3 mixtures, we evaluated the partial molar volume (VB) of UCl3, VB ¼ ∂V ∂nB   T;p;nC≠B ð2Þ where V is the total volume of the molten salt mixture, nB is the molar quantity of UCl3, nC≠B are molar quantities of species other than UCl3, and the other variables have the regular meaning. In Fig. 2b, it summa- rizes the partial molar volume of UCl3 in LiCl-KCl-UCl3 mixture at multiple temperatures. It can be seen that the partial molar volume of UCl3 in molten LiCl-KCl-UCl3 is about 87.5 cm3 mol−1 at 858 K and slightly increases to 88.3 cm3 mol−1 at 886 K, and then decreases with temperature. Despite the partial molar volume is calculated as the difference between two large volumes and is prone to calculation errors, its overall tendency should be convincing. The decreasing in partial molar volume indicates the shrinking of intermolecular distances as the molten UCl3 is added into molten LiCl-KCl-UCl3 at high temperature. For comparison, the molar volume of crystalline UCl3 is 62.38 cm3 mol−1 at room temperature [41]. 3.2. Structural characteristics 3.2.1. Snapshots of the simulation cells Fig. 3 shows snapshots of the LiCl-KCl eutectic and the molten LiCl- KCl-UCl3 mixture recorded during the FPMD simulations. All the ions are separated and distributed in the molten salt mixtures evenly. 3.2.2. Radial distribution functions The radial distribution functions (RDFs) are the most important structural information obtainable from FPMD simulations. From RDFs, the local structures, especially the coordination structures of the simu- lated molten salt mixtures, can be deduced. To restrict the calculation noises from the small simulation systems and the short simulation times, the radial distribution functions are evaluated using trajectories Fig. 1. The dependences of internal energies on cell volumes for the molten (a) LiCl-KCl and (b) LiCl-KCl-UCl3 mixtures evaluated from FPMD simulations in NVT ensemble. Fig. 2. (a) Densities of the molten LiCl-KCl and LiCl-KCl-UCl3 mixtures, (b) partial molar volume of UCl3 in LiCl-KCl eutectic. 281 J. Song et al. / Journal of Molecular Liquids 234 (2017) 279–286
+
+————————————————————————————————————————————————————————————
+
+[5] aimd-eutectic.pdf, page 1
+    Citation: Dynamic Fluctuation of U3+ Coordination Structure in the Molten LiCl−KCl Eutectic via First Principles Molecular Dynamics Simulations — Xuejiao Li et al. — The Journal of Physical Chemistry A vol. 121 (2017) — DOI: 10.1021/acs.jpca.6b10193
+
+steps, and the ﬁnal conﬁgurations were used as input for the FPMD simulations. After the classical MD simulation, the equilibrium cell volume was further optimized in the NVE ensemble at ﬁve ﬁxed volumes for each given temperature using FPMD as implemented in the Vienna Ab initio Simulation Package (VASP).23−25 The free energies were evaluated as the averages over 2000 time steps in the NVE ensemble. For each temperature, the free energies were ﬁtted to a quadratic polynomial of cell volumes, and the equilibrium volume was evaluated as cell volume with the minimum free energy. Finally, production FPMD simulation in the NVT ensemble was carried out for about 12 000 simulation steps at this equilibrium volume and corresponding temperature. To explore the eﬀect of temperature, this process was repeated ﬁve times at preset temperatures of 858, 886, 921, 960, and 1019 K because experimental densities were available at these temperatures for the molten LiCl−KCl mixture.26 During all the simulations, periodic boundary conditions (PBC) were applied to eliminate boundary eﬀects. The FPMD simulations employed the PBE functionals and the energy was evaluated using a 1 × 1 × 1 k- point mesh.27 The wave functions of valent electrons, Li(2s1), Cl(3s23p5), K_sv(3s23p64s1), and U_s(5f36s26p66d17s2), were expanded in the plane wave basis set with a cutoﬀenergy of 420 eV, and the core electrons were approximated by projector- augmented wave (PAW) pseudopotentials.28 Spin polarization was always applied for FPMD simulations to properly depict unpaired electrons of U3+. The ionic coordinates were updated at a relatively short time step of 1 fs to reduce energy drift and the energetic evolution (Figure S1) was appended in the Supporting Information. 3. RESULTS AND DISCUSSION 3.1. Equilibrium Densities of the Molten Salt Mixture. The equilibrium density (ρe) of the molten salt mixture at each simulation temperature was evaluated from its equilibrium cell volume (Ve), which was optimized by ﬁtting the free energies (F) to Ve on the basis of a quadratic polynomial (as shown in Figure S2 in the Supporting Information). To make a comparison between the FPMD simulation density and experimental density, the experimental density of the molten LiCl−KCl−UCl3 mixture was approximated by isometric mixing of molten LiCl−KCl and UCl3. Because the temper- ature dependence of experimental density for molten LiCl−KCl and pure UCl3 were26,29 ρ = − × − −T 2.029 5.274 10 LiCl KCl 4 (1) ρ = − × −T 13.652 7.943 10 UCl 3 3 (2) respectively, the density of the molten LiCl−KCl−UCl3 mixture was evaluated as ρ = − × −T 2.273 5.428 10 iso 4 (3) From Table 1, it could be seen that the FPMD density ρe was in good agreement with the isometric mixing density of molten LiCl−KCl and UCl3 with a small deviation of 1.53% (in maximum) in the temperature range 858.4−1019.4 K. As the temperature dependence of the density was an essential property of materials representing the position of energy minimum on the energetic hypersurface in conﬁgurational Table 1. Equilibrium Cell Size a and Volume Ve of the Simulation Cell and Various Densities of the Molten LiCl− KCl−UCl3 Mixture T
