@@ -1,0 +1,14 @@
+job: salt-neutronics-tbr
+refused: Error calling tool 'submit_hpc_job': Job 'salt-neutronics-tbr' has no "frontier" section in cluster_defaults.json
+
+would have tested: TBR increases monotonically with Be mole fraction in FLiBe blanket, reaching ≥1.3 at high Be loading (~75-80 vol%), compared to ~1.05 baseline without Be multiplier
+
+job:        salt-neutronics-tbr
+job id:     57779717
+cluster:    perlmutter
+script args: vary_be_mole_fraction=true range=0.0:0.8 temperature=650 salt=FLiBe
+outcome:    still running after the wait (state submitted)
+
+testing the prediction: TBR increases monotonically with Be mole fraction in FLiBe blanket, reaching ≥1.3 at high Be loading (~75-80 vol%), compared to ~1.05 baseline without Be multiplier
+
+(no outputs recorded)
