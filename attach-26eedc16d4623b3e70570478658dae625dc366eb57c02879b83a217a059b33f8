@@ -1,0 +1,115 @@
+query: Pint et al 2024 ORNL TM 2024/3508 FLiBe composition density TBR
+knowledge base: molten-salt
+
+[1] ORNL-pint-blanket-Pub219653.pdf, page 2
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 Materials Science and Technology Division MATERIALS ASSESSMENT FOR FLiBe FUSION BLANKETS Bruce A. Pint, Evangelia Kiosidou, Dino Sulejmanovic and Paul Humrickhouse September 2024 Prepared by OAK RIDGE NATIONAL LABORATORY Oak Ridge, TN 37831 managed by UT-BATTELLE LLC for the US DEPARTMENT OF ENERGY under contract DE-AC05-00OR22725
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 0
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+ORNL/TM-2024/3508 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY Materials Assessment for FLiBe Fusion Blankets Bruce A. Pint Evangelia Kiosidou Dino Sulejmanovic Paul Humrickhouse September 2024
+
+————————————————————————————————————————————————————————————
+
+[3] Tritium-BABYexperiment2024.pdf, page 9
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+offer valuable insights into the intricate dynamics of tri- tium breeding within molten salts. A TBR of 3.57 × 10−4 was measured: 21 Bq of tritium produced and a neutron fluence of 3.35×1013 n over 24 h of irradiation. Future en- deavors will be dedicated to reconciling disparities between observed and modeled tritium breeding ratios, refining neutron source characterization, and better understand- ing of the tritium speciation observations. Moreover, an effort will be made to develop and validate higher-fidelity tritium transport models. This project will progress to- wards larger-scale investigations, such as the planned 1 L volume experiment with FLiBe salt, and will continue to explore alternative beryllium-free molten salt breeders. Acknowledgements The authors would like to acknowledge funding from the Advanced Research Projects Agency-Energy (ARPA- E), U.S. Department of Energy. The views and opinions of authors expressed herein do not necessarily state or re- flect those of the United States Government or any agency thereof. References [1] Fusion Industry Association, The global fusion in- dustry in 2023, 2023, available at: hhttps://www. fusionindustryassociation.org/wp-content/uploads/2023/ 07/FIA%E2%80%932023-FINAL.pdf. Accessed: 2024-21-03. [2] M. Kovari, M. Coleman, I. Cristescu, and R. Smith, “Tritium resources available for fusion reactors,” Nuclear Fusion, vol. 58, no. 2, p. 026010, Dec. 2017, publisher: IOP Publishing. [Online]. Available: https://dx.doi.org/10.1088/1741-4326/aa9d25 [3] R. J. Pearson, A. B. Antoniazzi, and W. J. Nuttall, “Tritium supply and use: a key issue for the development of nuclear fusion energy,” Fusion Engineering and Design, vol. 136, pp. 1140–1148, Nov. 2018. [Online]. Available: https://www. sciencedirect.com/science/article/pii/S092037961830379X [4] M. Coleman, Y. H¨orstensmeyer, and F. Cismondi, “DEMO tritium fuel cycle: performance, parameter explorations, and design space constraints,” Fusion Engineering and Design, vol. 141, pp. 79–90, Apr. 2019. [Online]. Available: https://www. sciencedirect.com/science/article/pii/S092037961930167X [5] H. Chen, L. Pan, Z. Lv, W. Li, and Q. Zeng, “Tritium fuel cycle modeling and tritium breeding analysis for CFETR,” Fusion Engineering and Design, vol. 106, pp. 17–20, May 2016. [Online]. Available: https://www.sciencedirect.com/science/ article/pii/S0920379616301922 [6] S. Meschini, S. E. Ferry, R. Delaporte-Mathurin, and D. G. Whyte, “Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants,” Nuclear Fusion, vol. 63, no. 12, p. 126005, Sep. 2023, publisher: IOP Publishing. [Online]. Available: https://dx.doi.org/10.1088/1741-4326/acf3fc [7] M. Abdou, M. Riva, A. Ying, C. Day, A. Loarte, L. Baylor, P. Humrickhouse, T. F. Fuerst, and S. Cho, “Physics and technology considerations for the deuterium–tritium fuel cycle and conditions for tritium fuel self sufficiency,” Nuclear Fusion, vol. 61, no. 1, p. 013001, Jan. 2021. [Online]. Available: https://iopscience.iop.org/article/10.1088/1741-4326/abbf35 [8] S. E. Ferry, K. B. Woller, E. E. Peterson, C. Sorensen, and D. G. Whyte, “The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum,” Fusion Science and Technology, vol. 0, no. 0, pp. 1–23, Jun. 2022, publisher: Taylor & Fran- cis eprint: https://doi.org/10.1080/15361055.2022.2078136. [Online]. Available: https://doi.org/10.1080/15361055.2022. 2078136 [9] B. N. Sorbom, J. Ball, T. R. Palmer, F. J. Mangiarotti, J. M. Sierchio, P. Bonoli, C. Kasten, D. A. Sutherland, H. S. Barnard, C. B. Haakonsen, J. Goh, C. Sung, and D. G. Whyte, “ARC: A compact, high-field, fusion nuclear science facility and demonstration
+
+————————————————————————————————————————————————————————————
+
+[4] Barker_2025_Nucl._Fusion_65_086022.pdf, page 0
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+PAPER • OPEN ACCESS Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector To cite this article: Adam J. Barker et al 2025 Nucl. Fusion 65 086022 View the article online for updates and enhancements. You may also like Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants Samuele Meschini, Sara E. Ferry, Rémi Delaporte-Mathurin et al. - Electrochemical Study of Eu(III)/Eu(II) in LiF-BeF2 Molten Salt Yong Zuo, Hao Peng, Nan Ji et al. - Characterization of a Thermodynamic Reference Electrode for Molten LiF-BeF2 (FLiBe) Francesco Carotti, Huali Wu and Raluca O. Scarlat - This content was downloaded from IP address 192.31.96.218 on 26/12/2025 at 21:06
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-chloride-blanket-Pub201058.pdf, page 0
+    Citation: Optimal Chloride Salt Mixture for a Fusion Blanket — Nolan E. Goth et al. — (2023)
+
+ORNL/TM-2023/3052 Optimal Chloride Salt Mixture for a Fusion Blanket Nolan E. Goth Jesse M. Brown Tarek Ghaddar Logan Scott Jin Whan Bae Phillip Britt September 2023 ORNL IS MANAGED BY UT-BATTELLE LLC FOR THE US DEPARTMENT OF ENERGY
+
+attachment ORNL-pint-blanket-Pub219653.pdf
+
+Could not read ORNL-pint-blanket-Pub219653.pdf: 404: Not found
+
+query: "BeF2" volume fraction 75 2024 FLiBe
+knowledge base: molten-salt
+
+[1] molten-salt-fusion-1972-4578255.pdf, page 22
+    Citation: Molten Salts as Blanket Fluids in Controlled Fusion Reactors — W. R. Grimes, Stanley Cantor — ORNL-TM-4047 (1972)
+
+20 ORNL-DWG 71-5270R2 fmole faction) Fig. 1. Phase Diagram of the System LiF-BeF2.
+
+————————————————————————————————————————————————————————————
+
+[2] Barker_2025_Nucl._Fusion_65_086022.pdf, page 0
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+PAPER • OPEN ACCESS Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector To cite this article: Adam J. Barker et al 2025 Nucl. Fusion 65 086022 View the article online for updates and enhancements. You may also like Modeling and analysis of the tritium fuel cycle for ARC- and STEP-class D-T fusion power plants Samuele Meschini, Sara E. Ferry, Rémi Delaporte-Mathurin et al. - Electrochemical Study of Eu(III)/Eu(II) in LiF-BeF2 Molten Salt Yong Zuo, Hao Peng, Nan Ji et al. - Characterization of a Thermodynamic Reference Electrode for Molten LiF-BeF2 (FLiBe) Francesco Carotti, Huali Wu and Raluca O. Scarlat - This content was downloaded from IP address 192.31.96.218 on 26/12/2025 at 21:06
+
+————————————————————————————————————————————————————————————
+
+[3] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe serves as breeder, neu- tron shield, and coolant for the vacuum vessel [11]. The beryllium in FLiBe acts as a neutron multiplier, which significantly enhances Tritium Breeding Ratio (TBR). Al- though there are many challenges associated with working with beryllium because of its toxicity, FLiBe remains the most promising breeder choice for the ARC-class FPP due to its cooling capabilities [12], and its ability to achieve high TBR [13]. Recent models have shown that the FLiBe LIB should enable the ARC-class FPP to achieve tritium self-sufficiency [6]. Preprint submitted to Nuclear Fusion December 5, 2024 arXiv:2412.02721v1 [physics.plasm-ph] 2 Dec 2024
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-pint-blanket-Pub219653.pdf, page 14
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+5 Figure 3 shows the redox potential for various elements in fluoride salts. Thus, for example, if a stainless steel containing 16%Cr and 2%Mn were exposed to a salt containing NiF2 as an impurity, one would expect more dissolution of Cr and Mn from the steel compared to a salt with no NiF2 impurity. To reduce the salt potential due to T or other impurities, a redox agent can be added to the salt. Be is a good redox agent for FLiBe because it has a strong tendency to form stable BeF2, due to its very low chemical potential, defined as [Olander 2002, Petti 2006, Calderoni 2009, Keiser 2022]: DG = -RTln(𝑝!") The addition of Be can serve as a redox regulating agent [Wong 2005] that serves a dual purpose: a) it captures the free fluorine in the system, which is a byproduct of FLiBe irradiation: xM+ 𝐹" → xM𝐹"/$ b) it also helps reduce TF to T2, the ratio TF/T2 dictates the salt redox potential, which in turn, regulates the extent of corrosion [DeVan 1979, Ihli 2008, Cheng 2003]: 2TF+ Be → Be𝐹" + 𝑇" T2 is then recovered and recycled back to the fusion reactor [Cheng 2003, Fukada 2012]. Figure 3. Calculated redox potentials of various elements as a function of temperature in fluoride salts from HSC Chemistry v.9.0. Solid lines are for metal oxidation at 1ppm concentration. The dotted lines are for oxidation of reductants. HF/H2 rations are for 1 atm total pressure. Eu data in FLiNaK (FLiNaK often is used as a surrogate for FLiBe). [Zhang 2018] It is thus apparent that compatibility of structural materials in FLiBe is a complicated phenomenon. Potential candidate materials are addressed in the following sections where the limited compatibility data (shown in Figure 4) are addressed. Since the testing procedure and salt purity have a strong effect on the
+
+————————————————————————————————————————————————————————————
+
+[5] ORNL-pint-blanket-Pub219653.pdf, page 39
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+APPENDIX B – ORNL EXPERIENCE WITH FLIBE IN FISSION AND COMMENTS ON USE IN FUSION
+
+attachment ORNL-pint-blanket-Pub219653.pdf
+
+Could not read ORNL-pint-blanket-Pub219653.pdf: 404: Not found
+
+query: density LiF-BeF2 mixture composition
+knowledge base: molten-salt
+
+[1] _J._E._Enderby__auth.___Gleb_Mamantov__Roberto_Mar_z-lib.org_.pdf, page 289
+    Citation: Molten Salt Chemistry: An Introduction and Selected Applications — Gleb Mamantov, Roberto Marassi — NATO ASI Series, Series C: Mathematical and Physical Sciences vol. 202 (1987) — DOI: 10.1007/978-94-009-3863-2
+
+are mixtures of alkali metal and alkaline
+
+————————————————————————————————————————————————————————————
+
+[2] molten-salt-fusion-1972-4578255.pdf, page 22
+    Citation: Molten Salts as Blanket Fluids in Controlled Fusion Reactors — W. R. Grimes, Stanley Cantor — ORNL-TM-4047 (1972)
+
+20 ORNL-DWG 71-5270R2 fmole faction) Fig. 1. Phase Diagram of the System LiF-BeF2.
+
+————————————————————————————————————————————————————————————
+
+[3] _J._E._Enderby__auth.___Gleb_Mamantov__Roberto_Mar_z-lib.org_.pdf, page 130
+    Citation: Molten Salt Chemistry: An Introduction and Selected Applications — Gleb Mamantov, Roberto Marassi — NATO ASI Series, Series C: Mathematical and Physical Sciences vol. 202 (1987) — DOI: 10.1007/978-94-009-3863-2
+
+o .... ... 0"" }If-J!!F..3!.1~6_0L - - - - - - -20.0 l o \,-.---------- LiF -LoF3 1.0 0,,-.-.-.-.-.-.-.-,-,-, -4.0 -8.0 -12.0 -32.0 o AF-YF3·1360K -t-- ~-i T 1.0 -6.0 r- AF - YbF3; 1360K -10.0 -14.0 -38.0 II! ,! , 1 o 0.2 0.4 0.6 0.8 1.0 N2(Ybf3' Fig. 16.--Liquid-liquid enthalpy interaction parameters (AM = AHmix/XIX2) plotted against X2 for mixtures of LiF, NaF, KF, with LaF3 , YF3 , and YbF3' Solid curves are based on analytical expressions; broken lines are "best curves" (from Ref. 42). I o ~ ~ ~ 8 ~ ~ ~ f;l til ---
+
+————————————————————————————————————————————————————————————
+
+[4] ORNL-workshop-MS.pdf, page 18
+    Citation: Molten Salt Chemistry Workshop: Technology and Applied R&D Needs for Molten Salt Chemistry — David F. Williams et al. — (2017)
+
+FRD 1 9 Molten Salt Chemistry Workshop (a) Calculated LiF-BeF2 pseudo-binary phase diagram with fixed concentration of UF4 (2.55 mol%) and ThF4 (19.95 mol%). (b) The liquidus projection of the LiF-BeF2-ThF4 system. (c) Calculated entropy of mixing: BeF2-AnF4 (An=Th, U) 1000 K and 1400 K. (d) Optimized BeF2-UF4 phase diagram. Figure 5. Representations for integrating phase diagram understanding. |Reprinted from J. Nucl. Mater. 449, E. Capelli, O. Beneš, and R.J.M. Koning. “Thermodynamic assessment of the LiF–NaF–BeF2–ThF4–UF4 system.” 111–121, 2014, with permission from Elsevier. Phase Fields A. ThF4 B. LiTh4F17 C. LiTh2F9 D. LiThF5 E. Li3ThF7 F. LiF G. Li2BeF4 H. β-BeF2 I. Liquid (miscibility gap) ideal BeF2-UF4, 1000K, 1400K
+
+————————————————————————————————————————————————————————————
+
+[5] _J._E._Enderby__auth.___Gleb_Mamantov__Roberto_Mar_z-lib.org_.pdf, page 45
+    Citation: Molten Salt Chemistry: An Introduction and Selected Applications — Gleb Mamantov, Roberto Marassi — NATO ASI Series, Series C: Mathematical and Physical Sciences vol. 202 (1987) — DOI: 10.1007/978-94-009-3863-2
+
+imagine the exchange of next nearest neighbors in making a mixture of two molten salts, AX and BX
