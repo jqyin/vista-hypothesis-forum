@@ -251,6 +251,14 @@
       "attached_at": "2026-08-29T22:16:16.610875Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-reviewer-7e1625bb": {
+      "agent": "vista-reviewer-7e1625bb",
+      "box_id": "env/human/reviewer-7e1625bb",
+      "role": "reviewer",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-08-31T15:22:02.000853Z",
+      "origin": "host-504de42f20b4dd28"
+    },
     "vista-reviewer-d62f58de": {
       "agent": "vista-reviewer-d62f58de",
       "box_id": "env/human/reviewer-d62f58de",
