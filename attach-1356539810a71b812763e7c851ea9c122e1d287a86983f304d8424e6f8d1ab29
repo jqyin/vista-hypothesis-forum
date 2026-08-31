@@ -1,0 +1,304 @@
+skill salt-neutronics-tbr
+
+# Salt Neutronics TBR: tritium breeding ratio from composition and Li-6 enrichment
+
+This skill answers "what tritium breeding ratio (TBR) would a Shift Monte Carlo
+neutronics run have produced for *this* FLiBe blanket composition?" — not by running
+neutron transport (which costs hours on HPC), but by **interpolating a precomputed
+Shift parameter study**. The headline output is the **TBR** (tritium atoms bred per
+source neutron); a blanket needs TBR ≳ 1.0 (with margin for losses) to be tritium
+self-sufficient. It also returns neutron flux, nuclide number densities, composition
+sweeps, and plots. The whole calculation is **CPU-only and sub-second**.
+
+It is built to be driven end-to-end by an agent: take a candidate salt (mol% BeF₂ +
+Li-6 enrichment), return TBR with an honest interpolated-vs-extrapolated flag and a
+plot. In a VISTA campaign it is the **neutronics sim skill** — the companion to
+[`salt-chemistry-md`](../salt-chemistry-md/SKILL.md) (which gives density): together
+they let a planner screen breeder-salt compositions on both physics axes.
+
+## The code lives in a public repo — clone it, don't expect it vendored
+
+The implementation (the `salt_neutronics` package, the CLI, the reference docs, and the
+bundled Shift parameter study `data/neutronics_isotopics.h5`, ~59 KB) is **not vendored
+into VISTA**. It is a public GitHub repo that you clone at runtime:
+
+> **`https://github.com/jqyin/salt-neutronics-skill`**  (`salt_neutronics` package, ~1 MB)
+
+This keeps the skill lightweight: VISTA carries only this SKILL.md and a thin HPC job
+(`hpc_jobs/salt-neutronics-tbr`) that bootstraps the same repo on the compute node.
+
+There are **two execution contexts**. Unlike a GPU MD run, this calculation is cheap
+enough to run in either — pick by what you're doing:
+
+| Context | Where | Use it for | How the code arrives |
+|---|---|---|---|
+| **Sandbox (CPU)** | `run_bash` sandbox | ad-hoc single queries, sweeps, **plotting**, exploration | you `curl`+`tar` the repo into `/mnt/data/output` |
+| **HPC (CPU)** | OLCF Odo (open enclave) **or** NERSC Perlmutter | the **per-state-point sim in a campaign** (`submit_hpc_job`) | the job `git clone`s the repo for you |
+
+The HPC path is not required for correctness (there's no GPU step), but it is how a
+**multi-agent campaign** runs one state point per subagent through VISTA's HPC backend,
+symmetrically with the other sim skills — see
+[Sim-skill contract](#sim-skill-contract-for-multi-agent-campaigns). For a one-off
+question, just run it in the sandbox.
+
+## Bootstrapping the code in the sandbox (CPU steps)
+
+`git` is **not** installed in the sandbox, but `curl`, `python3`, and `pip` are, and the
+sandbox has outbound network. Fetch the repo as a tarball once per session:
+
+```bash
+cd /mnt/data/output
+curl -fsSL https://github.com/jqyin/salt-neutronics-skill/archive/refs/heads/main.tar.gz \
+  | tar xz
+cd salt-neutronics-skill-main
+python3 -m pip install --quiet scipy h5py    # numpy/matplotlib are already present
+export PYTHONPATH="$PWD:${PYTHONPATH:-}"      # package is importable in place, no install needed
+export MPLBACKEND=Agg                         # headless plotting
+```
+
+Everything below runs here, from this directory. Write all artifacts under
+`/mnt/data/output/...` and print `Plot saved to <path>` for any image so the UI
+auto-displays it.
+
+## The workflow
+
+```
+composition + Li-6  →  [tbr]    →  TBR + provenance        (results.json)
+composition + Li-6  →  [flux]   →  neutron flux at a position
+composition range   →  [sweep]  →  CSV (+ TBR surface PNG)
+```
+
+1. **Define the state point(s).** Composition is the **mol% BeF₂** (33.33 = the
+   2LiF·BeF₂ eutectic). Li-6 enrichment is the ⁶Li atom fraction (default 0.075 ≈
+   natural). One composition + one enrichment is one state point; a screen is a grid.
+
+2. **Query the headline TBR** (sandbox quick check, or HPC in a campaign):
+   ```bash
+   # Human-readable
+   python3 -m salt_neutronics.cli tbr --bef2 33.3 --li6 0.075
+   # Machine-readable JSON (preferred when you will parse it)
+   python3 -m salt_neutronics.cli tbr --bef2 40 --li6 0.5 --json
+   ```
+
+3. **Read the result.** The JSON report carries everything needed to interpret and cite
+   it: `result.tbr`, `result.interpretation`, `input_composition`,
+   `derived.beryllium_multiplier`, and `provenance.is_interpolated` /
+   `provenance.is_extrapolated`. An **extrapolated** number is not backed by any Shift
+   run — always say which it is.
+
+4. **Sweep / plot** (sandbox). See [Other queries](#other-queries-sweeps-flux-density-plots).
+
+## The key input mapping: BeF₂ mol % → beryllium multiplier
+
+Users think in **salt composition**; the precomputed data is indexed by **beryllium
+multiplier**. The skill converts:
+
+```
+beryllium_multiplier = (mol% BeF2) / 33.33
+```
+
+Eutectic FLiBe (2 LiF : 1 BeF₂ = 33.33 mol% BeF₂) maps to multiplier **1.0**. The
+scanned grid (multiplier 0.9–1.4) covers roughly **30–46.67 mol% BeF₂**. Valid query
+ranges:
+
+- BeF₂: **30–46.67 mol %**
+- Li-6 enrichment: **0.07–1.0**
+
+Single-point queries outside these ranges are rejected (pass `--allow-extrapolation` to
+override); sweeps return `NaN` for out-of-grid points. See `references/physics.md` in
+the clone for the assumption behind the mapping and how to change the nominal
+(`--nominal-bef2`).
+
+## Running the TBR sim on HPC (the HPC step)
+
+The query is wrapped as the VISTA HPC job **`salt-neutronics-tbr`**, with CPU backends for
+both **Odo** (the OLCF open enclave) and **Perlmutter** (NERSC) — pick with `cluster=`.
+Both run on a single CPU core; one submission = one state point = one `results.json`. The
+job clones the repo on the node, uses a tiny Python env at runtime
+(numpy/scipy/h5py/matplotlib — seconds, no pre-provisioning), runs the `tbr` query, and
+writes `results.json` into the job's output dir.
+
+```python
+submit_hpc_job(
+    job="salt-neutronics-tbr",
+    cluster="odo",            # or cluster="perlmutter"
+    duration="0:10:00",
+    script_args="--bef2 33.33 --li6 0.075",
+)
+```
+
+Use whichever cluster the user has credentials for; the `script_args` contract and the
+`results.json` output are identical across backends.
+
+### `script_args` contract
+
+Pass one state point's composition as a single flat string (forwarded to the `tbr`
+query):
+
+| Flag | Meaning | Default |
+|---|---|---|
+| **Composition (pick one):** | | |
+| `--bef2 P` | BeF₂ content in mol% | — |
+| `--be-multiplier M` | beryllium multiplier (instead of `--bef2`) | — |
+| `--li6 E` | Li-6 enrichment (⁶Li atom fraction) | 0.075 |
+| `--nominal-bef2 P` | mol% BeF₂ that maps to multiplier 1.0 | 33.33 |
+| `--allow-extrapolation` | permit (cautious) extrapolation outside the grid | off |
+
+### Outputs (in the job's `$VISTA_OUT`)
+
+- `results.json` — the result. TBR at `result.tbr`; `provenance.is_extrapolated`
+  flags out-of-grid; `input_composition` + `derived.beryllium_multiplier` echo the
+  state point. (Full schema: `references/data_schema.md` in the repo.)
+
+Poll with `get_hpc_job_status`; when complete, fetch with
+`get_hpc_job_outputs(job_id, files=["results.json"], cluster=…)` (the same cluster you
+submitted to).
+
+## Sim-skill contract for multi-agent campaigns
+
+In a VISTA campaign, the planner fans out **one neutronics subagent per candidate state
+point**; each subagent uses this skill to launch and parse one Odo job. The two
+operations a subagent performs:
+
+- **dispatch(order) → job:** turn the order (a composition + Li-6 enrichment) into the
+  `script_args` string above, call
+  `submit_hpc_job(job="salt-neutronics-tbr", cluster="odo"|"perlmutter", duration="0:10:00", script_args=…)`,
+  and record the returned `job_id` + `cluster`.
+- **collect(job) → result:** once the job completes,
+  `get_hpc_job_outputs(... files=["results.json"])` and parse it into a structured
+  result:
+  ```json
+  {"tbr": <float>, "is_extrapolated": <bool>,
+   "bef2_mol_percent": <float>, "li6_enrichment": <float>,
+   "beryllium_multiplier": <float>, "lif_mol_percent": <float>,
+   "shielding_flux_n_per_cm2_s": <float>}
+  ```
+  If `provenance.is_extrapolated` is true, flag the point as not backed by a Shift run
+  rather than reporting it as a simulated value.
+
+  **Also extract the magnet radiation-shielding flux** into `shielding_flux_n_per_cm2_s`,
+  reading it from the report's `shielding.magnet_flux_n_per_cm2_s` (the neutron flux reaching
+  the superconducting magnets behind a 1 m blanket, n/cm²·s). The planner's scorer treats this
+  as a **hard gate**: a candidate whose flux exceeds **1e12** is rejected (shielding too weak);
+  **≤ 1e10** is the preferred long-magnet-life target. Report it alongside the TBR so the scorer
+  can apply the gate.
+
+Subagents do not talk to each other; the planner and durable campaign state coordinate
+them. To screen a grid, the planner issues N orders (one per (composition, Li-6)) and
+dispatches N jobs in parallel, then collects and hands the results to the planner's
+scorer for ranking/plotting.
+
+**Coupled with density.** A breeder-salt screen usually wants **both** TBR and mass
+density per composition. The planner can fan out, per state point, a `salt-neutronics-tbr`
+job (TBR, Odo/CPU, this skill) **and** a [`salt-chemistry-md`](../salt-chemistry-md/SKILL.md)
+job (density, Frontier/GPU), then rank candidates on both axes (e.g. TBR ≥ 1.1 *and*
+acceptable coolant density).
+
+## Other queries (sweeps, flux, density, plots)
+
+These are sandbox operations (a sweep is many interpolations; plotting needs no HPC):
+
+```bash
+# Sweep TBR over composition; write a CSV (+ optional surface plot)
+python3 -m salt_neutronics.cli sweep --bef2-range 30 46 60 --li6 0.075 --plot
+# 2-D sweep over both axes
+python3 -m salt_neutronics.cli sweep --bef2-range 30 46 40 --li6-range 0.07 1.0 40 --output sweep.csv
+
+# Neutron flux at a spatial position (cm) for one composition
+python3 -m salt_neutronics.cli flux --position 15 --bef2 33.3 --li6 0.075 --json
+
+# Number density of a nuclide by ZAID (1003 = tritium, 8016 = O-16, ...)
+python3 -m salt_neutronics.cli density --zaid 1003 --position 15 --bef2 33.3 --li6 0.5 --json
+```
+
+`--bef2-range LOW HIGH [N]` builds `N` linearly spaced points (default 50). Sweep CSV
+columns: `bef2_mol_percent, li6_enrichment, beryllium_multiplier, tbr`. For finer plot
+control, import the helpers (`from salt_neutronics.plotting import plot_tbr_surface,
+plot_flux_profiles, plot_nuclide_density_surface`); each saves a PNG and returns its
+path.
+
+## Interpreting results for the user
+
+Always state **whether the value was interpolated or extrapolated**
+(`provenance.is_extrapolated`) — an extrapolated number is not backed by any simulation.
+Then read the physics:
+
+- **TBR ≥ 1.0** is the self-sufficiency threshold; **≥ ~1.1** gives a comfortable margin
+  once first-wall losses, structural absorption, and neutron streaming are accounted for.
+- In this dataset TBR **rises with both** Li-6 enrichment and BeF₂ content, and Li-6
+  enrichment is the **stronger lever** (especially below ~50%). State the trend, not just
+  the single number, when it helps the user's decision.
+- This is an **emulation by interpolation**, not a fresh transport solve. Don't claim
+  Monte Carlo statistical uncertainties; the limiting error is interpolation between
+  grid points.
+
+## Reference material (in the cloned repo)
+
+- `references/physics.md` — FLiBe chemistry, TBR definition, the composition→multiplier
+  assumption and how to change it, modeling caveats. **Read before judging whether a
+  result is trustworthy.**
+- `references/data_schema.md` — exact layout of `neutronics_isotopics.h5`.
+- `README.md` — human-oriented overview, install, and dev/test instructions.
+
+## Guardrails
+
+- Always report **interpolated vs extrapolated**; never present an extrapolated TBR as a
+  simulated result.
+- Composition is given in **mol% BeF₂**; the skill derives the beryllium multiplier from
+  it — report the multiplier the run actually used (`derived.beryllium_multiplier`).
+- Sanity-check the trend (TBR rises with Li-6 and BeF₂); nominal eutectic FLiBe at
+  natural Li-6 sits near TBR ≈ 1.0.
+- In a campaign, never launch jobs without an approved plan, and cite the
+  `job_id` / `results.json` for every number you report.
+
+query: FLiBe TBR interpolation grid BeF2 mol% beryllium multiplier accuracy
+knowledge base: molten-salt
+
+[1] Barker_2025_Nucl._Fusion_65_086022.pdf, page 8
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al cross-section, though generally also considered as a multiplier [46], and tungsten carbide (WC) which is found to be an excellent reflector in small reactors [47]. The inclusion of any reflector in only the final layer is always seen to improve the TBR of the blanket (this configuration is shown as [‘Li’, ‘Li’, ‘R’]), when compared to a pure lithium alternative, but only FLiBe gave a continual increase in TBR performance as the volume of the reflector increased (shown in figure 5 by popu- lating more layers of reflector ‘R’). Initially (with R only at the rear), a FLiBe reflector produced system wide TBR levels sim- ilar to those of a beryllium reflector, which was to be expec- ted as it is assumed the reflective nature of FLiBe comes from the presence of beryllium in the molten salt. However, as the volume of reflectors is increased, the loss of lithium towards the rear in all but FLiBe has a negative effect on the TBR. Because FLiBe contains lithium, the drop in lithium density is much less abrupt, and when combined with the reflecting prop- erties of beryllium, this material exceeds all of the alternatives considered, including pure Li. A potential issue was identified in the nuclear data for FLiBe. During analysis of the neutron spectra produced within FLiBe, an increase in near-thermal neutron populations was observed to improve the TBR of the system. However, the cross-section libraries found in ENDF/B-VII.1 and other rel- evant nuclear data libraries do not include the thermal scat- tering data S(α,β) associated with liquid FLiBe. As a res- ult, this scattering data was not incorporated throughout the study, and the thermal neutron dynamics may not have been accurately characterized. Nevertheless, as shown in figure 4, neutrons largely remain above the thermal threshold of ⩾0.025 eV, so their exclusion from this study should have a minimal effect on the final results. Although such data has been generated [48], they do not appear to be publicly available. 4. Conclusion A repeatable digital optimisation workflow to create and test fusion reactor blankets concepts has been shown along with verification steps to provide evidence of the validity of the model. The TBR error through segmentation of the EU- DEMO-like geometry was found to be within the order of 0.01. The model was applied to a hybrid liquid metal and mol- ten salt design, and it was found that FLiBe acted as an effi- cient reflector. This novel use of FLiBe alongside layers of pure Li differentiates it from other considered reflectors, typ- ically graphite and tungsten carbide, due to its ability to breed tritium as well as reflect. The general metric to find effect- ive reflectors relies on materials that have a high moderat- ing ratio (the ratio of neutron scattering and absorption cross- sections). FLiBe would not rate high on this metric due to its large lithium content. However, through a merger of two of FLiBe’s properties, namely high neutron scattering and multi- plication in beryllium and the breeding potential of lithium,
+
+————————————————————————————————————————————————————————————
+
+[2] ORNL-pint-blanket-Pub219653.pdf, page 12
+    Citation: Materials Assessment for FLiBe Fusion Blankets — Bruce A. Pint et al. — ORNL/TM-2024/3508 (2024)
+
+3 Figure 1. Viscosity (top), heat removal ability (center) and pressure drop (right) of LiF/BeF2 mixtures in 4x3 cm FW coolant channels [Gehrig 2024]. Another challenge associated with molten salt blankets is the marginal tritium breeding ratio. This can be improved by the addition of a neutron multiplier, in particular beryllium [Konishi 2017], which can potentially increase the tritium breeding ratio (TBR) from 1.05 to more than 1.3, thereby increasing the overall efficiency and reducing the amount of generated nuclear waste [Shmayda 2022]. Molten salt blanket designs [Moir 1985, Wong 2005, Kuang 2018] invariably include it for this reason. Pure beryllium is typically included in the form of small pebbles [Scaffidi-Argentina 2000, Wong 2005]. In light of the high swelling and tritium retention in pure Be, other alternatives, such as BeO are considered. However, BeO may not be compatible with FLiBe or have adequate mechanical properties [Scaffidi- Argentina 2000]. More recently, beryllide intermetallic compounds [Mishima 2007] such as Be12Ti have been developed (primarily for use with solid breeder designs) that alleviate the swelling and tritium retention issues associated with pure beryllium; these potentially enable a move away from pebbles to larger solid forms. The possibility of combining beryllides with molten salts has the potential to significantly improve TBR [Humrickhouse 2023]. Though lower multiplier volume fractions (e.g. around 30 vol% Be [Cheng 2003]) have frequently been employed, the optimal ratio for tritium breeding is rather higher [Fischer 1988], as shown in Figure 2. Though the additional metal component of the beryllides does have an absorbing effect, optimal fractions are still ~75-80% multiplier. Investigations of a FLiBe blanket with immersed multipliers at this optimal fraction added to the FNSF design revealed TBRs ~1.3 without lithium enrichment, see Figure 2. Moreso than in liquid metal blankets, the breeding was concentrated in the front of the blanket, mostly within the first 45 cm.
+
+————————————————————————————————————————————————————————————
+
+[3] lam-modeling-lif-and-flibe-molten-salts-with-robust-neural-network-interatomic-potential.pdf, page 6
+    Citation: Modeling LiF and FLiBe Molten Salts with Robust Neural Network Interatomic Potential — Stephen T. Lam et al. — ACS Applied Materials & Interfaces vol. 13 (2021) — DOI: 10.1021/acsami.1c00604
+
+were speciﬁed using the ﬁrst minimum of each RDF, which are 2.7 Å for Li−F and 2.3 Å for Be−F. The angular distributions are found in Figure 8b, where the two prominent peaks are observed for F−Be−F and Be−F−Be. The peak value of F−Be−F is located at 108°, which represents a BeF2 tetrahedral conﬁguration, and the Be− F−Be represents corner-sharing tetrahedra with a median angle of 127°. These observations agree with our previous study,13 where the detailed analysis was performed on the local and extended structures in Flibe, and Be−F4 tetrahedral chains were observed with up to 4 Be atom centers. As shown in Figure 8b, the three-body interactions are accurately modeled by the NN (dashed lines), with the angular distributions almost exactly overlapping the AIMD (solid lines) results in Figure 7. NNIP predicted equation of state for Flibe at 973 K. Calculated data (points) are ﬁtted to the Birch−Murnaghan equation of state (dashed line). Figure 8. (a) Neural network potential, polarizable ion model, and DFT radial distribution functions obtained for Be−F, Li−F, and F−F pairs in Flibe. (b) Angular distribution functions of Flibe. ACS Applied Materials & Interfaces www.acsami.org Research Article https://doi.org/10.1021/acsami.1c00604 ACS Appl. Mater. Interfaces 2021, 13, 24582−24592 24588
+
+————————————————————————————————————————————————————————————
+
+[4] lam-modeling-lif-and-flibe-molten-salts-with-robust-neural-network-interatomic-potential.pdf, page 6
+    Citation: Modeling LiF and FLiBe Molten Salts with Robust Neural Network Interatomic Potential — Stephen T. Lam et al. — ACS Applied Materials & Interfaces vol. 13 (2021) — DOI: 10.1021/acsami.1c00604
+
+neural network potential were performed at 973 K for 50 ps. NVT simulations were performed at diﬀerent cell volumes to ﬁt to the Birch−Murnaghan equation of state as shown in Figure 7, from which density and bulk modulus were obtained.40,41 The equilibrium density was found to be 1815 kg/m3, which is a 6% underprediction compared to the experimental value.15 This error is most likely due to the lack of dispersion eﬀects included in the DFT data that was used to train the NN model and the relatively low bulk modulus for Flibe, which was calculated to be ∼9.0 GPa. This is consistent with previous ab initio calculations for Flibe.42 In comparison, our previous studies estimated that the average density of binary chlorides and ﬂuorides is overestimated by 4% when using Grimme’s D3 method,43 and Nam found that Flibe density was overpredicted by ∼2% using Grimme’s D2 method.42,44 Dispersion can have eﬀects on the calculated properties of molten salts but are generally not observed in ﬁxed volume simulations.45 However, it can inﬂuence the calculated equilibrium volume and melting transition, and as such, dispersion corrections should be appropriately para- meterized and tested. This can be added to provide systematic improvement in neural network potential predictions. The local structure predicted by NNIP, DFT, and polarizable ion model is compared in Figure 8. For PIM calculations, simulations were performed in CP2K46 using parameters from a previous study.47 Simulations were performed for 100 ps, with the ﬁrst 10 ps used for equilibration. For the RDFs in Figure 8a, NN (circles), DFT values (solid lines), and PIM (dashed lines) values show good agreement for all species pairs (Be−F, F−Li, F−F). NN-based RDFs follow the curvature of the DFT and PIM-based RDFs closely over the range from 0 to 6 Å, precisely matching the location and magnitude of the minima and maxima and the peak widths and heights. This indicates that the DFT and previously validated PIM47 coordination distances and the coordination numbers between atomic species are well reproduced by the NNIP. Furthermore, the calculated ﬁrst peak distances for Be− F, Li−F, and F−F are 1.5, 1.8, and 2.5 Å, which are close to their experimental values of 1.58, 1.85, and 2.56 Å, respectively.48 In addition, the calculated ﬂuorine coordination numbers (integral of the ﬁrst peak in the RDF) of Li and Be are 4.0 and 4.0, compared to experimental values of 4.0 and 3.7, respectively. This indicates that DFT and consequently NNIP can accurately capture the local environment of ions in Flibe. To calculate the angular distribution, the angle formed by triplets was tallied based on speciﬁed bond cutoﬀdistances, and the distributions were normalized (∫0 2πf(θ)dθ = 1) to give f(θijk), where i, j, and k represent the atomic species of each atom in the triplet. The cutoﬀdistances were speciﬁed using the ﬁrst minimum of each RDF, which are 2.7 Å for Li−F and 2.3 Å for Be−F. The angular distributions are found in Figure 8b, where the two prominent peaks are observed for F−Be−F and Be−F−Be. The peak value of F−Be−F is located at 108°, which represents
+
+————————————————————————————————————————————————————————————
+
+[5] lam-modeling-lif-and-flibe-molten-salts-with-robust-neural-network-interatomic-potential.pdf, page 7
+    Citation: Modeling LiF and FLiBe Molten Salts with Robust Neural Network Interatomic Potential — Stephen T. Lam et al. — ACS Applied Materials & Interfaces vol. 13 (2021) — DOI: 10.1021/acsami.1c00604
+
+The system is equilibrated at 973 K for 10 ps, and the simulation is performed over 70 ps using both NN potentials and AIMD. In addition, diﬀusivity calculated using the PIM potential is shown along with limited experimental results. These diﬀusivities for the species in Flibe are shown in Table 4, where the uncertainty values represent the 95% conﬁdence intervals of the predictions. In all cases (Be, F, and Li), the relative magnitudes of ionic diﬀusivities in AIMD are reproduced by both NNIP and PIM potentials and agree qualitatively with expectations based on the known structure and dynamics of Flibe.8,47 Beryllium diﬀusivity is lowest at 0.79−0.87 × 10−5 cm2/s due to the presence of BeF4 tetrahedral polymer-like chains shown in Figures 5c and 8b. In contrast, the LiF in Flibe (66.6%LiF− 33.3%BeF2) is found to dissociate, producing free ﬂuorine and lithium ions. As a result, the ﬂuorine diﬀusivity is higher (some ﬂuorine still bound to Be). For ﬂuorine, NNIP results agreed with DFT within statistical uncertainty, while PIM diﬀusivity was 0.7 × 10−5 cm2/s lower than DFT. For ﬂuorine, one experimental result exists53 but is believed to be unreliable based on our previous analysis and is therefore not used for comparison here.13 The lithium diﬀusivity is the highest with DFT and NN values being around 5.12−5.67 × 10−5 cm2/s. The lithium diﬀusivity values were again slightly lower for PIM, in which the calculated value was 3.72 ± 0.29 cm2/s. For lithium, only one experimental study is available for comparison. The experimental Li measurement is closer to the DFT and NNIP calculations, but the experimental uncertainty is very large compared to the diﬀerence between values calculated by the diﬀerent computational methods. Overall, the agreement between methods is good, as small diﬀerences are expected since the models are developed on diﬀerent data. Further, the neural network prediction agrees with DFT within the uncertainty (±10−15%) for all cases, which is within the uncertainty of typical experiments. This provides a good indication that NNIP dynamics are accurate and bound only by the accuracy of the ab initio functionals used to train the model. Given reliable DFT functionals, NNIPs should be reasonably capable of calculating more demanding dynamics and transport properties such as viscosity or heat transfer coeﬃcient. 3.2.4. Computational Performance of Neural Network Potential. The computational demand of the neural network potential for Flibe is examined in this section. Scaling tests were performed, and simulation times are compared between DFT, neural network potentials, and polarizable ion models. Simulations for these tests were performed on the Engaging cluster in the Massachusetts Green High Performance Computing Center (MGHPCC) facility and the Frontera Cluster in the Texas Advanced Computing Center (TACC). The Engaging cluster consists of nodes with 2 × 16 Intel Xeon 2.1 GHz cores, connected with an Inﬁniband interconnect with a bandwidth of 4 × 14 Gb/s node-to-node transfer and 0.7 ms of latency. On Frontera, nodes consisted of 28 × 2 Intel Xeon Platinum 8280 2.7 GHz processors connected via a HDR-100 Mellanox InﬁniBand. Parallelization in DFT is performed using VASP recommendations based on machine architecture,
+
+about: TBR interpolation error FLiBe BeF2 43 mol percent beryllium multiplier grid accuracy
+
+No earlier debate on this forum matches.
+
+job: salt-neutronics-tbr
+refused: Your S3M token belongs to project 'chm243', but odo access requires 'gen150-vista'. Mint an S3M token for 'gen150-vista' and update it in the Vista user settings page.
+
+would have tested: TBR at 43.3 mol% BeF2 and Li-6=0.90 will fall between 1.35 and 1.43 and provenance.is_extrapolated will be false, with beryllium_multiplier reported as approximately 1.299
+
+job:        salt-neutronics-tbr
+job id:     57776203
+cluster:    perlmutter
+script args: --bef2 43.3 --li6 0.90
+
+testing the prediction: TBR at 43.3 mol% BeF2 and Li-6=0.90 will fall between 1.35 and 1.43 and provenance.is_extrapolated will be false, with beryllium_multiplier reported as approximately 1.299
