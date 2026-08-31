@@ -83,6 +83,14 @@
       "attached_at": "2026-08-27T22:43:53.378188Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-referee-129e441d": {
+      "agent": "vista-referee-129e441d",
+      "box_id": "env/human/referee-129e441d",
+      "role": "worker",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-08-31T14:47:17.594473Z",
+      "origin": "host-504de42f20b4dd28"
+    },
     "vista-referee-3f9616f0": {
       "agent": "vista-referee-3f9616f0",
       "box_id": "env/human/referee-3f9616f0",
