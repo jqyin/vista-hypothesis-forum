@@ -1,0 +1,298 @@
+job: hpc_jobs/salt-neutronics-tbr
+refused: 'hpc_jobs/salt-neutronics-tbr' is not runnable in this project. Available: salt-chemistry-md, salt-neutronics-tbr.
+
+would have tested: provenance.is_extrapolated = false, TBR in [1.37, 1.42] (close to campaign value 1.3983, within ~1-2%), beryllium multiplier ≈ 1.299, shielding.magnet_flux_n_per_cm2_s below 1e12
+
+job: salt-neutronics-tbr
+refused: this debate has already commissioned 2 of 2 permitted simulations.
+
+would have tested: provenance.is_extrapolated = false, TBR in [1.37, 1.42] (close to campaign value 1.3983, within ~1-2%), beryllium multiplier ≈ 1.299, shielding.magnet_flux_n_per_cm2_s below 1e12
+
+skill salt-neutronics-tbr
+
+# Salt Neutronics TBR: tritium breeding ratio from composition and Li-6 enrichment
+
+This skill answers "what tritium breeding ratio (TBR) would a Shift Monte Carlo
+neutronics run have produced for *this* FLiBe blanket composition?" — not by running
+neutron transport (which costs hours on HPC), but by **interpolating a precomputed
+Shift parameter study**. The headline output is the **TBR** (tritium atoms bred per
+source neutron); a blanket needs TBR ≳ 1.0 (with margin for losses) to be tritium
+self-sufficient. It also returns neutron flux, nuclide number densities, composition
+sweeps, and plots. The whole calculation is **CPU-only and sub-second**.
+
+It is built to be driven end-to-end by an agent: take a candidate salt (mol% BeF₂ +
+Li-6 enrichment), return TBR with an honest interpolated-vs-extrapolated flag and a
+plot. In a VISTA campaign it is the **neutronics sim skill** — the companion to
+[`salt-chemistry-md`](../salt-chemistry-md/SKILL.md) (which gives density): together
+they let a planner screen breeder-salt compositions on both physics axes.
+
+## The code lives in a public repo — clone it, don't expect it vendored
+
+The implementation (the `salt_neutronics` package, the CLI, the reference docs, and the
+bundled Shift parameter study `data/neutronics_isotopics.h5`, ~59 KB) is **not vendored
+into VISTA**. It is a public GitHub repo that you clone at runtime:
+
+> **`https://github.com/jqyin/salt-neutronics-skill`**  (`salt_neutronics` package, ~1 MB)
+
+This keeps the skill lightweight: VISTA carries only this SKILL.md and a thin HPC job
+(`hpc_jobs/salt-neutronics-tbr`) that bootstraps the same repo on the compute node.
+
+There are **two execution contexts**. Unlike a GPU MD run, this calculation is cheap
+enough to run in either — pick by what you're doing:
+
+| Context | Where | Use it for | How the code arrives |
+|---|---|---|---|
+| **Sandbox (CPU)** | `run_bash` sandbox | ad-hoc single queries, sweeps, **plotting**, exploration | you `curl`+`tar` the repo into `/mnt/data/output` |
+| **HPC (CPU)** | OLCF Odo (open enclave) **or** NERSC Perlmutter | the **per-state-point sim in a campaign** (`submit_hpc_job`) | the job `git clone`s the repo for you |
+
+The HPC path is not required for correctness (there's no GPU step), but it is how a
+**multi-agent campaign** runs one state point per subagent through VISTA's HPC backend,
+symmetrically with the other sim skills — see
+[Sim-skill contract](#sim-skill-contract-for-multi-agent-campaigns). For a one-off
+question, just run it in the sandbox.
+
+## Bootstrapping the code in the sandbox (CPU steps)
+
+`git` is **not** installed in the sandbox, but `curl`, `python3`, and `pip` are, and the
+sandbox has outbound network. Fetch the repo as a tarball once per session:
+
+```bash
+cd /mnt/data/output
+curl -fsSL https://github.com/jqyin/salt-neutronics-skill/archive/refs/heads/main.tar.gz \
+  | tar xz
+cd salt-neutronics-skill-main
+python3 -m pip install --quiet scipy h5py    # numpy/matplotlib are already present
+export PYTHONPATH="$PWD:${PYTHONPATH:-}"      # package is importable in place, no install needed
+export MPLBACKEND=Agg                         # headless plotting
+```
+
+Everything below runs here, from this directory. Write all artifacts under
+`/mnt/data/output/...` and print `Plot saved to <path>` for any image so the UI
+auto-displays it.
+
+## The workflow
+
+```
+composition + Li-6  →  [tbr]    →  TBR + provenance        (results.json)
+composition + Li-6  →  [flux]   →  neutron flux at a position
+composition range   →  [sweep]  →  CSV (+ TBR surface PNG)
+```
+
+1. **Define the state point(s).** Composition is the **mol% BeF₂** (33.33 = the
+   2LiF·BeF₂ eutectic). Li-6 enrichment is the ⁶Li atom fraction (default 0.075 ≈
+   natural). One composition + one enrichment is one state point; a screen is a grid.
+
+2. **Query the headline TBR** (sandbox quick check, or HPC in a campaign):
+   ```bash
+   # Human-readable
+   python3 -m salt_neutronics.cli tbr --bef2 33.3 --li6 0.075
+   # Machine-readable JSON (preferred when you will parse it)
+   python3 -m salt_neutronics.cli tbr --bef2 40 --li6 0.5 --json
+   ```
+
+3. **Read the result.** The JSON report carries everything needed to interpret and cite
+   it: `result.tbr`, `result.interpretation`, `input_composition`,
+   `derived.beryllium_multiplier`, and `provenance.is_interpolated` /
+   `provenance.is_extrapolated`. An **extrapolated** number is not backed by any Shift
+   run — always say which it is.
+
+4. **Sweep / plot** (sandbox). See [Other queries](#other-queries-sweeps-flux-density-plots).
+
+## The key input mapping: BeF₂ mol % → beryllium multiplier
+
+Users think in **salt composition**; the precomputed data is indexed by **beryllium
+multiplier**. The skill converts:
+
+```
+beryllium_multiplier = (mol% BeF2) / 33.33
+```
+
+Eutectic FLiBe (2 LiF : 1 BeF₂ = 33.33 mol% BeF₂) maps to multiplier **1.0**. The
+scanned grid (multiplier 0.9–1.4) covers roughly **30–46.67 mol% BeF₂**. Valid query
+ranges:
+
+- BeF₂: **30–46.67 mol %**
+- Li-6 enrichment: **0.07–1.0**
+
+Single-point queries outside these ranges are rejected (pass `--allow-extrapolation` to
+override); sweeps return `NaN` for out-of-grid points. See `references/physics.md` in
+the clone for the assumption behind the mapping and how to change the nominal
+(`--nominal-bef2`).
+
+## Running the TBR sim on HPC (the HPC step)
+
+The query is wrapped as the VISTA HPC job **`salt-neutronics-tbr`**, with CPU backends for
+both **Odo** (the OLCF open enclave) and **Perlmutter** (NERSC) — pick with `cluster=`.
+Both run on a single CPU core; one submission = one state point = one `results.json`. The
+job clones the repo on the node, uses a tiny Python env at runtime
+(numpy/scipy/h5py/matplotlib — seconds, no pre-provisioning), runs the `tbr` query, and
+writes `results.json` into the job's output dir.
+
+```python
+submit_hpc_job(
+    job="salt-neutronics-tbr",
+    cluster="odo",            # or cluster="perlmutter"
+    duration="0:10:00",
+    script_args="--bef2 33.33 --li6 0.075",
+)
+```
+
+Use whichever cluster the user has credentials for; the `script_args` contract and the
+`results.json` output are identical across backends.
+
+### `script_args` contract
+
+Pass one state point's composition as a single flat string (forwarded to the `tbr`
+query):
+
+| Flag | Meaning | Default |
+|---|---|---|
+| **Composition (pick one):** | | |
+| `--bef2 P` | BeF₂ content in mol% | — |
+| `--be-multiplier M` | beryllium multiplier (instead of `--bef2`) | — |
+| `--li6 E` | Li-6 enrichment (⁶Li atom fraction) | 0.075 |
+| `--nominal-bef2 P` | mol% BeF₂ that maps to multiplier 1.0 | 33.33 |
+| `--allow-extrapolation` | permit (cautious) extrapolation outside the grid | off |
+
+### Outputs (in the job's `$VISTA_OUT`)
+
+- `results.json` — the result. TBR at `result.tbr`; `provenance.is_extrapolated`
+  flags out-of-grid; `input_composition` + `derived.beryllium_multiplier` echo the
+  state point. (Full schema: `references/data_schema.md` in the repo.)
+
+Poll with `get_hpc_job_status`; when complete, fetch with
+`get_hpc_job_outputs(job_id, files=["results.json"], cluster=…)` (the same cluster you
+submitted to).
+
+## Sim-skill contract for multi-agent campaigns
+
+In a VISTA campaign, the planner fans out **one neutronics subagent per candidate state
+point**; each subagent uses this skill to launch and parse one Odo job. The two
+operations a subagent performs:
+
+- **dispatch(order) → job:** turn the order (a composition + Li-6 enrichment) into the
+  `script_args` string above, call
+  `submit_hpc_job(job="salt-neutronics-tbr", cluster="odo"|"perlmutter", duration="0:10:00", script_args=…)`,
+  and record the returned `job_id` + `cluster`.
+- **collect(job) → result:** once the job completes,
+  `get_hpc_job_outputs(... files=["results.json"])` and parse it into a structured
+  result:
+  ```json
+  {"tbr": <float>, "is_extrapolated": <bool>,
+   "bef2_mol_percent": <float>, "li6_enrichment": <float>,
+   "beryllium_multiplier": <float>, "lif_mol_percent": <float>,
+   "shielding_flux_n_per_cm2_s": <float>}
+  ```
+  If `provenance.is_extrapolated` is true, flag the point as not backed by a Shift run
+  rather than reporting it as a simulated value.
+
+  **Also extract the magnet radiation-shielding flux** into `shielding_flux_n_per_cm2_s`,
+  reading it from the report's `shielding.magnet_flux_n_per_cm2_s` (the neutron flux reaching
+  the superconducting magnets behind a 1 m blanket, n/cm²·s). The planner's scorer treats this
+  as a **hard gate**: a candidate whose flux exceeds **1e12** is rejected (shielding too weak);
+  **≤ 1e10** is the preferred long-magnet-life target. Report it alongside the TBR so the scorer
+  can apply the gate.
+
+Subagents do not talk to each other; the planner and durable campaign state coordinate
+them. To screen a grid, the planner issues N orders (one per (composition, Li-6)) and
+dispatches N jobs in parallel, then collects and hands the results to the planner's
+scorer for ranking/plotting.
+
+**Coupled with density.** A breeder-salt screen usually wants **both** TBR and mass
+density per composition. The planner can fan out, per state point, a `salt-neutronics-tbr`
+job (TBR, Odo/CPU, this skill) **and** a [`salt-chemistry-md`](../salt-chemistry-md/SKILL.md)
+job (density, Frontier/GPU), then rank candidates on both axes (e.g. TBR ≥ 1.1 *and*
+acceptable coolant density).
+
+## Other queries (sweeps, flux, density, plots)
+
+These are sandbox operations (a sweep is many interpolations; plotting needs no HPC):
+
+```bash
+# Sweep TBR over composition; write a CSV (+ optional surface plot)
+python3 -m salt_neutronics.cli sweep --bef2-range 30 46 60 --li6 0.075 --plot
+# 2-D sweep over both axes
+python3 -m salt_neutronics.cli sweep --bef2-range 30 46 40 --li6-range 0.07 1.0 40 --output sweep.csv
+
+# Neutron flux at a spatial position (cm) for one composition
+python3 -m salt_neutronics.cli flux --position 15 --bef2 33.3 --li6 0.075 --json
+
+# Number density of a nuclide by ZAID (1003 = tritium, 8016 = O-16, ...)
+python3 -m salt_neutronics.cli density --zaid 1003 --position 15 --bef2 33.3 --li6 0.5 --json
+```
+
+`--bef2-range LOW HIGH [N]` builds `N` linearly spaced points (default 50). Sweep CSV
+columns: `bef2_mol_percent, li6_enrichment, beryllium_multiplier, tbr`. For finer plot
+control, import the helpers (`from salt_neutronics.plotting import plot_tbr_surface,
+plot_flux_profiles, plot_nuclide_density_surface`); each saves a PNG and returns its
+path.
+
+## Interpreting results for the user
+
+Always state **whether the value was interpolated or extrapolated**
+(`provenance.is_extrapolated`) — an extrapolated number is not backed by any simulation.
+Then read the physics:
+
+- **TBR ≥ 1.0** is the self-sufficiency threshold; **≥ ~1.1** gives a comfortable margin
+  once first-wall losses, structural absorption, and neutron streaming are accounted for.
+- In this dataset TBR **rises with both** Li-6 enrichment and BeF₂ content, and Li-6
+  enrichment is the **stronger lever** (especially below ~50%). State the trend, not just
+  the single number, when it helps the user's decision.
+- This is an **emulation by interpolation**, not a fresh transport solve. Don't claim
+  Monte Carlo statistical uncertainties; the limiting error is interpolation between
+  grid points.
+
+## Reference material (in the cloned repo)
+
+- `references/physics.md` — FLiBe chemistry, TBR definition, the composition→multiplier
+  assumption and how to change it, modeling caveats. **Read before judging whether a
+  result is trustworthy.**
+- `references/data_schema.md` — exact layout of `neutronics_isotopics.h5`.
+- `README.md` — human-oriented overview, install, and dev/test instructions.
+
+## Guardrails
+
+- Always report **interpolated vs extrapolated**; never present an extrapolated TBR as a
+  simulated result.
+- Composition is given in **mol% BeF₂**; the skill derives the beryllium multiplier from
+  it — report the multiplier the run actually used (`derived.beryllium_multiplier`).
+- Sanity-check the trend (TBR rises with Li-6 and BeF₂); nominal eutectic FLiBe at
+  natural Li-6 sits near TBR ≈ 1.0.
+- In a campaign, never launch jobs without an approved plan, and cite the
+  `job_id` / `results.json` for every number you report.
+
+query: FLiBe TBR interpolation grid BeF2 beryllium multiplier Shift neutronics accuracy
+knowledge base: molten-salt
+
+[1] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe serves as breeder, neu- tron shield, and coolant for the vacuum vessel [11]. The beryllium in FLiBe acts as a neutron multiplier, which significantly enhances Tritium Breeding Ratio (TBR). Al- though there are many challenges associated with working with beryllium because of its toxicity, FLiBe remains the most promising breeder choice for the ARC-class FPP due to its cooling capabilities [12], and its ability to achieve high TBR [13]. Recent models have shown that the FLiBe LIB should enable the ARC-class FPP to achieve tritium self-sufficiency [6]. Preprint submitted to Nuclear Fusion December 5, 2024 arXiv:2412.02721v1 [physics.plasm-ph] 2 Dec 2024
+
+————————————————————————————————————————————————————————————
+
+[2] tritium-LIBRA_Experiment_FLiBe.pdf, page 9
+    Citation: The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum — Sara E. Ferry et al. — Fusion Science and Technology vol. 79 (2023) — DOI: 10.1080/15361055.2022.2078136
+
+6, LIBRA was modeled with both FLiBe and FLiNaK for varying Li enrichment levels, Pb multiplier thicknesses, and salt breeder thicknesses. These results show that a FLiNaK breeder requires a larger LIBRA radial build to achieve the same TBR (a result that extends to the LIB in an FPP). For example, a TBR of ,1 can be achieved using 10%-enriched FLiBe with 0.5-m salt thickness and a < 5-cm Pb thickness. Using 10%-enriched FLiNaK, LIBRA would need a > 1-m salt thickness and a > 5-cm Pb thickness. FLiBe was thus chosen for study in LIBRA because it is the most compelling breeder choice for the LIB: It enables a high TBR without requiring expensive Li enrichment or increasing plant radial build. LIBRA aims to achieve a blanket-prototypical radia­ tion environment in its volume of FLiBe salt. The fusion neutron energy spectrum in an FPP ranges from high- energy “fast” neutrons near the fusion core, where neutrons emerge from the D-T reaction at 14.1 MeV, to thermalized lower-energy neutrons at the outer edge. The expected spectrum as a function of location is determined by system Fig. 6. FLiBe is a more efficient T breeder than FLiNaK. OpenMC simulations of LIBRA show that increases in breeder thickness and neutron multiplier thickness are required to achieve a given TBR with FLiNaK instead of FLiBe. THE LIBRA EXPERIMENT · FERRY et al. 21 FUSION SCIENCE AND TECHNOLOGY · VOLUME 79 · JANUARY 2023
+
+————————————————————————————————————————————————————————————
+
+[3] Barker_2025_Nucl._Fusion_65_086022.pdf, page 8
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al cross-section, though generally also considered as a multiplier [46], and tungsten carbide (WC) which is found to be an excellent reflector in small reactors [47]. The inclusion of any reflector in only the final layer is always seen to improve the TBR of the blanket (this configuration is shown as [‘Li’, ‘Li’, ‘R’]), when compared to a pure lithium alternative, but only FLiBe gave a continual increase in TBR performance as the volume of the reflector increased (shown in figure 5 by popu- lating more layers of reflector ‘R’). Initially (with R only at the rear), a FLiBe reflector produced system wide TBR levels sim- ilar to those of a beryllium reflector, which was to be expec- ted as it is assumed the reflective nature of FLiBe comes from the presence of beryllium in the molten salt. However, as the volume of reflectors is increased, the loss of lithium towards the rear in all but FLiBe has a negative effect on the TBR. Because FLiBe contains lithium, the drop in lithium density is much less abrupt, and when combined with the reflecting prop- erties of beryllium, this material exceeds all of the alternatives considered, including pure Li. A potential issue was identified in the nuclear data for FLiBe. During analysis of the neutron spectra produced within FLiBe, an increase in near-thermal neutron populations was observed to improve the TBR of the system. However, the cross-section libraries found in ENDF/B-VII.1 and other rel- evant nuclear data libraries do not include the thermal scat- tering data S(α,β) associated with liquid FLiBe. As a res- ult, this scattering data was not incorporated throughout the study, and the thermal neutron dynamics may not have been accurately characterized. Nevertheless, as shown in figure 4, neutrons largely remain above the thermal threshold of ⩾0.025 eV, so their exclusion from this study should have a minimal effect on the final results. Although such data has been generated [48], they do not appear to be publicly available. 4. Conclusion A repeatable digital optimisation workflow to create and test fusion reactor blankets concepts has been shown along with verification steps to provide evidence of the validity of the model. The TBR error through segmentation of the EU- DEMO-like geometry was found to be within the order of 0.01. The model was applied to a hybrid liquid metal and mol- ten salt design, and it was found that FLiBe acted as an effi- cient reflector. This novel use of FLiBe alongside layers of pure Li differentiates it from other considered reflectors, typ- ically graphite and tungsten carbide, due to its ability to breed tritium as well as reflect. The general metric to find effect- ive reflectors relies on materials that have a high moderat- ing ratio (the ratio of neutron scattering and absorption cross- sections). FLiBe would not rate high on this metric due to its large lithium content. However, through a merger of two of FLiBe’s properties, namely high neutron scattering and multi- plication in beryllium and the breeding potential of lithium,
+
+————————————————————————————————————————————————————————————
+
+[4] tritium-LIBRA_Experiment_FLiBe.pdf, page 6
+    Citation: The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum — Sara E. Ferry et al. — Fusion Science and Technology vol. 79 (2023) — DOI: 10.1080/15361055.2022.2078136
+
+but with diminishing scientific returns for the associated increase in cost and size. II.B.2. Key Design Choice 2: Match the LIB Radiochemical Environment LIBRA provides a close match to the expected LIB radiochemical environment by using the intended breeder material (FLiBe) and neutron spectrum (14-MeV D-T neutrons) instead of substitutions like FLiNaK and fission neutrons. FLiNaK is easier to procure, contains comparable amounts of Li breeder, and circumvents the issue of Be toxicity. However, we do not anticipate that a future LIB would use FLiNaK instead of FLiBe, although it is theoretically possible, because Be acts as a neutron multiplier and enhances T breeding. A FLiNaK LIB would need to be much larger to achieve the same T inventory, increasing plant size and cost (see Sec. III and Fig. 6). Therefore, LIBRA must use FLiBe in order to be truly radiochemically relevant to the LIB, as T transport and behavior are highly dependent on its chemical form, which in turn is coupled to salt chemistry. Each QT will TABLE I Technical Performance Targets for LIBRA Compared to FLiBe T Breeding Experiments in the Literature Target Literature LIBRA Experiment Neutron energy spectrum Arbitrary Matches LIB spectrum Tritium equilibration time ∼7 days < 1 day Validated global TBR n/aa > 1 Breeder volume 0.001 m3 0.5 m3 Redox potential Variable Controllable Corrosion rate 0 to 25 µm/yr < 5 µm/yr an/a = not measured. 18 FERRY et al. · THE LIBRA EXPERIMENT FUSION SCIENCE AND TECHNOLOGY · VOLUME 79 · JANUARY 2023
+
+————————————————————————————————————————————————————————————
+
+[5] breeder_blanket_and_tritium_fuel_cycle_feasibility_of_the_infinity_two_fusion_pilot_plant.pdf, page 11
+    Citation: Breeder blanket and tritium fuel cycle feasibility of the Infinity Two fusion pilot plant — D.W.S. Clark et al. — Journal of Plasma Physics vol. 91 (2025) — DOI: 10.1017/S002237782500039X
+
+vessel, tank sector separators for modularity and penetrations for plasma access. In addition to the lowest saturated TBR, the F-LIB concept was also found to be sensitive to this additional structure requirement which negatively impacts the TBR. As a supplement to the reference configurations above, a wide variety of neutron- ics calculations in simplified geometric approximations were performed to better probe and understand the overall design space for breeder concepts consistent with prior studies (Zheng & Wu 2003), but using modern tools and more representative geometries. One such example is shown in figure 2, where the TBR was calcu- lated for various breeder materials mixed homogeneously with concentrations of multiplier (Be12Ti) increasing in the y-direction. The relationship between breeder thickness and TBR was then calculated at enrichments increasing in the x-direction and with varying multiplier material content in the breeder region. This analysis https://doi.org/10.1017/S002237782500039X Published online by Cambridge University Press
