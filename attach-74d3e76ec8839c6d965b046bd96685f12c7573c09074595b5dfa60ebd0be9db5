@@ -1,0 +1,1530 @@
+attachment index
+
+Attached to this project:
+- Molten_Salt_Thermophysical_Properties.json
+
+about: FliBe composition TBR tritium breeding ratio neutronics
+
+## find best FliBe salt that maximizes TBR and production viable
+## Verdict
+
+**1. A systematic high‑fidelity neutronics sweep over Li‑6 enrichment (15–35 mol %) and solid‑Be reflector thickness (3–7 cm) will identify the composition that yields the highest viable net TBR for FLiBe‑based blankets while respecting melt‑temperature (<730 °C) and viscosity limits.**
+
+*Standing.* No reviewer raised objections specifically to the methodological proposal; criticisms concerned redundancy but did not refute the claim that the sweep will identify the optimal viable configuration. The hypothesis therefore remains unchallenged and pending execution.
+*Confidence.* 0.60
+
+*Predictions.*
+- The sweep will produce a TBR value for every (Li‑6 enrichment, Be‑thickness) pair in the investigated range.
+- The configuration that maximizes TBR while keeping melt temperature <730 °C and viscosity‑induced pressure drop within design limits will be identified as the optimal viable FLiBe breeder.
+
+**2. A 5 cm solid‑Be reflector adjacent to the peak neutron‑flux region combined with the standard 2LiF·BeF2 eutectic enriched to ≈20–30 mol % ^6Li produces an overall net TBR of ≈1.48 while staying within melt‑temperature and viscosity constraints.**
+
+*Standing.* Multiple reviewers argue that the cited literature does not support a system‑wide TBR of 1.48 for a 5 cm Be reflector with 20–30 mol % ^6Li, interpreting the reported gains as local rather than overall. No definitive refutation has been presented, so the hypothesis remains viable but unvalidated pending dedicated neutronics simulation.
+*Confidence.* 0.70
+
+*Predictions.*
+- Overall net TBR ≈1.48 for the described configuration.
+- Melt temperature stays below 730 °C.
+- Viscosity increase remains within acceptable pressure‑drop limits.
+
+**3. A 10–12 cm solid‑Be multiplier combined with the standard eutectic enriched to ≈20–30 mol % ^6Li provides the highest realistic net TBR for FLiBe‑based blankets while meeting thermal‑hydraulic limits.**
+
+*Standing.* Reviewers cited the LIBRA study showing a thin Pb multiplier can achieve a higher TBR than any solid‑Be configuration, directly contradicting the claim that the thick Be design yields the highest realistic net TBR. The hypothesis is therefore falsified by existing literature.
+*Confidence.* 0.65
+
+*Predictions.*
+- Overall net TBR >1.3 (higher than any Pb‑multiplier design).
+- Melt temperature remains <730 °C.
+- Viscosity stays within design specifications.
+
+**4. A <5 cm Pb multiplier combined with 20–30 mol % ^6Li‑enriched FLiBe yields the highest achievable net TBR for FLiBe‑based blankets.**
+
+*Standing.* Multiple reviewers presented published neutronics results showing solid‑Be multipliers achieve net TBR ≈1.5, whereas Pb‑based designs are limited to ≈1.3. These contradictions directly falsify the claim that the Pb configuration provides the highest achievable net TBR.
+*Confidence.* 0.60
+
+*Predictions.*
+- Overall net TBR >1.3, surpassing any Be‑multiplier design.
+- Melt temperature stays below 730 °C.
+- Viscosity remains within acceptable limits.
+
+**5. A standard FLiBe eutectic enriched to >99.5 % ^6Li with no excess BeF2 is the best viable FLiBe breeder.**
+
+*Standing.* Reviewers demonstrated that even with >99.5 % ^6Li the TBR cannot exceed ≈1.2 without solid multipliers, and that the proposal cannot meet the target TBR. The hypothesis is therefore falsified.
+*Confidence.* 0.25
+
+*Predictions.*
+- TBR close to the maximum achievable with FLiBe alone (≈1.13–1.2).
+- Melt temperature <730 °C.
+- Viscosity within acceptable limits.
+
+**6. A FLiBe composition of the standard eutectic with >99.5 % ^6Li enrichment and ~5 mol % excess BeF₂ yields TBR >1.45, tritium loss <5 %, and melt temperature <730 °C.**
+
+*Standing.* Both neutronics and thermohydraulic objections showed the excess BeF₂ raises viscosity excessively and the neutron multiplication is insufficient to reach TBR >1.45. The hypothesis was abandoned and is falsified.
+*Confidence.* 0.20
+
+*Predictions.*
+- Overall TBR >1.45 in a typical dual‑coolant fast‑reactor spectrum.
+- Tritium loss <5 %.
+- Melt temperature stays below 730 °C.
+
+**Why this order.** The debate produced multiple design hypotheses and one methodological proposal. All composition hypotheses were met with substantive literature‑based objections that either contradicted their predicted TBR or demonstrated infeasibility with respect to viscosity or melt limits. The only hypothesis that faced no direct refutation is the proposal to perform a systematic high‑fidelity neutronics sweep; reviewers raised concerns about redundancy but did not invalidate the claim that the sweep will identify the optimal viable configuration. Consequently, the sweep hypothesis ranks highest. Among composition claims, the 5 cm solid‑Be reflector with moderate ^6Li enrichment survived the longest despite contested evidence, so it is ranked next. The thicker Be multiplier, the Pb multiplier, the high‑^6Li no‑excess‑BeF₂ design, and the original high‑^6Li with excess BeF₂ design are each directly falsified by published studies, placing them lower in the ranking. Confidence values follow those stated in the original proposals.
+
+Unresolved issues include the need for the proposed neutronics sweep to be executed, experimental validation of viscosity and pressure‑drop for the suggested FLiBe compositions, and systematic benchmarking of thin Be versus Pb multipliers in identical blanket geometries to resolve conflicting literature reports.
+
+**Unresolved.**
+- Execute the high‑fidelity neutronics sweep (Li‑6 15–35 mol %, Be 3–7 cm) to determine whether the 5 cm Be reflector can achieve an overall TBR ≈1.48.
+- Experimentally measure viscosity, pressure‑drop, and corrosion behavior of FLiBe with 20–30 mol % ^6Li at reactor‑relevant temperatures.
+- Quantify the trade‑off between ^6Li enrichment level and (n,2n) multiplication in FLiBe‑based blankets to locate the true optimum for net TBR.
+- Benchmark thin Be and thin Pb multipliers in identical dual‑coolant fast‑reactor blanket geometries to resolve the conflicting literature reports on achievable TBR.
+
+## Adding Be to improve TBR may create a materials/corrosion problem worse than the neutronics benefit
+## Verdict
+
+**1. Adding Be to FLiBe suppresses bulk Cr dissolution from RAFM steel by maintaining salt redox potential below the Cr/CrF₂ equilibrium, and this bulk suppression survives flowing conditions; however, irradiation-driven pebble fracture progressively collapses effective metallic Be surface area, degrading the electrochemical buffer at pebble–structure interfaces and leaving localized corrosion at those interfaces currently unbounded by data — but the topic claim that this corrosion cost exceeds the TBR benefit (~0.25 TBR units, baseline 1.05 to ~1.3) is not supported.**
+
+Metallic Be at any surface in electrochemical contact with FLiBe sets the bulk salt redox potential via the equilibrium Be + 2F⁻ → BeF₂ + 2e⁻, keeping E below the Cr/CrF₂ threshold (~−2.3 V vs. F₂/F⁻). Flowing salt redistributes dissolved BeF₂ around the pebble bed without destroying the bulk buffer as long as some metallic Be surface remains anywhere in the loop. Pebble fracture under He-induced swelling (~10 dpa) converts metallic Be surface area to dissolved BeF₂ (redox-inert once in solution), collapsing the local buffer at high-dose zones and potentially enabling interfacial Cr attack at pebble–wall contact zones.
+
+*Standing.* Partially survives. The bulk-suppression mechanism is thermodynamically sound and has static experimental support (Calderoni 2009, Hara/Zhang 2018 data). The Reviewer's round 2 objection — that flowing conditions structurally guarantee buffer depletion — was rebutted in round 3: flowing salt redistributes dissolved BeF₂ but does not destroy the bulk buffer as long as metallic Be surface remains anywhere in the loop. That rebuttal was not answered. However, the Reviewer's round 4 objection stands unanswered: pebble fracture converts metallic Be surface area (the electroactive species) to dissolved BeF₂ (redox-inert), decoupling the bulk-Cr test metric from the interfacial risk the Proposer had already conceded. The surviving prediction is therefore vacuous as a bound on the topic claim. The hypothesis holds on its positive content — bulk suppression is real and probably durable early in pebble lifetime — but fails to close the engineering question the topic poses, because the precise operating condition that achieves TBR ≥ 1.3 (high pebble fraction, prolonged irradiation, fracture) is the condition that degrades the buffer the argument depends on. Confidence is set at 0.35, reflecting moderate support for the positive claim (bulk suppression survives intact-pebble conditions) against a background of complete absence of data for the irradiated, flowing, high-volume-fraction configuration that actually achieves the claimed TBR.
+*Confidence.* 0.35
+
+*Predictions.*
+- In a flowing FLiBe loop with intact Be pebbles at 600–700 °C, bulk Cr dissolution rate from RAFM steel walls will be at least 3× lower than in a Be-free loop at equivalent temperature and flow rate.
+- Under sustained neutron flux (~10 dpa He-equivalent), pebble fracture reduces effective metallic Be electroactive surface area and increases Cr attack at pebble–wall contact zones, but bulk Cr dissolution remains suppressed relative to Be-free salt throughout intact-pebble lifetime.
+- The TBR gain from 75–80 vol% Be loading (~0.25 TBR units) exceeds any corrosion-driven structural penalty on the timescale for which bulk redox suppression holds.
+
+**2. Pebble fracture under fusion neutron flux (~10 dpa) converts metallic Be surface area to dissolved BeF₂ at an accelerating rate, collapsing the electrochemical redox buffer at structural interfaces faster than the intact-pebble model assumes; at the operating point required for TBR ≥ 1.3 (75–80 vol% Be pebbles, flowing FLiBe, sustained irradiation), the localized corrosion risk may exceed the neutronics benefit.**
+
+Neutron-induced He production via ⁹Be(n,2n) and subsequent ⁹Be(n,α) reactions generates internal He bubbles causing pebble swelling and fracture. Fractured pebbles expose high-surface-area Be to flowing FLiBe, accelerating dissolution and converting metallic Be (electroactive) to dissolved BeF₂ (redox-inert). Flowing salt sweeps dissolved BeF₂ away from fracture zones before local redox equilibrium is restored. The result is a salt chemically enriched in BeF₂ but lacking sufficient metallic-Be electrochemical contact to maintain a reducing potential at structural interfaces.
+
+*Standing.* The Reviewer's round 2 objection that flowing conditions structurally guarantee buffer depletion was rebutted by the Proposer in round 3 and not successfully defended: the Reviewer conflated local equilibrium disruption with bulk buffer destruction, and the Proposer correctly separated these. However, the Reviewer's round 4 argument — that pebble fracture decouples mass inventory from electroactive surface area, rendering the surviving prediction vacuous as a bound on interfacial corrosion — was both mechanistically sound and unanswered. It stands as the debate's strongest unresolved objection against the Proposer's position, and in doing so partially supports the Reviewer's own claim. However, the Reviewer's positive assertion — that corrosion may exceed the TBR benefit — was never quantified. No rate data for fracture-driven surface-area collapse were presented. The Be₁₂Ti substitution-as-evidence argument in round 8 was itself rebutted (or at least neutralised) by the Reviewer's rejoinder that precautionary design substitution does not discriminate between untested failure modes. The hypothesis ranks below the Proposer's because the positive evidence cited by the Proposer (Calderoni 2009, Hara data, Zhang 2018) provides at least static corrosion-suppression support, while the Reviewer's worst-case scenario has no experimental support at all — it is a plausible mechanism without a measured magnitude.
+*Confidence.* 0.25
+
+*Predictions.*
+- A fractured pebble bed at ~10 dpa He-equivalent will show measurably higher Cr dissolution at RAFM steel contact zones than an intact pebble bed at the same Be mass inventory and bulk salt composition.
+- Electrochemical potential measurements in a flowing FLiBe loop with irradiation-damaged (fractured) Be pebbles will show salt redox potential drifting toward the Cr/CrF₂ equilibrium over irradiation lifetime, even while bulk BeF₂ concentration increases.
+
+**Why this order.** The debate ran four productive rounds and produced two genuine positions that moved under pressure, but closed without resolving the central quantitative dispute. The topic claim — that Be addition creates a corrosion problem worse than the neutronics benefit — was not established in either direction. What the debate did establish clearly is: (1) bulk redox suppression by metallic Be in FLiBe is thermodynamically sound and has static experimental support; (2) flowing conditions do not destroy this bulk buffer by themselves, contrary to the Reviewer's round 2 assertion; (3) pebble fracture under irradiation converts metallic Be surface area to dissolved BeF₂ and does decouple the bulk Cr metric from interfacial corrosion at pebble–RAFM contact zones; (4) the Proposer's surviving falsifiable prediction does not measure the risk it is offered as bounding; (5) neither side quantified the rate at which fracture-driven surface-area collapse occurs, which is the number that determines whether the buffer survives blanket lifetime. The key unanswered argument in the record is the Reviewer's round 4 point about decoupling, which the Proposer never addressed in round 7 (which instead pivoted to the beryllide-substitution argument, itself neutralised in round 8). No simulations were commissioned despite explicit offers in rounds 1 and 3, leaving the rate question entirely open. The attached thermophysical properties file (Cantor 1969 BeF₂-LiF density/viscosity data) is not relevant to corrosion, electrochemistry, or irradiation damage and contributed nothing to the debate. The human's request in round 6 for a TBR-vs.-Be-mole-fraction simulation was acknowledged by the Proposer but no results were posted before the debate ended; that simulation would have provided a denominator for the corrosion-cost argument but was not available. Rankings are assigned on argument quality: the Proposer's hypothesis survives on positive evidence and a rebuttal that landed; the Reviewer's hypothesis survives on a valid structural objection (round 4) and a plausible but unquantified mechanism.
+
+**Unresolved.**
+- Rate of effective metallic Be electroactive surface-area loss per dpa under fusion-spectrum neutrons in a flowing-FLiBe pebble-bed geometry. This is the single number that determines whether the redox buffer survives blanket lifetime. A salt-chemistry-md simulation of a fractured-pebble surface in flowing FLiBe at 650 °C combined with a dissolution-rate model under He-bubble-driven cracking would bound it analytically; a flowing-loop corrosion experiment with pre-irradiated Be pebbles at ~5 dpa surrogate damage (~$100k cost per ORNL-TM-2024/3508) would measure it directly.
+- Whether bulk Cr dissolution in a flowing Be-pebble FLiBe loop at 600–700 °C is actually ≥3× lower than Be-free FLiBe at equivalent temperature and flow rate. The Proposer's core prediction has no experimental confirmation. A flowing-loop test would resolve this; if suppression is confirmed at ≥3×, the Reviewer's localized-attack scenario is weakened; if suppression is less than 3× or absent, the topic claim gains significant traction.
+- Quantitative separation of bulk Cr dissolution from localized Cr attack at Be-pebble / RAFM-steel contact zones in a flowing-FLiBe system. The debate established that the bulk metric does not bound interfacial risk, but no experiment was proposed to isolate interfacial attack. Post-test metallographic examination of RAFM steel specimens in direct pebble contact in a flowing-loop test at 650 °C would resolve this.
+- Whether dissolved BeF₂ in a temperature-cycling loop re-deposits metallic Be at cold-leg surfaces (≤450 °C) in sufficient quantity to partially regenerate the redox buffer — a self-regenerating buffer character was never argued but is mechanistically relevant. A salt-chemistry-md simulation of BeF₂ speciation and Be⁰ deposition equilibria across a 450–700 °C thermal gradient would clarify this.
+- Thermodynamic stability and growth rate of Be₂Fe intermetallic at hot-to-cold loop transitions. Keiser et al. (JNM 2022) data were cited but not quantitatively analysed. A phase-stability calculation for Be-Fe-F across 450–700 °C followed by loop coupon examination would bound whether intermetallic formation constitutes a structural integrity risk on engineering timescales.
+- TBR as a function of Be mole fraction across the operating range (0–80 vol% loading). The human requested this simulation in round 6 and it was never delivered. Commissioning a salt-neutronics-tbr sweep would give the debate a quantitative denominator for the corrosion-cost argument and reveal whether TBR ≥ 1.2 is achievable at lower pebble fractions that avoid the worst fracture-damage regime.
+- End-of-life tritium inventory in Be pebbles (~3 kg per blanket, Sawan et al. 2004) as a constraint independent of corrosion. This was flagged by the Proposer but never analysed as a distinct engineering limit. It may be the binding constraint on Be-pebble blanket designs regardless of how the corrosion question resolves.
+
+## what is the most promising molten salt in literature for tritium breeding
+## Verdict
+
+**1. FLiBe (2LiF·BeF₂) is the most promising molten salt for tritium breeding in current fusion blanket literature, specifically in the Liquid Immersion Blanket configuration for compact high-field tokamaks, where its built-in Be neutron multiplier enables TBR ≥ 1.1 without enrichment and up to ~1.3 with Be-beryllide supplementation, while its low electrical conductivity avoids MHD penalties that disable competing liquid-metal designs.**
+
+Beryllium in FLiBe undergoes (n,2n) neutron multiplication on fast neutrons, expanding the thermal neutron population available for ⁶Li(n,α)T reactions. This multiplication occurs within the same fluid that carries the bred tritium, concentrating production in the high-flux front ~45 cm of the blanket without separate multiplier structures. Low electrical conductivity (~10⁻⁴ S/cm) eliminates magnetohydrodynamic pressure-drop penalties that make liquid-metal (PbLi) blankets unworkable in strong-field (≥12 T) magnet environments.
+
+*Standing.* Proposed but unreviewed. The Reviewer was budget-blocked before engaging, and the Proposer similarly could not respond. The hypothesis therefore survives the debate without having faced any objection — but that survival is vacuous: no prediction was tested, no mechanism was challenged, and no simulation was commissioned. The claim rests entirely on the Proposer's own framing of the literature (primarily FNSF/ARC LIB neutronics studies and MSR tritium-extraction work). Its internal tensions — particularly the conflict between high TBR and high tritium partial pressure driving permeation losses — were named by the Proposer but not resolved. The confidence is reduced from the Proposer's 0.62 to 0.45 to reflect that an unchallenged proposal in a budget-blocked debate has not been validated, and the open risks listed are substantial enough that a reviewer with access to the literature could plausibly overturn the ranking.
+*Confidence.* 0.45
+
+*Predictions.*
+- FLiBe with Be-beryllide pebbles at ~75–80 vol% multiplier fraction achieves TBR ≥ 1.3 in FNSF-class geometry without ⁶Li enrichment.
+- Chloride-salt candidates (LiCl-NaCl, LiCl-MgCl₂) reach equivalent TBR only when isotopically enriched to ≥90% ⁶Li and ≥90% ³⁷Cl with a thicker blanket; unenriched chloride TBR is ~0.6–0.7× FLiBe.
+- FLiBe MHD pressure drop in a 12 T toroidal-field blanket channel is at least one order of magnitude lower than an equivalent PbLi channel at the same flow velocity.
+- Tritium permeation loss into structural steel scales inversely with solubility; FLiBe's low tritium solubility produces measurably higher fractional permeation per unit surface area than PbLi, detectable as T in He cover gas within minutes of irradiation onset in BABY/LIBRA-class experiments.
+
+**Why this order.** The debate produced exactly one substantive contribution: the Proposer's structured hypothesis. Both the Reviewer and the Proposer's second turn were budget-blocked before any argument was exchanged. The debate therefore ended with zero adversarial engagement. The hypothesis is ranked first by default — it is the only hypothesis — not because it prevailed against objections. Its standing reflects that reality: the claim is internally coherent and grounded in real neutronics literature, but its four testable predictions are untested within this thread, its three most serious risks (tritium permeation, Be toxicity at scale, corrosion data gap) are unresolved open questions acknowledged by the Proposer, and the conditional nature of FLiBe's advantage over enriched chloride salts was not probed. A prior debate on the same question ended without a verdict, and this one follows the same pattern. No consensus was reached; no consensus is reported.
+
+**Unresolved.**
+- Whether FLiBe's low tritium solubility produces permeation losses large enough to make tritium self-sufficiency impractical at reactor scale — settleable by a BABY/LIBRA-class flowing-loop irradiation experiment measuring T in He cover gas as a function of FLiBe surface-to-volume ratio and temperature.
+- Whether isotopically enriched chloride salts (≥90% ⁶Li, ≥90% ³⁷Cl) match or exceed FLiBe TBR in an FNSF-class geometry — settleable by a salt-neutronics-tbr simulation comparing FLiBe LIB against LiCl-MgCl₂ at equivalent enrichment cost.
+- What the corrosion rate of candidate structural alloys (316SS, Hastelloy-N, ODS steels) is in flowing FLiBe under simultaneous neutron flux and 12 T magnetic field at 600–700 °C — no experimental database currently covers this operating regime.
+- Whether Be-beryllide pebble beds at 75–80 vol% fraction in an FLiBe LIB remain mechanically and chemically stable over a full reactor lifetime (~10 dpa He-equivalent), given that Be swelling data at fusion-relevant fluences is sparse.
+- Whether the system-level tritium inventory and doubling time for an FLiBe LIB reactor is acceptable given the combination of high permeation rate and slow tritium extraction kinetics — this requires coupling the neutronics TBR to a tritium transport model with realistic permeation barriers, and has not been done for ARC/SPARC-scale parameters in any published source cited in this thread.
+
+## for FLiBe based molten salt, which composition is most likely to provide high tritium breeding rate while remaining chemical viable to extract from blanket
+## Verdict
+
+**1. FLiBe at the 2:1 LiF:BeF₂ eutectic stoichiometry (33.3 mol% BeF₂, melting point ~459 °C), enriched to ≥90% ⁶Li, is the chemically viable composition that maximises tritium breeding ratio among circulating-blanket-compatible FLiBe melts, with tritium recovered by continuous helium sparging.**
+
+⁶Li(n,α)T is the sole productive breeding reaction; TBR is the product of ⁶Li atom density and effective neutron population. Be moderates fast neutrons into the thermal range where the ⁶Li cross-section peaks (~940 b) and provides ⁹Be(n,2n) multiplication above 2.7 MeV. The neutronics-only optimum sits near 36–40 mol% BeF₂, but BeF₄²⁻ network polymerisation at those compositions raises the liquidus to 530–560 °C and viscosity to ≥100 mPa·s near the liquidus, disqualifying them as circulating coolants. The 2:1 eutectic is the richest-BeF₂ composition that remains single-phase and pumpable (liquidus ~459 °C, viscosity ~6 mPa·s at 600 °C) with an adequate freeze-transient margin. Tritium partitions as T₂/HT into the cover gas at ppb-level melt solubility and is stripped continuously by helium sparging without bulk salt reprocessing.
+
+*Standing.* This is the surviving hypothesis after four rounds, but it survives by constraint elimination rather than positive confirmation. The Proposer originally claimed 2:1 as the neutronics optimum; the Reviewer correctly refuted that, citing published sweeps showing TBR peaking near 38–40 mol% BeF₂. The Proposer conceded the neutronics point entirely and shifted to a chemical-operability argument: the unconstrained neutronics peak is inaccessible because those compositions freeze and gel under operating conditions. The Reviewer's second objection — citing ORNL liquidus data (Cantor 1968, Williams 2006) and the non-linear viscosity jump from BeF₄²⁻ polymerisation — directly attacked the revised 38–40 mol% hypothesis and succeeded; the Proposer accepted the physical chemistry and retreated to 2:1. The final hypothesis thus rests on two accepted facts: (1) the neutronics peak is near 36–40 mol% BeF₂, and (2) those compositions are thermally and rheologically inoperable. Neither fact was contested in the final round. What was never established by argument or simulation is whether the 2:1 composition itself meets TBR >1.05 at ≥90% ⁶Li in the specific blanket geometry under discussion — the numbers are taken from prior literature without a geometry-specific neutronics run. The helium-sparging extraction mechanism was proposed in round 1 and never challenged; it stands as uncontested but also unvalidated.
+*Confidence.* 0.62
+
+*Predictions.*
+- TBR for 2:1 FLiBe at 90% ⁶Li enrichment in a 60 cm blanket zone exceeds 1.05; compositions above 42 mol% BeF₂ at identical enrichment yield lower TBR because the Li-density penalty dominates.
+- A BeF₂ sweep from 33–45 mol% shows a shallow TBR maximum near 36–40 mol%, but those compositions have liquidus ≥530 °C and viscosity ≥50 mPa·s near operating temperature, disqualifying them on operability grounds.
+- Helium sparging at <1 L/min per MW fusion power maintains dissolved tritium below 1 wppm at 500–650 °C, given tritium partial pressure >10⁻⁴ Pa per wppm dissolved T over 2:1 FLiBe.
+- TBR drops below 1.0 at ⁶Li enrichments below 30% for the 2:1 composition in a 60 cm standard blanket geometry.
+
+**2. FLiBe at approximately 38–40 mol% BeF₂ (roughly 1.5:1 LiF:BeF₂) enriched to ≥90% ⁶Li maximises TBR among FLiBe compositions without operability constraints applied.**
+
+In the 33–40 mol% BeF₂ window, ⁹Be(n,2n) neutron multiplication above the 2.7 MeV threshold adds to the total neutron population feeding ⁶Li capture faster than the fractional loss of Li atom density. Above ~40 mol% the Li-density penalty dominates and TBR declines. The peak is interior to the operable composition range only in a neutronics sense.
+
+*Standing.* This hypothesis was proposed by the Reviewer in round 2 as a direct refutation of the original 2:1 optimum claim, and the Proposer accepted it in round 3. However, the Reviewer then refuted it on operability grounds in round 4, citing ORNL thermophysical data the Proposer did not contest. The hypothesis survives as a neutronics statement — that the unconstrained TBR maximum is near 38–40 mol% BeF₂ — but fails as a practical recommendation because the composition cannot be safely circulated. No simulation was commissioned to confirm the neutronics claim, so even the neutronics standing is literature-supported but not independently verified in the debate. It ranks below the eutectic hypothesis solely because the debate applied an operability constraint that the topic explicitly required ('chemically viable to extract from blanket').
+*Confidence.* 0.45
+
+*Predictions.*
+- A BeF₂ composition sweep at 90% ⁶Li shows TBR peaking between 36–42 mol% BeF₂, with the 33.3 mol% eutectic measurably below (≥0.02 TBR units) the peak.
+- TBR at 40 mol% BeF₂ / 90% ⁶Li exceeds 1.10 in a 60 cm blanket zone, versus 1.05–1.10 at 33.3 mol% BeF₂.
+
+**Why this order.** The debate moved through three distinct positions: (1) 2:1 eutectic as neutronics optimum (refuted by the Reviewer on neutron-multiplication grounds); (2) 38–40 mol% BeF₂ as neutronics optimum (accepted by the Proposer, then refuted by the Reviewer on thermophysical-operability grounds); (3) 2:1 eutectic as the best chemically viable composition (accepted by both parties in the final round). The final consensus is narrow: both sides agree the unconstrained neutronics peak is near 38–40 mol% BeF₂, and both agree those compositions are thermally and rheologically inoperable under blanket conditions, leaving the 2:1 eutectic as the best viable option. Confidence is set below the Proposer's 0.74 because the specific TBR values (>1.05, enrichment threshold) were never confirmed by a commissioned simulation and rest on literature interpolation for a generic blanket geometry, not the one under discussion. The helium-sparging extraction method was uncontested throughout but also unvalidated at scale.
+
+**Unresolved.**
+- The TBR of the 2:1 LiF:BeF₂ eutectic at ≥90% ⁶Li in the specific tokamak blanket geometry under consideration was never computed in this debate. A salt-neutronics-tbr sweep from 30–45 mol% BeF₂ at fixed 90% ⁶Li enrichment in that geometry would confirm whether TBR >1.05 is achievable at the eutectic and precisely where the peak sits.
+- The ~0.02-unit TBR advantage of the 38–40 mol% composition over the 2:1 eutectic was asserted from prior published sweeps; it may be within numerical or interpolation error. The same neutronics sweep would resolve whether the peak-to-eutectic TBR difference is real and large enough to motivate engineering workarounds for the operability problem.
+- Whether any thermal-management or composition-control strategy (e.g., operating at higher bulk temperature, adding a small LiF excess, or accepting a narrower freeze margin) could make the 36–38 mol% range circulate-able while preserving most of the TBR gain is unexplored. A salt-chemistry-md simulation at 36–40 mol% BeF₂ near the liquidus would bound the viscosity and phase-stability question more precisely than the 1968 ORNL data allow.
+- Tritium permeation through structural steel at 600 °C relative to helium-sparge stripping rate is unresolved. This determines whether dissolved tritium actually stays below 1 wppm or whether wall permeation is the dominant loss channel, undermining the extraction viability claim. No experimental or simulation pathway was identified to close this gap in the debate.
+- The impact of reduced ⁶Li enrichment (60–70% vs. ≥90%) on TBR at the 2:1 eutectic, and whether a slightly richer-BeF₂ melt at lower enrichment could compensate, was raised as a concern but left entirely unanalysed. This is the commercially critical operating regime and deserves a dedicated neutronics sweep.
+
+## suggest the best molten salt candidate that can maximize the tritium breeding yield while are easy to extract from molten salt blanket
+(ended without a verdict)
+
+attachment Molten_Salt_Thermophysical_Properties.json
+
+{
+    "MSTDBTP": {
+        "estimates": {
+            "RK": {
+                "Density": {
+                    "BeF2-LiF": {
+                        "A": [
+                            -0.2616,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            7.53e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "CantorS. Density and Viscosity of Several Molten Fluoride Mixtures; Oak RidgeTN (United States)1973. https://doi.org/10.2172/4419855. CantorS.; WardW. T.; MoynihanC. T. Viscosity and Density in Molten BeF 2 -LiF Solutions. J. Chem. Phys. 196950 (7). PowersW. D.; CohenS. I.; GreeneN. D. Physical Properties of Molten Reactor Fuels and Coolants. Nucl. Sci. Eng. 196317.",
+                        "t_max": 1367.5,
+                        "t_min": 787.7
+                    },
+                    "BeF2-NaF": {
+                        "A": [
+                            0.009154,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000106,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "BlankeB. C.; BousquetE. N.; JonesL. V.; MurphyE. L.; ValleeR. E. Density of Fused Mixtures of Sodium FlouorideBeryllium Fluorideand Uranium Fluoride. Mound Laboratory. 1958. PowersW. D.; CohenS. I.; GreeneN. D. Physical Properties of Molten Reactor Fuels and Coolants. Nucl. Sci. Eng. 196317 (2)200-211. https://doi.org/10.13182/NSE63-5.",
+                        "t_max": 1373.0,
+                        "t_min": 633.0
+                    },
+                    "KCl-KF": {
+                        "A": [
+                            0.08214,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -7.36e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1310.0,
+                        "t_min": 962.0
+                    },
+                    "KCl-LiCl": {
+                        "A": [
+                            0.076801732,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -8.5e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Van ArtsdalenE. R.; YaffeI. S. Electrical Conductance and Density of Molten Salt Systems: KCl-LiClKCl-NaCl and KCl-KI. J. Phys. Chem. 195559 (2)118-127. https://doi.org/10.1021/j150524a007.",
+                        "t_max": 1213.2,
+                        "t_min": 668.0
+                    },
+                    "KCl-MgCl2": {
+                        "A": [
+                            0.3931,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000492,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "LillebuenB.Ph.D. ThesisThe Technical University of NorwayTrondheimNorway(1969)",
+                        "t_max": 1213.2,
+                        "t_min": 723.0
+                    },
+                    "KCl-NaCl": {
+                        "A": [
+                            -0.030135058,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -1.21e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Van ArtsdalenE. R.; YaffeI. S. Electrical Conductance and Density of Molten Salt Systems: KCl-LiClKCl-NaCl and KCl-KI. J. Phys. Chem. 195559 (2)118-127. https://doi.org/10.1021/j150524a007.",
+                        "t_max": 1303.2,
+                        "t_min": 945.0
+                    },
+                    "KCl-UCl3": {
+                        "A": [
+                            -2.1219,
+                            1.56934,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.00149087,
+                            -0.0016887,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "DesyatnikV. N.; KatyshevS. F.; RaspopinS. P.; ChervinskiiY. F. DENSITYSURFACE-TENSION AND VISCOSITY OF MELTS OF URANIUM TRICHLORIDE-POTASSIUM-CHLORIDE SYSTEM. Zhurnal Fiz. khimii 197650 (10)2522-2525.",
+                        "t_max": 1500.0,
+                        "t_min": 863.0
+                    },
+                    "KCl-UCl4": {
+                        "A": [
+                            -2.333,
+                            0.5056,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.002062,
+                            2.12e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1213.2,
+                        "t_min": 657.0
+                    },
+                    "KCl-ZrF4": {
+                        "A": [
+                            -1.906,
+                            2.227,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000693,
+                            -0.001029,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1280.0,
+                        "t_min": 864.0
+                    },
+                    "KF-LiF": {
+                        "A": [
+                            -0.05708,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            2.9e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "TaniuchiK.; KanaiT. Density of Binary Molten Salts of Lithium Fluoride-Potassium Fluoride and Lithium Fluoride-Calcium Fluoride Systems. Denki Kagaku oyobi Kogyo Butsuri Kagaku 197745 (6)401-404.",
+                        "t_max": 1367.5,
+                        "t_min": 1006.0
+                    },
+                    "KF-NaF": {
+                        "A": [
+                            -0.6499,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000297,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "PorterB.; MeakerR. E. Density and Molar Volumes of Binary Fluoride Mixtures. U.S. Dept. of the InteriorBureau of Mines. 1966.",
+                        "t_max": 1373.0,
+                        "t_min": 1050.0
+                    },
+                    "KF-ZrF4": {
+                        "A": [
+                            -1.774,
+                            0.9944,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000579,
+                            -0.000261,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1310.0,
+                        "t_min": 933.0
+                    },
+                    "LiCl-NaCl": {
+                        "A": [
+                            -0.2435,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            7.73e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1303.2,
+                        "t_min": 850.0
+                    },
+                    "LiCl-UCl3": {
+                        "A": [
+                            -1.525,
+                            1.321,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.0015069,
+                            -0.001584,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1300.0,
+                        "t_min": 766.0
+                    },
+                    "LiCl-UCl4": {
+                        "A": [
+                            -1.956,
+                            1.404,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.001796,
+                            -0.000984,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1053.0,
+                        "t_min": 819.0
+                    },
+                    "LiF-NaF": {
+                        "A": [
+                            0.005952,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -5.25e-05,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "JanzG. J.; GardnerG. L.; KrebsU. Molten Salts: Volume 4Part 1Fluorides and Mixtures Electrical ConductanceDensityViscosityand Surface Tension Data. J. Phys. Chem. Ref. Data. 19743 (1).",
+                        "t_max": 1373.0,
+                        "t_min": 1123.6
+                    },
+                    "LiF-ThF4": {
+                        "A": [
+                            1.769,
+                            -1.798,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.001047,
+                            0.000873,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "HillD. G.; CantorS.; WardW. T. Molar Volumes in the LiFThF4 System. J. Inorg. Nucl. Chem. 196729 (1)241-243.",
+                        "t_max": 1651.0,
+                        "t_min": 1020.0
+                    },
+                    "LiF-UF4": {
+                        "A": [
+                            2.219429608,
+                            -2.785316627,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.001771493,
+                            0.002645012,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "PorterB.; MeakerR. E. Density and Molar Volumes of Binary Fluoride Mixtures. U.S. Dept. of the InteriorBureau of Mines. 1966.",
+                        "t_max": 1614.0,
+                        "t_min": 980.0
+                    },
+                    "LiF-ZrF4": {
+                        "A": [
+                            -1.272093482,
+                            0.734841564,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000487,
+                            0.000231,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevS. F.; ArtemovV. V; DesyatnikV. N. Density and surface tension of melts of zirconium and hafnium fluorides with lithium fluoride. Sov. At. Energy. 198763929-930.",
+                        "t_max": 1367.5,
+                        "t_min": 943.0
+                    },
+                    "MgCl2-NaCl": {
+                        "A": [
+                            0.38827,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000318,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "LillebuenB.Ph.D. ThesisThe Technical University of NorwayTrondheimNorway(1969)",
+                        "t_max": 1303.2,
+                        "t_min": 990.0
+                    },
+                    "NaCl-NaF": {
+                        "A": [
+                            -0.117,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            1.77e-05,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1373.0,
+                        "t_min": 1073.0
+                    },
+                    "NaCl-ThCl4": {
+                        "A": [
+                            -0.274401353,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.00039,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "OyamadaR.;  YoshidaS.;  KurodaT. Denki Kagaku Oyobi Kogyo Butsuri Kagaku196937417",
+                        "t_max": 1303.2,
+                        "t_min": 670.0
+                    },
+                    "NaCl-UCl3": {
+                        "A": [
+                            -0.1333,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000144,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "ParkerS. S.; LongA.; LhermitteC.; VogelS.; MonrealM.; JacksonJ.M. Thermophysical properties of liquid chlorides from 600 to 1600 K: Melt pointenthalpy of fusionand volumetric expansion. J. Mol. Liq. 2022346118147.",
+                        "t_max": 1500.0,
+                        "t_min": 796.0
+                    },
+                    "NaCl-UCl4": {
+                        "A": [
+                            -2.8509,
+                            3.02579,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.00282427,
+                            -0.0029857,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "ZiolekB.; BogaczA. Roczniki Chem. 197044665.",
+                        "t_max": 1303.2,
+                        "t_min": 780.0
+                    },
+                    "NaCl-ZrF4": {
+                        "A": [
+                            -1.0393,
+                            -0.04282,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000357,
+                            0.000184,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1303.0,
+                        "t_min": 1033.0
+                    },
+                    "NaF-ThF4": {
+                        "A": [
+                            0.4476,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000762,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "DesyatnikV. N.; KlimenkovA. A.; KurbatovN. N.; NechaevA. I.; RaspopinS. P.; ChervinskiiY. F. Density and kinematic viscosity of NaF-ThF4 and KF-ThF4 melts. Sov. At. Energy. 198151807-810.",
+                        "t_max": 1651.0,
+                        "t_min": 1027.0
+                    },
+                    "NaF-UF4": {
+                        "A": [
+                            -0.1274,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000807,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "BlankeB. C.; BousquetE. N.; JonesL. V.; MurphyE. L.; ValleeR. E. Density of Fused Mixtures of Sodium FlouorideBeryllium Fluorideand Uranium Fluoride. Mound Laboratory. 1958. CohenS. I.; JonesT. N. A SUMMARY OF DENSITY MEASUREMENTS ON MOLTEN FLUORIDE MIXTURES AND A CORRELATION FOR PREDICTING DENSITIES OF FLUORIDE MIXTURESORNL-1702; United States1954.",
+                        "t_max": 1614.0,
+                        "t_min": 923.0
+                    },
+                    "NaF-ZrF4": {
+                        "A": [
+                            -1.2952,
+                            -0.4568,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000311,
+                            0.000665,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "ArtemovV. V.; KatyshevS. F.; DesyatnikV. N.Density and Surface Tension of Sodium Halide Melts with Zirconium and Hafnium Tetrafluorides. Zhurnal Fiz. Khimii. 199064 (4)1113-1115.",
+                        "t_max": 1373.0,
+                        "t_min": 953.0
+                    },
+                    "UCl3-UCl4": {
+                        "A": [
+                            0.1833,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000261,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "KatyshevSergey Filippovich. Properties of molten mixtures of alkali metal halideszirconiumhafnium and uranium. Ural State Technical University2001.",
+                        "t_max": 1300.0,
+                        "t_min": 837.0
+                    }
+                },
+                "Viscosity": {
+                    "BeF2-LiF": {
+                        "A": [
+                            -97.41,
+                            -104.354,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.1043,
+                            0.117,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -2.9e-05,
+                            -3.25e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Cantor, S.; Ward, W. T.; Moynihan, C. T. Viscosity and Density in Molten BeF2 -LiF Solutions. J. Chem. Phys. 1969, 50 (7), 2874-2879. https://doi.org/10.1063/1.1671478.",
+                        "t_max": 1303.2,
+                        "t_min": 660.0,
+                        "DOI": "https://doi.org/10.1063/1.1671478"
+                    },
+                    "BeF2-NaF": {
+                        "A": [
+                            -97.66,
+                            -36.368,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.1081,
+                            0.0309,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -3.29e-05,
+                            -9.42e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Blanke, B. C.; Fister, K. W.; Jones, L. V.; Jordan, K. C.; Joyner, R. W.; Murphy, E. L. Viscosity of Fused Mixtures of Sodium Fluoride, Beryllium Fluoride, and Uranium Fluoride. Mound Laboratory. 1958b.",
+                        "t_max": 1373.0,
+                        "t_min": 873.0,
+                        "DOI": "https://www.osti.gov/biblio/4303840-viscosity-fused-mixtures-sodium-fluoride-beryllium-fluoride-uranium-fluoride"
+                    },
+                    "KCl-LiCl": {
+                        "A": [
+                            -0.7936,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.000661,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borcan, R.; Zuca, S. Rev Roumaine Chim. 1970, 15, 1681.",
+                        "t_max": 1275.0,
+                        "t_min": 886.0
+                    },
+                    "KCl-MgCl2": {
+                        "A": [
+                            -4.258,
+                            -6.125,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.005012,
+                            0.009048,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -1.66e-06,
+                            -3e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Bondarenko, N. V. J. Appl. Chem. (USSR). 1966. 39, 2522.",
+                        "t_max": 1300.0,
+                        "t_min": 723.0
+                    },
+                    "KCl-NaCl": {
+                        "A": [
+                            1.931,
+                            -1.0121,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.001878,
+                            -4.04e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Birri, Tony, Nick Termini, Kevin Garland, Shay Chapel, Hunter Andrews, Paul Rose Jr, and N. Dianne Ezell. FY23 progress report on viscosity and thermal conductivity measurements of molten salts. No. ORNL/TM-2023/3048. Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States), 2023.",
+                        "t_max": 1303.2,
+                        "t_min": 940.0,
+                        "DOI": "https://doi.org/10.2172/1887678"
+                    },
+                    "KCl-UCl3": {
+                        "A": [
+                            16.96,
+                            -32.46,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.0203,
+                            0.04,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            6.26e-06,
+                            -1.24e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1278.0,
+                        "t_min": 873.0
+                    },
+                    "KCl-UCl4": {
+                        "A": [
+                            -7.557,
+                            20.08,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.0132,
+                            -0.0267,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -4.72e-06,
+                            9.52e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1213.0,
+                        "t_min": 676.0
+                    },
+                    "KF-LiF": {
+                        "A": [
+                            -0.6398,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.00028,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Nguyen, D. K., and V. Danek. \"Viscosity of Melts of the System LiF-KF-K2NbF7.\" Chemical Papers-Slovak Academy of Sciences 54(5) (2000): 277-281.",
+                        "t_max": 1772.0,
+                        "t_min": 830.0
+                    },
+                    "KF-NaF": {
+                        "A": [
+                            0.7318,
+                            0.34734,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000719,
+                            -0.000599,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Kubikova, B., J. Mlynarikova, and M. Boca. \"Intermolecular forces in the NaF+ KF+ K2NbF7 system: Investigation of surface tension and viscosity.\" Journal of Chemical & Engineering Data 53(3) (2008): 812-815.",
+                        "t_max": 1373.0,
+                        "t_min": 1120.0
+                    },
+                    "LiCl-UCl3": {
+                        "A": [
+                            10.57,
+                            -8.417,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.01094,
+                            0.01062,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            3.47e-06,
+                            -3.36e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1278.0,
+                        "t_min": 821.0
+                    },
+                    "LiCl-UCl4": {
+                        "A": [
+                            -9.083,
+                            12.26,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.017,
+                            -0.01762,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -5.65e-06,
+                            5.85e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1275.0,
+                        "t_min": 730.0
+                    },
+                    "LiF-NaF": {
+                        "A": [
+                            0.1938,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000155,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Cohen, S. I.; Jones, T. N. VISCOSITY MEASUREMENTS ON MOLTEN FLUORIDE MIXTURES ORNL-2278; Oak Ridge National Lab., Tenn.: Oak Ridge, TN (United States), 1957. https://doi.org/10.2172/4803933.",
+                        "t_max": 1772.0,
+                        "t_min": 973.0,
+                        "DOI": "https://doi.org/10.2172/4803933"
+                    },
+                    "LiF-UF4": {
+                        "A": [
+                            -101.0,
+                            78.82,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.141,
+                            -0.1039,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -4.71e-05,
+                            3.33e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Blanke, B.C.; Bousquet, E. N.; Curtis, M. L.; Murphy, E. L. Density and Viscosity of Fused Mixtures of Lithium, Beryllium, and Uranium Fluorides. Mound Laboratory. 1959.",
+                        "t_max": 1772.0,
+                        "t_min": 973.0,
+                        "DOI": "https://www.osti.gov/biblio/4274391"
+                    },
+                    "MgCl2-NaCl": {
+                        "A": [
+                            -0.1719,
+                            3.753,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.000755,
+                            -0.004986,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            2.3e-07,
+                            1.52e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Bondarenko, N. V.; Strelets, Kh. L. J. Appl. Chem. (USSR). 1965, 38, 1254.",
+                        "t_max": 1203.2,
+                        "t_min": 973.0
+                    },
+                    "NaCl-UCl3": {
+                        "A": [
+                            21.44,
+                            -25.24,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.02594,
+                            0.0301,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            7.95e-06,
+                            -9.24e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1278.0,
+                        "t_min": 888.0
+                    },
+                    "NaCl-UCl4": {
+                        "A": [
+                            -4.008,
+                            10.47,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.005072,
+                            -0.008681,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1203.2,
+                        "t_min": 713.0
+                    },
+                    "NaF-UF4": {
+                        "A": [
+                            -130.6,
+                            124.2,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            0.1864,
+                            -0.169,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            -6.44e-05,
+                            5.72e-05,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Blanke, B. C.; Fister, K. W.; Jones, L. V.; Jordan, K. C.; Joyner, R. W.; Murphy, E. L. Viscosity of Fused Mixtures of Sodium Fluoride, Beryllium Fluoride, and Uranium Fluoride. Mound Laboratory. 1958b.",
+                        "t_max": 1614.0,
+                        "t_min": 973.0,
+                        "DOI": "https://www.osti.gov/biblio/4303840-viscosity-fused-mixtures-sodium-fluoride-beryllium-fluoride-uranium-fluoride"
+                    },
+                    "UCl3-UCl4": {
+                        "A": [
+                            24.63,
+                            17.13,
+                            0.0,
+                            0.0
+                        ],
+                        "B": [
+                            -0.02749,
+                            -0.0208,
+                            0.0,
+                            0.0
+                        ],
+                        "C": [
+                            8.5e-06,
+                            6.42e-06,
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Katyshev, Sergey Filippovich. Properties of molten mixtures of alkali metal halides, zirconium, hafnium and uranium. Ural State Technical University, 2001.",
+                        "t_max": 1300.0,
+                        "t_min": 870.0
+                    }
+                }
+            }
+        },
+        "evaluated": {
+            "AlCl3": {
+                "1": {
+                    "boil": {
+                        "reference": "Janz, G. J. Molten Salts Handbook; Elsevier: New York, 1967. https://doi.org/10.1016/B978-0-123-95642-2.X5001-1.",
+                        "uncertainty_notes": "None",
+                        "value": 453.0,
+                        "value_notes": "Sublimates",
+                        "DOI": "https://doi.org/10.1016/B978-0-123-95642-2.X5001-1",
+                        "abs_uncertainty": 0.0
+                    },
+                    "heat_capacity": {
+                        "pct_uncertainty": 0.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            125.52,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011"
+                    },
+                    "melt": {
+                        "reference": "Kelley, K.K. Contributions to the Data on Theoretical Metallurgy: [Part] 3. The Free Energies of Vaporization and Vapor Pressures of Inorganic Substances. U.S. Department of the Interior, Bureau of Mines. 1935.",
+                        "uncertainty_notes": "None",
+                        "value": 465.0,
+                        "value_notes": "Pressurized",
+                        "DOI": "https://digital.library.unt.edu/ark:/67531/metadc12551/",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 133.3405,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            469.0,
+                            559.0
+                        ],
+                        "reference": "Brockner, W.; Torklep, K.; Oye, H.A. Viscosity of Aluminium Chloride and Acidic Sodium Chloroaluminate Melts. Berichte der Bunsengesellschaft for Phys. Chemie 1979b, 83 (1), 1-11.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.00228,
+                            19399.999999999996
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19790830102"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            462.0,
+                            569.0
+                        ],
+                        "reference": "King, L. A.; Seegmiller, D. W. Liquid and vapor densities of aluminum chloride. J. Chem. Eng. Data 1971, 16 (1), 23-26.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.56,
+                            0.00271
+                        ],
+                        "DOI": "https://doi.org/10.1021/je60048a008"
+                    }
+                }
+            },
+            "AlCl3-KCl": {
+                "0.055-0.945": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "value": 1024.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 5.0
+                    },
+                    "molecular_weight": 77.7847,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0529,
+                            26800.0
+                        ]
+                    }
+                },
+                "0.115-0.885": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 1000.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 81.3121,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0407,
+                            27700.0
+                        ]
+                    }
+                },
+                "0.183-0.817": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 972.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 85.3097,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0285,
+                            29800.0
+                        ]
+                    }
+                },
+                "0.257-0.743": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 942.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 89.6601,
+                    "viscosity": {
+                        "pct_uncertainty": 15.0,
+                        "range": [
+                            0.0,
+                            0.0
+                        ],
+                        "reference": "Borisoglebskii, Y. V.; Huong, B; Van, Vetyukov, M. M.; Izy. Vyssh. Uchebn. Zaved. Tvetn. Metall. 1980, 3, 16.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "values": [
+                            0.0197,
+                            31900.0
+                        ]
+                    }
+                },
+                "0.333-0.667": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 905.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 94.1281,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            960.0,
+                            1040.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.97,
+                            0.00061
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                },
+                "0.5-0.5": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "value": 531.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 5.0
+                    },
+                    "molecular_weight": 103.9459,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            740.0,
+                            1040.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.96,
+                            0.000662
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                },
+                "0.667-0.333": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "Uncharacterized",
+                        "value": 414.0,
+                        "value_notes": "None",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 5.0
+                    },
+                    "molecular_weight": 113.7637,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            500.0,
+                            780.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.99,
+                            0.00079
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                },
+                "0.8-0.2": {
+                    "melt": {
+                        "reference": "Robelin, C.; Chartrand, P.; Pelton, A. D. Thermodynamic evaluation and optimization of the (NaCl + KCl + AlCl3) system. J. Chem. Thermodyn. 2004, 36 (8) 683-699.",
+                        "uncertainty_notes": "None",
+                        "value": 452.0,
+                        "value_notes": "LiquidGas",
+                        "DOI": "https://doi.org/10.1016/j.jct.2004.04.011",
+                        "abs_uncertainty": 10.0
+                    },
+                    "molecular_weight": 121.5827,
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            480.0,
+                            540.0
+                        ],
+                        "reference": "Morrey, J. R.; Carter, D. G. Densities of molten mixtures of potassium chloride and aluminum chloride. J. Chem. Eng. Data. 1968, 13 (1), 94-96.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.03,
+                            0.001
+                        ],
+                        "DOI": "https://pubs.acs.org/action/doSearch?ContribAuthorRaw=Morrey%2C+John+R&SeriesKey=jceaax"
+                    }
+                }
+            },
+            "AlCl3-LiCl-NaCl": {
+                "0.5-0.1-0.4": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 414.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 94.2868,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            383.0,
+                            556.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0538,
+                            15000.0
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            432.0,
+                            606.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.04,
+                            0.000791
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.5-0.2-0.3": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 393.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 92.6819,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            372.0,
+                            534.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0441,
+                            15900.0
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            419.0,
+                            545.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.03,
+                            0.000794
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.5-0.3-0.2": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 381.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 91.077,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            384.0,
+                            534.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0448,
+                            16000.000000000002
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            397.0,
+                            534.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            2.01,
+                            0.000795
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.5-0.4-0.1": {
+                    "melt": {
+                        "reference": "MSTDB-TC",
+                        "uncertainty_notes": "None",
+                        "value": 402.0,
+                        "value_notes": "None",
+                        "DOI": "https://code.ornl.gov/neams/mstdb",
+                        "abs_uncertainty": 0.0
+                    },
+                    "molecular_weight": 89.4721,
+                    "viscosity": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            424.0,
+                            574.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            0.0495,
+                            15800.0
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    },
+                    "density": {
+                        "pct_uncertainty": 1.0,
+                        "range": [
+                            418.0,
+                            535.0
+                        ],
+                        "reference": "Carpio, R. A.; Kibler, F. C.; King, L. A. Density, Viscosity, and Electrical Conductivity of Acidic AlCl3-LiCl-NaCl Melts. Ber. Buunsenges. Phys. Chem. 1981, 85, 31-38.",
+                        "uncertainty_notes": "None",
+                        "values": [
+                            1.98,
+                            0.000764
+                        ],
+                        "DOI": "https://doi.org/10.1002/bbpc.19810850109"
+                    }
+                },
+                "0.6-0.1-0.3": {
+             
+
+… Molten_Salt_Thermophysical_Properties.json truncated at 60000 characters.
