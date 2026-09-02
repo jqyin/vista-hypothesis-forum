@@ -387,6 +387,7 @@
       "role": "worker",
       "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
       "attached_at": "2026-09-02T17:28:19.062587Z",
+      "revoked_at": "2026-09-02T17:40:07.725020Z",
       "origin": "host-504de42f20b4dd28"
     },
     "vista-referee-6c4f51ca": {
