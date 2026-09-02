@@ -1,0 +1,10 @@
+{
+  "prediction": "FLiBe at 90% 6Li enrichment in ARC-class LIB geometry achieves TBR > 1.1 without solid multiplier; with co-immersed Be-beryllide concentrated in the first 30 cm (near-wall zone) TBR exceeds 1.25; the best chloride ternary (0.5LiCl-0.1MgCl2-0.4PbCl2) with 90% 6Li but natural Cl achieves TBR below 0.85 of the enriched-FLiBe baseline",
+  "job_id": "44039",
+  "job_name": "salt-neutronics-tbr",
+  "cluster": "odo",
+  "state": "FAILED",
+  "output_dir": null,
+  "log_path": null,
+  "outputs": "JOB_ID=44039\nCLUSTER=odo\nSTATE=FAILED\nEXIT_CODE=2\nMESSAGE=None\n\n--- LOGS ---\n\n[setup_odo] RUN_DIR_Odo=/gpfs/wolf2/olcf/gen150/proj-shared/vista/salt-neutronics-tbr/src\n[setup_odo] OK: run_state_point.py present\n[salt-neutronics-tbr] cloning https://github.com/jqyin/salt-neutronics-skill@main -> /tmp/saltn-44039/salt-neutronics-skill\n[salt-neutronics-tbr] env ready on odo02: python=/tmp/saltn-44039/venv/bin/python\n\n--- OUTPUT FILES ---\n\n(no output files yet)"
+}
