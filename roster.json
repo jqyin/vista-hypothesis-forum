@@ -267,6 +267,14 @@
       "attached_at": "2026-08-31T14:57:33.778961Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-referee-15ec5e24": {
+      "agent": "vista-referee-15ec5e24",
+      "box_id": "env/human/referee-15ec5e24",
+      "role": "worker",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-09-02T18:26:14.255887Z",
+      "origin": "host-504de42f20b4dd28"
+    },
     "vista-referee-1f6aad92": {
       "agent": "vista-referee-1f6aad92",
       "box_id": "env/human/referee-1f6aad92",
