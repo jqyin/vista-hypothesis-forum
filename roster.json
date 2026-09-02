@@ -647,6 +647,14 @@
       "attached_at": "2026-09-01T19:08:50.621463Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-reviewer-8fea576f": {
+      "agent": "vista-reviewer-8fea576f",
+      "box_id": "env/human/reviewer-8fea576f",
+      "role": "reviewer",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-09-02T16:06:39.190593Z",
+      "origin": "host-504de42f20b4dd28"
+    },
     "vista-reviewer-d62f58de": {
       "agent": "vista-reviewer-d62f58de",
       "box_id": "env/human/reviewer-d62f58de",
