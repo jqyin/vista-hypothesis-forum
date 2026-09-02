@@ -1,0 +1,171 @@
+query: lithium-6 enrichment tritium breeding ratio FLiBe blanket
+knowledge base: molten-salt
+
+[1] molten-salt-fusion-1972-4578255.pdf, page 12
+    Citation: Molten Salts as Blanket Fluids in Controlled Fusion Reactors — W. R. Grimes, Stanley Cantor — ORNL-TM-4047 (1972)
+
+10 Table 2. Tritium Breeding Calculations3"'13 Breeding Ratio0 from T ^ 0 ^ , .Breeding Coolant ^Li ^Li Ratio LiF (850°C)e O.8O4 0.244 1.05 Li2BeF4 (850°C) 0.785 O . U 4 0.93 Li2C03 (900°K) 0.642 O.I67 0.8l LiCl (900°K) O.6I4 0.132 0.75 Li (850°C 0.982 O.454 1.44 a D. Steiner, Oak Ridge National Laboratory, personal communication, March 1972. -i- Blanket Configuration: (l) first wall - 0.5 cm Nb, (2) 94$ coolant, 6$ Nb - 3 cm, (3) second wall - 0.5 cm .Nb, (4) 94$ coolant, 6<f0 Nb - 60 cm, (5) graphite - 30 cm, (6) 94$ coolant, 6$ Nb - 6 cm. c Defined as tritium atom produced per fusion neutron incident on the first wall. ^Lithium in natural isotopic abundance. Temperature at -which atom densities were calculated. (a) design of blanket to include a region of metallic lithium, (b) increasing Be content of the blanket by adding a region of Be or Be2C to increase neutron multiplication and to provide more 6Li |Be(n,a) |He 0 , 8 s e c > §Li, and (c) modest enrichment of the blanket material in The second option was briefly treated by Bell (16) who showed that if a "blanket region (40 cm thick adjoining a 1 cm first wall of molybdenum) were changed from Li2BeF4 to an equal thickness of Be and Li2BeF4, the \ tritium-breeding ratio would increase from 0.95 to 1.50. The third option has also received some attention. Impink (13) reported that small increases in 6Li enrichment of the Li2BeF4 blanket led to modest gains in breeding ratio. For example, increasing the 6Li isotopic fraction to 0.2 in a 6.25-cm thick coolant region next to the first wall improves the total breeding ratio by about 3$. Although
+
+————————————————————————————————————————————————————————————
+
+[2] Barker_2025_Nucl._Fusion_65_086022.pdf, page 5
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+were enriched to 20%. Details on higher 6Li enrichments can be found in appendix C This investigation into blanket configuration shows that the spatial placement of the materials can have considerable impact in the overall TBR, and adds leverage to the segment- ation approach showing that further optimisation of blankets can be found via appropriate placement of the material within the blanket region. A blanket made solely from FLiBe would not perform well, at the enrichment levels tested, while a pure liquid lithium blanket would also fall short of the TBR tar- get ⩾1.05 at natural abundances. However, when FLiBe and Li are combined in differing combinations with natural 6Li abundance the minimum required TBR level can be exceeded. Furthermore, when the 6Li enrichment was increased, to 10% or 20%, multiple combinations, including pure liquid lithium, exceeded the minimum theoretical TBR threshold; though the greatest performance was seen when FLiBe was placed near the rear and this configuration was always the best performer at each enrichment level tested. 3.1. FLiBe as a reflector It is evident that a pure FLiBe blanket produces less tritium in a like-for-like comparison to its pure lithium counterpart, 5
+
+————————————————————————————————————————————————————————————
+
+[3] Barker_2025_Nucl._Fusion_65_086022.pdf, page 6
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure 3. Tritium production in 6Li at different layers throughout the blanket. The first instance of FLiBe for the best TBR performing configurations is shown with circular markers. In each instance, an increase in TBR is observed in the preceding Li layers. Also shown is a pure liquid Li blanket design for comparison (dashed line). though the best performing blanket designs all contain FLiBe, shown in figure 2. It is proposed that by including a propor- tion of molten salt in the rear of the blanket, FLiBe is act- ing as a reflector of neutrons and elevating tritium produc- tion in the preceding pure lithium layers, whilst also contrib- uting directly to the tritium production. The implication is that FLiBe increases tritium production in lithium through reflec- tion, rather than enhancing the overall (TBR) solely due to FLiBe being a more efficient breeder than pure liquid lithium. This is supported by figure 3, which shows the best performing iterations of the blanket, and displays tritium produced (from exclusively 6Li) in each layer. Referenced on the image is the first instance of FLiBe in each variation. Any lithium layers directly preceding (i.e. lower-layer number) the first appear- ance of FLiBe clearly show an increase in tritium production, while the highest performing blankets (shown in dark blue) all have their initial FLiBe layer in layer 4.5. The observed variations in tritium production between the hybrid scenarios are caused by a change in the ordering of Li and FLiBe layers from layer 5 onwards—see figure 2. The dashed line in figure 3 represents the TBR from a pure liquid lithium blanket and a constant decrease in tritium production is seen throughout the layers in contrast to the varied nature of the tritium production when FLiBe is included into the system. Here it is observed that FLiBe is outperformed at the rear of the blanket when compared to liquid lithium, though in the mixed segmentation scenarios, this under performance of FLiBe is counteracted by the increase in TBR in the initial layers of the blanket. This results in a larger overall TBR in the higher neutron flux areas of the blanket, rather than in the low TBR production areas at the rear of the blanket. For greater spatial resolution a fifty-layer blanket was cre- ated using the same methodology, as described above. The neutron flux per unit lethargy (neutron cm−2 per unit lethargy) as a function of neutron energy (group structure CCFE-709) and layer number, are shown in figures 4(a) and (b). These figures illustrate how the neutron flux spectrum is affected by penetration depth within the blanket, indicated by the layer number, with 50 representing the final layer, or the layer fur- thest from the plasma source. A comparison is made between a solely liquid lithium blanket, figure 4(a), and a hybrid dual breeder design, figure 4(b), where lithium is contained within the first 31 layers and layer 32–50 contain FLiBe. This was chosen because it most closely represents the best performing configuration in figure 2.
+
+————————————————————————————————————————————————————————————
+
+[4] Barker_2025_Nucl._Fusion_65_086022.pdf, page 10
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+Nucl. Fusion 65 (2025) 086022 A.J. Barker et al Figure B.2. Tritium production per source neutron as a function of layer depth through the blanket over a range of incident neutron energies, that collide with either 6Li or 7Li (in grey). A reduction of TBR across the entire energy range is seen with penetration depth of the neutron through the blanket structure. At the top of the graph the TBR within each order of magnitude of neutron energy is shown. The lower energy neutrons contribute a small amount to the overall TBR while the mid range dominate its overall production. Appendix C. Combinatorics of higher lithium-6 enrichments Figure C.3. Tritium breeding ratio for all combinations of a eight-layer blanket containing liquid lithium (Li) and FLiBe (FL), respectively. The front four layers are on the x-axis and the final four layers are shown on the y-axis. 10% enrichment of the lithium-6 isotope were used in these simulations. 10
+
+————————————————————————————————————————————————————————————
+
+[5] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe serves as breeder, neu- tron shield, and coolant for the vacuum vessel [11]. The beryllium in FLiBe acts as a neutron multiplier, which significantly enhances Tritium Breeding Ratio (TBR). Al- though there are many challenges associated with working with beryllium because of its toxicity, FLiBe remains the most promising breeder choice for the ARC-class FPP due to its cooling capabilities [12], and its ability to achieve high TBR [13]. Recent models have shown that the FLiBe LIB should enable the ARC-class FPP to achieve tritium self-sufficiency [6]. Preprint submitted to Nuclear Fusion December 5, 2024 arXiv:2412.02721v1 [physics.plasm-ph] 2 Dec 2024
+
+about: lithium enrichment tritium breeding FLiBe blanket TBR
+
+## for FLiBe based molten salt, which composition is most likely to provide high tritium breeding rate while remaining chemical viable to extract from blanket
+**1. FLiBe at the 2:1 LiF:BeF₂ eutectic stoichiometry (33.3 mol% BeF₂, melting point ~459 °C), enriched to ≥90% ⁶Li, is the chemically viable composition that maximises tritium breeding ratio among circulating-blanket-compatible FLiBe melts, with tritium recovered by continuous helium sparging.**
+*Confidence.* 0.62
+**2. FLiBe at approximately 38–40 mol% BeF₂ (roughly 1.5:1 LiF:BeF₂) enriched to ≥90% ⁶Li maximises TBR among FLiBe compositions without operability constraints applied.**
+*Confidence.* 0.45
+**Unresolved.**
+- The TBR of the 2:1 LiF:BeF₂ eutectic at ≥90% ⁶Li in the specific tokamak blanket geometry under consideration was never computed in this debate. A salt-neutronics-tbr sweep from 30–45 mol% BeF₂ at fixed 90% ⁶Li enrichment in that geometry would confirm whether TBR >1.05 is achievable at the eutectic and precisely where the peak sits.
+- The ~0.02-unit TBR advantage of the 38–40 mol% composition over the 2:1 eutectic was asserted from prior published sweeps; it may be within numerical or interpolation error. The same neutronics sweep would resolve whether the peak-to-eutectic TBR difference is real and large enough to motivate engineering workarounds for the operability problem.
+… trimmed at 1400 characters.
+
+## what are good alternatives to FliBe for tritium breeding
+(ended without a verdict)
+
+## what is the best FLiBe composition for tritium breeding rate
+(ended without a verdict)
+
+(5 further matching debate(s) not quoted — these are the closest by title. Conclusions only; the arguments behind them are on the forum.)
+
+query: natural lithium enrichment FLiBe TBR beryllium neutron multiplication self-sufficiency
+knowledge base: molten-salt
+
+[1] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe serves as breeder, neu- tron shield, and coolant for the vacuum vessel [11]. The beryllium in FLiBe acts as a neutron multiplier, which significantly enhances Tritium Breeding Ratio (TBR). Al- though there are many challenges associated with working with beryllium because of its toxicity, FLiBe remains the most promising breeder choice for the ARC-class FPP due to its cooling capabilities [12], and its ability to achieve high TBR [13]. Recent models have shown that the FLiBe LIB should enable the ARC-class FPP to achieve tritium self-sufficiency [6]. Preprint submitted to Nuclear Fusion December 5, 2024 arXiv:2412.02721v1 [physics.plasm-ph] 2 Dec 2024
+
+————————————————————————————————————————————————————————————
+
+[2] tritium-breeding-1305833.pdf, page 15
+    Citation: Tritium Breeding Blanket for a Commercial Fusion Power Plant - A System Engineering Assessment — Wayne R. Meier — (2014)
+
+will also begin breeding tritium. A portion of the flow will be diverted to the T recovery system either immediately or after a short period of operation that brings the T concentration in PbLi to the level needed for efficient recovery.
+
+————————————————————————————————————————————————————————————
+
+[3] Barker_2025_Nucl._Fusion_65_086022.pdf, page 5
+    Citation: Analysis of a segmentation approach to breeder blanket design and the utilisation of FLiBe as a novel neutron reflector — Adam J. Barker, Mark R. Gilbert, Philip D. Edmondson — Nuclear Fusion vol. 65 (2025) — DOI: 10.1088/1741-4326/adecb2
+
+were enriched to 20%. Details on higher 6Li enrichments can be found in appendix C This investigation into blanket configuration shows that the spatial placement of the materials can have considerable impact in the overall TBR, and adds leverage to the segment- ation approach showing that further optimisation of blankets can be found via appropriate placement of the material within the blanket region. A blanket made solely from FLiBe would not perform well, at the enrichment levels tested, while a pure liquid lithium blanket would also fall short of the TBR tar- get ⩾1.05 at natural abundances. However, when FLiBe and Li are combined in differing combinations with natural 6Li abundance the minimum required TBR level can be exceeded. Furthermore, when the 6Li enrichment was increased, to 10% or 20%, multiple combinations, including pure liquid lithium, exceeded the minimum theoretical TBR threshold; though the greatest performance was seen when FLiBe was placed near the rear and this configuration was always the best performer at each enrichment level tested. 3.1. FLiBe as a reflector It is evident that a pure FLiBe blanket produces less tritium in a like-for-like comparison to its pure lithium counterpart, 5
+
+————————————————————————————————————————————————————————————
+
+[4] tritium-LIBRA_Experiment_FLiBe.pdf, page 1
+    Citation: The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum — Sara E. Ferry et al. — Fusion Science and Technology vol. 79 (2023) — DOI: 10.1080/15361055.2022.2078136
+
+The LIBRA Experiment: Investigating Robust Tritium Accountancy in Molten FLiBe Exposed to a D-T Fusion Neutron Spectrum Sara E. Ferry, *† Kevin B. Woller,† Ethan E. Peterson, Caroline Sorensen, and Dennis G. Whyte Massachusetts Institute of Technology Plasma Science and Fusion Center, 175 Albany Street, Cambridge, Massachusetts 02139 Received January 4, 2022 Accepted for Publication May 12, 2022 Abstract — The Liquid Immersion Blanket: Robust Accountancy (LIBRA) experiment will be a first-of-a-kind experiment to explore and develop the liquid immersion blanket (LIB) concept. The LIB is a radically simple molten–LiF-BeF2 (FLiBe)–salt tritium breeding blanket for deuterium-tritium (D-T)–fueled fusion power plants (FPPs) achieving a high tritium breeding ratio (TBR) in neutronics models. However, tritium breeding in FLiBe is inherently difficult to study experimentally. As a result, the coupled issues of FLiBe radiochemistry and tritium (T) transport are poorly understood. LIBRA approaches this challenge by simulating an FPP blanket environ­ ment using a D-T neutron generator and  1000 kg of FLiBe. LIBRA will investigate T breeding, containment, and extraction, coupled with FLiBe redox control and radiochemistry. The primary goal of LIBRA is to demonstrate robust T accountancy in blanket prototypical conditions. Here, T accountancy encompasses accurate predictions of T breeding in the FLiBe; detection and measurement of all T bred in LIBRA; and speciation of the T extracted from the FLiBe. Initial neutronics simulations of LIBRA indicate that a global TBR of ,1 is possible, where the TBR is defined as the number of tritons bred and extracted from FLiBe relative to the number of neutrons produced by D-T fusion reactions in the neutron generator. In this paper, we present the LIBRA concept and its scientific goals in the context of T breeding experiments. We also consider the potential impact of the LIB on the future fusion power industry, motivating further development of FLiBe-based T breeding research activities such as LIBRA. Keywords — FLiBe, tritium breeding, tritium accountancy, liquid immersion blanket, fusion power. Note — Some figures may be in color only in the electronic version. I. INTRODUCTION The growing fusion industry aims to deploy full-scale fusion power plants (FPPs) in the 2030s. If successful, deuterium-tritium (D-T)–fueled FPPs, such as Commonwealth Fusion Systems’ ARC concept or Tokamak Energy’s spherical tokamak, could play a major role in accelerating decarbonization.1–3 This will require many breakthrough engineering advances, including the development of highly efficient tritium (T) breeding systems. Tritium is scarce and extremely expensive, so any D-T FPP will need to breed its own T fuel. This is accomplished by exploiting the interaction between the neutrons created as a by-product of the D-T fusion reac­ tion in the plasma and lithium (Li) in the T breeding blanket, particularly the isotope 6Li ( < 8% natural abundance): 6 3Li þ1 0 n !4 2 He þ3 1 H : ð1Þ *E-mail: seferry@mit.edu †Co-first authors This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License (http://creativecommons.org/licenses/by-nc-nd/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited, and is not altered, transformed, or built upon in
+
+————————————————————————————————————————————————————————————
+
+[5] Tritium-BABYexperiment2024.pdf, page 0
+    Citation: Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment — Rémi Delaporte-Mathurin et al. — Nuclear Fusion (2024)
+
+Advancing Tritium Self-Sufficiency in Fusion Power Plants: Insights from the BABY Experiment R´emi Delaporte-Mathurina,∗, Nikola Golesa, John Balla, Collin Dunna, Emily Edwardsa, Sara Ferrya, Edward Lamereb, Andrew Lanzratha, Rick Leccacorvia, Samuele Meschinia, Ethan Petersona, Stefano Segantina, Rui Vieiraa, Dennis Whytea, Weiyue Zhoua, Kevin Wollera aPlasma Science and Fusion Center, Massachusetts Institute of Technology, Cambridge, MA 02139, USA bEnvironment, Health & Safety Office, MIT Abstract In the pursuit of fusion power, achieving tritium self-sufficiency stands as a pivotal challenge. Tritium breeding within molten salts is a critical aspect of next-generation fusion reactors, yet experimental measurements of Tritium Breeding Ratio (TBR) have remained elusive. Here we present the results of the Build A Better Yield blanket (BABY) experi- ment, which represents a pioneering effort in tritium research by utilizing high-energy (14 MeV) neutron irradiation of molten salts, a departure from conventional low-energy neutron approaches. Using a small-scale (100 mL) molten salt tritium breeding setup, we not only simulated, but also directly measured a TBR. This innovative approach provides crucial experimental validation, offering insights unattainable through simulation alone. Moreover, our findings reveal a surprising outcome: tritium was predominantly collected as HT, contrary to the expected TF. This underscores the complexity of tritium behavior in molten salts, highlighting the need for further investigation. This work lays the foun- dation for a more sophisticated experimental setup, including increasing the volume of the breeder, enhancing neutron detection, and refining tritium collection systems. Such improvements are crucial for advancing our understanding of fusion reactor feasibility and paving the way for future experiments. Glossary BABY Build A Better Yield blanket. 1–3, 5, 6, 9 D-T Deuterium-Tritium. 1–3, 5 FPP Fusion Power Plant. 1, 2 LIB Liquid Immersion Blanket. 1, 2 LIBRA Liquid Immersion Blanket: Robust Accountancy. 1, 2 LSC Liquid Scintillation Counting. 4, 5, 9 TBR Tritium Breeding Ratio. 1, 2, 4–8, 10 1. Introduction Most proposed Fusion Power Plants (FPPs) are fueled by Deuterium-Tritium (D-T) fusion reactions [1], but tri- tium is scarce [2, 3]. It is essential to develop tritium breed- ing blanket and fuel cycle technologies that can generate and maintain a self-sustaining supply of tritium within the ∗Corresponding author Email address: remidm@mit.edu () FPP. Tritium self-sufficiency refers to the ability of the FPP to breed and process enough tritium to run the plant without relying on an external source [4, 5, 6, 7]. Achieve- ment of tritium self-sufficiency is intrinsically tied to the design and performance of the tritium breeding blanket. However, tritium self-sufficiency on a large scale has never been demonstrated. The Liquid Immersion Blanket: Robust Accountancy (LIBRA) project was proposed at the MIT Plasma Science and Fusion Center (PSFC) to address critical research gaps in understanding tritium breeding and tritium chemistry in molten FLiBe exposed to a fu- sion neutron environment [8]. FLiBe has been proposed as a breeder material for the Liquid Immersion Blanket (LIB) of ARC-class FPPs [9]. In an ARC-class FPP, the first wall and vacuum vessel structures are coupled and located in- side a tank of molten FLiBe salt. The LIB is a self-cooled blanket concept [10], and the FLiBe
+
+job:        salt-neutronics-tbr
+job id:     44042
+cluster:    odo
+script args: --bef2 33.33 --li6 0.075
+outcome:    finished COMPLETED
+
+testing the prediction: At natural Li-6 abundance (7.5%), FLiBe at eutectic (33.33 mol% BeF2) yields TBR < 1.0; enrichment to ≥90% Li-6 pushes TBR above 1.05
+
+JOB_ID=44042
+CLUSTER=odo
+STATE=COMPLETED
+EXIT_CODE=0
+MESSAGE=None
+
+--- LOGS ---
+
+[setup_odo] RUN_DIR_Odo=/gpfs/wolf2/olcf/gen150/proj-shared/vista/salt-neutronics-tbr/src
+[setup_odo] OK: run_state_point.py present
+[salt-neutronics-tbr] cloning https://github.com/jqyin/salt-neutronics-skill@main -> /tmp/saltn-44042/salt-neutronics-skill
+[salt-neutronics-tbr] env ready on odo02: python=/tmp/saltn-44042/venv/bin/python
+[salt-neutronics-tbr] run: /tmp/saltn-44042/venv/bin/python -m salt_neutronics.cli tbr --json --output /gpfs/wolf2/olcf/gen150/proj-shared/vista/out/44042/results.json --bef2 33.33 --li6 0.075
+{
+  "quantity": "tritium_breeding_ratio",
+  "input_composition": {
+    "bef2_mol_percent": 33.33,
+    "lif_mol_percent": 66.67,
+    "li6_enrichment": 0.075
+  },
+  "derived": {
+    "beryllium_multiplier": 0.9998999999999999,
+    "nominal_bef2_mol_percent": 33.333333333333336
+  },
+  "result": {
+    "tbr": 1.196947566051775,
+    "interpretation": "TBR = 1.1969 >= 1.0: tritium self-sufficient with a comfortable margin (before accounting for losses/streaming)."
+  },
+  "shielding": {
+    "magnet_flux_n_per_cm2_s": 832793726345.153,
+    "thickness_cm": 100.0,
+    "reject_above_n_per_cm2_s": 1000000000000.0,
+    "preferred_at_or_below_n_per_cm2_s": 10000000000.0,
+    "verdict": "acceptable",
+    "acceptable": true
+  },
+  "provenance": {
+    "method": "linear interpolation of a precomputed Shift Monte Carlo table",
+    "is_interpolated": true,
+    "is_extrapolated": false,
+    "data_file": "/tmp/saltn-44042/salt-neutronics-skill/data/neutronics_isotopics.h5",
+    "grid": {
+      "li6_enrichment": [
+        0.07,
+        0.2,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "beryllium_multiplier": [
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.4
+      ]
+    },
+    "source_strength_n_per_s": 7.53e+17,
+    "irradiation_time_s": 86400.0,
+    "incident_neutrons": 6.50592e+22
+  }
+}
+[salt-neutronics-tbr] done — results.json in /gpfs/wolf2/olcf/gen150/proj-shared/vista/out/44042
+
+--- STDERR ---
+
+Cloning into '/tmp/saltn-44042/salt-neutronics-skill'...
+
+--- OUTPUT FILES ---
+
+results.json
