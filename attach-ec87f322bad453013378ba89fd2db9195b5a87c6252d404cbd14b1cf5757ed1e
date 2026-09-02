@@ -1,0 +1,10 @@
+{
+  "prediction": "TBR as a function of \u2076Li enrichment (10%, 25%, 40%, 50%, 60%, 75%, 90%) at fixed 33.3 mol% BeF\u2082 eutectic composition, homogeneous 60 cm FLiBe blanket, no external Be multiplier, 14 MeV D-T source; peak TBR occurs at enrichment \u226575% and TBR(90%) \u2212 TBR(50%) > 0.04",
+  "job_id": "44032",
+  "job_name": "salt-neutronics-tbr",
+  "cluster": "odo",
+  "state": "FAILED",
+  "output_dir": null,
+  "log_path": null,
+  "outputs": "JOB_ID=44032\nCLUSTER=odo\nSTATE=FAILED\nEXIT_CODE=2\nMESSAGE=None\n\n--- LOGS ---\n\n[setup_odo] RUN_DIR_Odo=/gpfs/wolf2/olcf/gen150/proj-shared/vista/salt-neutronics-tbr/src\n[setup_odo] OK: run_state_point.py present\n[salt-neutronics-tbr] cloning https://github.com/jqyin/salt-neutronics-skill@main -> /tmp/saltn-44032/salt-neutronics-skill\n[salt-neutronics-tbr] env ready on odo05: python=/tmp/saltn-44032/venv/bin/python\n\n--- OUTPUT FILES ---\n\n(no output files yet)"
+}
