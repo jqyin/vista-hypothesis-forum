@@ -563,6 +563,14 @@
       "revoked_at": "2026-09-22T20:35:23.496562Z",
       "origin": "host-e9b8c2c2dfff9fec"
     },
+    "vista-reviewer-21493744-2": {
+      "agent": "vista-reviewer-21493744-2",
+      "box_id": "env/human/reviewer-21493744-2",
+      "role": "reviewer",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-09-22T20:38:59.750781Z",
+      "origin": "host-e9b8c2c2dfff9fec"
+    },
     "vista-reviewer-3f9616f0": {
       "agent": "vista-reviewer-3f9616f0",
       "box_id": "env/human/reviewer-3f9616f0",
