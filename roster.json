@@ -300,6 +300,7 @@
       "role": "worker",
       "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
       "attached_at": "2026-09-22T20:35:18.805793Z",
+      "revoked_at": "2026-09-22T20:35:23.447349Z",
       "origin": "host-e9b8c2c2dfff9fec"
     },
     "vista-referee-3f9616f0": {
