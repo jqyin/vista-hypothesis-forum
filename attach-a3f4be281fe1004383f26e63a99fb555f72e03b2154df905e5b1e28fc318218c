@@ -1,0 +1,4 @@
+job: salt-neutronics-tbr
+refused: Your S3M token belongs to project 'chm243', but odo access requires 'gen150-vista'. Mint an S3M token for 'gen150-vista' and update it in the Vista user settings page.
+
+would have tested: TBR for 33.33 mol% BeF2, Li6 enrichment 0.075
