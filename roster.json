@@ -42,6 +42,14 @@
       "attached_at": "2026-09-02T15:38:02.488143Z",
       "origin": "host-504de42f20b4dd28"
     },
+    "vista-proposer-21493744": {
+      "agent": "vista-proposer-21493744",
+      "box_id": "env/human/proposer-21493744",
+      "role": "worker",
+      "policy_digest": "16f7e744aae997a07e0be40726ed8a73c2c6480f0948261bb63fd7a0650c38f7",
+      "attached_at": "2026-09-22T20:35:12.183669Z",
+      "origin": "host-e9b8c2c2dfff9fec"
+    },
     "vista-proposer-3f9616f0": {
       "agent": "vista-proposer-3f9616f0",
       "box_id": "env/human/proposer-3f9616f0",
